@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="images/spining-elements.png" alt="imagen spining elements">
+	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="<?php echo THEMEPATH; ?>images/spining-elements.png" alt="imagen spining elements">
 	<div class="[ margin-bottom margin-auto ][ width--600p ]">
 		<h2 class="[ color-primary ][ text-center ]">Introduce tus datos y los de tu papá, mamá o tutor.</h2>
 		<form class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="images/spining-elements.png" alt="imagen spining elements">
+	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="<?php echo THEMEPATH; ?>images/spining-elements.png" alt="imagen spining elements">
 	<h2 class="[ color-primary ][ text-center ]">Recuperar contraseña</h2>
 	<div class="[ margin-bottom--large margin-auto ][ width--600p ]">
 		<div class="[ border-top--primary ][ padding-top--large padding-bottom--large ][ text-uppercase ]">
