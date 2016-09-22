@@ -1302,7 +1302,7 @@ h2 {
   line-height: 35px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  font-weight: 300;
+  font-weight: 600;
 }
 p {
   margin: 0 0 10px;
@@ -1557,6 +1557,11 @@ a:not(.btn):hover {
 p {
   color: #fff;
   letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  line-height: 22px;
+}
+.text-uppercase {
+  text-transform: uppercase;
 }
 code,
 kbd,
@@ -2538,7 +2543,7 @@ label {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 400;
 }
 input[type="search"] {
   -webkit-box-sizing: border-box;
@@ -3037,11 +3042,15 @@ input {
   padding: 16px 12px!important;
   font-size: 18px!important;
 }
+input[type="checkbox"] {
+  width: 30px!important;
+}
 .parsley-errors-list {
   padding: 5px 0px 0!important;
   display: inline-block;
 }
-.parsley-errors-list .parsley-type {
+.parsley-errors-list .parsley-type,
+.parsley-errors-list .parsley-required {
   color: #E2262A;
   display: inline-block !important;
   font-weight: 200;
@@ -3518,7 +3527,12 @@ input[type="button"].btn-block {
   text-transform: uppercase;
   border-radius: 20px;
   font-size: 26px;
+  font-weight: 600;
   width: 296px;
+}
+.btn--primary:hover {
+  background-color: #E2262A;
+  color: #FDC804;
 }
 .fade {
   opacity: 0;
@@ -6710,20 +6724,23 @@ button.close {
 .width--900p {
   width: 900px;
 }
+.color-light {
+  color: #fff;
+}
 .color-primary {
   color: #FDC804;
 }
 .border-bottom--primary {
-  border-top: 2px solid #FDC804;
+  border-bottom: 2px solid #FDC804;
 }
 .border-top--primary {
-  border-bottom: 2px solid #FDC804;
+  border-top: 2px solid #FDC804;
 }
 .border-primary {
   border: 2px solid #FDC804;
 }
 .border-radius--20 {
-  border-radius: 20px;
+  border-radius: 23px;
 }
 @-ms-viewport {
   width: device-width;
@@ -6944,7 +6961,6 @@ footer {
   padding: 10px 0;
   color: #fff;
   font-size: 12px;
-  font-weight: 100;
 }
 footer p {
   margin-bottom: 0px;

@@ -33,7 +33,7 @@ label {
   display: inline-block;
   max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 
@@ -269,6 +269,7 @@ input[type="search"] {
 // Some special care is needed because <label>s don't inherit their parent's `cursor`.
 //
 // Note: Neither radios nor checkboxes can be readonly.
+
 input[type="radio"],
 input[type="checkbox"] {
   &[disabled],
@@ -621,15 +622,21 @@ input {
   font-size: 18px!important;
 }
 
+input[type="checkbox"] {
+  width: 30px!important;
+}
+
 //Parsley
 
 .parsley-errors-list {
   padding: 5px 0px 0!important;
   display: inline-block;
-  .parsley-type {
+  .parsley-type,
+  .parsley-required {
     color: @color-secondary;
     display: inline-block!important;
     font-weight: 200;
     letter-spacing: 1.5px;
   }
 }
+
