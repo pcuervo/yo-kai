@@ -6985,4 +6985,29 @@ header {
   margin-bottom: 20px;
   padding: 20px 0;
 }
+header .nav-header {
+  background-color: #E2262A;
+  text-align: center;
+  padding: 5px 30px;
+}
+header .nav-header > div {
+  border-top: 2px solid #FDC804;
+  border-bottom: 2px solid #FDC804;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+header .nav-header > div > div {
+  border-top: 2px solid #FDC804;
+  border-bottom: 2px solid #FDC804;
+}
+header .nav-header > div > div a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+}
+header .nav-header > div > div a:hover {
+  color: #FDC804;
+}
 /*# sourceMappingURL=bootstrap.css.map */

@@ -59,8 +59,28 @@
 	<?php } ?>
 
 		<header class="[ js-header ]">
-			<a href="<?php echo site_url('/'); ?>">
-				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">
-			</a>
+
+			<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>
+				<a href="<?php echo site_url('/'); ?>">
+					<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">
+				</a>
+			<?php } else { ?>
+				<div class="[ nav-header ]">
+					<div>
+						<div>
+							<a href="<?php echo site_url('/album'); ?>">Álbum</a>
+							<a href="<?php echo site_url('/cargar'); ?>">Cargar</a>
+							<a href="<?php echo site_url('/ranking'); ?>">Ranking</a>
+							<a href="<?php echo site_url('/'); ?>">
+								<!--<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai">-->
+							</a>
+							<a href="<?php echo site_url('/descargables'); ?>">Descargables</a>
+							<a href="<?php echo site_url('/videos'); ?>">Videos</a>
+							<a href="<?php echo site_url('/ayuda'); ?>">Ayuda</a>
+						</div>
+					</div>
+
+				</div>
+			<?php } ?>
 		</header>
 		<div class="[ main ]">
