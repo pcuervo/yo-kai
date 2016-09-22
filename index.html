@@ -51,12 +51,28 @@
 	</head>
 
 	<body>
-		<footer class="">
+		<header class="[ js-header ]">
 
-		</footer>
+		</header>
+		<div class="[ main ]">
+
+			<footer>
+				<p class="[ margin-right--small ][ inline-block ]">©LEVEL-5/YWP</p><p class="[ inline-block ]">D.R. © Hasbro Inc. México, 2016. ®Marca registrada.</p>
+			</footer>
+		</div>
+
 
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<script src="js/functions.js"></script>
 
+		<script>
+			$( document ).ready(function() {
+
+				footerBottom();
+
+				$(window).resize(function () { footerBottom(); });
+			});
+		</script>
 	</body>
 </html>

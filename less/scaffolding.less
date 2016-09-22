@@ -42,6 +42,18 @@ textarea {
   line-height: inherit;
 }
 
+html,
+body { height: 100%; }
+
+.main {
+  /*El header es fijo por lo que main requiere top (height-header + margin)*/
+  min-height: -moz-calc(100% - 50px);
+  min-height: -o-calc(100% - 50px);
+  min-height: -webkit-calc(100% - 50px);
+  min-height: calc(100% - 50px);
+  position: relative;
+}
+
 
 // Links
 

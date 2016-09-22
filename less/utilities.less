@@ -7,16 +7,16 @@
 // -------------------------
 
 .clearfix {
-  .clearfix();
+	.clearfix();
 }
 .center-block {
-  .center-block();
+	.center-block();
 }
 .pull-right {
-  float: right !important;
+	float: right !important;
 }
 .pull-left {
-  float: left !important;
+	float: left !important;
 }
 
 
@@ -25,16 +25,16 @@
 
 // Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
 .hide {
-  display: none !important;
+	display: none !important;
 }
 .show {
-  display: block !important;
+	display: block !important;
 }
 .invisible {
-  visibility: hidden;
+	visibility: hidden;
 }
 .text-hide {
-  .text-hide();
+	.text-hide();
 }
 
 
@@ -43,7 +43,7 @@
 // Credit: HTML5 Boilerplate
 
 .hidden {
-  display: none !important;
+	display: none !important;
 }
 
 
@@ -51,5 +51,37 @@
 // -------------------------
 
 .affix {
-  position: fixed;
+	position: fixed;
 }
+
+//Box model
+
+.margin-right--xsmall		{ margin-right: (@margin-base/4); }
+.margin-right--small		{ margin-right: (@margin-base/2); }
+.margin-right				{ margin-right: @margin-base; }
+.margin-right--large		{ margin-right: (@margin-base*2); }
+
+// Positions
+.relative{ position: relative; }
+.absolute{ position: absolute; }
+.inherit{ position: inherit; }
+.fixed{ position: fixed; }
+.static{ position: static;}
+
+//overflow
+.overflow-hidden{overflow: hidden;}
+
+// Z-index
+.z-index---1{ z-index: -1;}
+
+// Displays
+.block{ display: block; }
+.inline{ display: inline; }
+.inline-block{ display: inline-block; }
+
+//alingnemt
+.align-top{ vertical-align: top; }
+.align-middle{ vertical-align: middle; }
+.align-bottom{ vertical-align: bottom; }
+
+.text-center { text-align: center; }
