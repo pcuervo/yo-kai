@@ -17,7 +17,7 @@
 		</form>
 	</div>
 	<div class="[ text-center ]">
-		<a class="[ margin-left ][ margin-right ]" href="registro.html">Crear cuenta</a>
-		<a class="[ margin-left ][ margin-right ]" href="recuperar-contraseña.html">Recuperar contraseña</a>
+		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/registro'); ?>">Crear cuenta</a>
+		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/recuperar-contrasena'); ?>">Recuperar contraseña</a>
 	</div>
 <?php get_footer(); ?>

@@ -12,6 +12,8 @@ define( 'CSSPATH', get_template_directory_uri() . '/css/' );
 define( 'THEMEPATH', get_template_directory_uri() . '/' );
 define( 'SITEURL', site_url('/') );
 
+require_once('inc/pages.php');
+
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
 \*------------------------------------*/

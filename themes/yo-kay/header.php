@@ -52,7 +52,7 @@
 
 	<body>
 		<header class="[ js-header ]">
-			<a href="index.html">
+			<a href="<?php echo site_url('/'); ?>">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">
 			</a>
 		</header>
