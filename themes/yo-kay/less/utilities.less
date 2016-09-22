@@ -1,0 +1,135 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+	.clearfix();
+}
+.center-block {
+	.center-block();
+}
+.pull-right {
+	float: right !important;
+}
+.pull-left {
+	float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+	display: none !important;
+}
+.show {
+	display: block !important;
+}
+.invisible {
+	visibility: hidden;
+}
+.text-hide {
+	.text-hide();
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+	display: none !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+	position: fixed;
+}
+
+//Box model
+.margin-auto 				{ margin: auto; }
+
+.margin-right--xsmall		{ margin-right: (@margin-base/4); }
+.margin-right--small		{ margin-right: (@margin-base/2); }
+.margin-right				{ margin-right: @margin-base; }
+.margin-right--large		{ margin-right: (@margin-base*2); }
+
+.margin-left--xsmall		{ margin-left: (@margin-base/4); }
+.margin-left--small			{ margin-left: (@margin-base/2); }
+.margin-left				{ margin-left: @margin-base; }
+.margin-left--large			{ margin-left: (@margin-base*2); }
+.margin-left--25p 			{ margin-left: 25%; }
+
+.margin-bottom--xsmall		{ margin-bottom: (@margin-base/4); }
+.margin-bottom--small		{ margin-bottom: (@margin-base/2); }
+.margin-bottom				{ margin-bottom: @margin-base; }
+.margin-bottom--large		{ margin-bottom: (@margin-base*2); }
+
+.padding-top--xsmall		{ padding-top: (@padding-base/4); }
+.padding-top--small		{ padding-top: (@padding-base/2); }
+.padding-top				{ padding-top: @padding-base; }
+.padding-top--large		{ padding-top: (@padding-base*2); }
+
+.padding-bottom--xsmall		{ padding-bottom: (@padding-base/4); }
+.padding-bottom--small		{ padding-bottom: (@padding-base/2); }
+.padding-bottom				{ padding-bottom: @padding-base; }
+.padding-bottom--large		{ padding-bottom: (@padding-base*2); }
+
+// Positions
+.relative			{ position: relative; }
+.absolute			{ position: absolute; }
+.inherit			{ position: inherit; }
+.fixed				{ position: fixed; }
+.static				{ position: static;}
+
+.right--0 			{ right: 0px }
+.left--0 			{ left: 0px }
+
+//overflow
+.overflow-hidden	{overflow: hidden;}
+
+// Z-index
+.z-index---1		{ z-index: -1;}
+
+// Displays
+.hidden				{ display: none; }
+.block				{ display: block; }
+.inline				{ display: inline; }
+.inline-block		{ display: inline-block; }
+
+//alingnemt
+.align-top			{ vertical-align: top; }
+.align-middle		{ vertical-align: middle; }
+.align-bottom		{ vertical-align: bottom; }
+
+.text-center 		{ text-align: center; }
+
+//Size
+
+.width--100 		{ width: 100%; }
+.width--50 		{ width: 50%; }
+.width--600p 		{ width: 600px; }
+.width--900p 		{ width: 900px; }
+
+.height--170p 		{ height: 170px; }
+
+//Color
+
+.color-light		{ color: @light; }
+.color-primary		{ color: @color-primary; }
+
+//Border
+
+.border-bottom--primary{ border-bottom:2px solid @color-primary; }
+.border-top--primary{ border-top:2px solid @color-primary; }
+.border-primary { border:2px solid @color-primary; }
+
+.border-radius--20 { border-radius: 23px; }
