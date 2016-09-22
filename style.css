@@ -1075,7 +1075,8 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  background-color: #fff;
+  background-image: url('images/fondo.png');
+  background-size: 100%;
 }
 input,
 button,
@@ -6556,6 +6557,9 @@ button.close {
 .z-index---1 {
   z-index: -1;
 }
+.hidden {
+  display: none;
+}
 .block {
   display: block;
 }
@@ -6576,6 +6580,12 @@ button.close {
 }
 .text-center {
   text-align: center;
+}
+.width--100 {
+  width: 100%;
+}
+.color-primary {
+  color: #FDC804;
 }
 @-ms-viewport {
   width: device-width;
@@ -6793,9 +6803,16 @@ footer {
   bottom: 0;
   background-color: #E2262A;
   text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 100;
+}
+footer p {
+  margin-bottom: 0px;
 }
 header {
-  height: 50px;
   width: 100%;
+  margin-bottom: 20px;
 }
 /*# sourceMappingURL=bootstrap.css.map */
