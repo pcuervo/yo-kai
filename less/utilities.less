@@ -55,11 +55,33 @@
 }
 
 //Box model
+.margin-auto 				{ margin: auto; }
 
 .margin-right--xsmall		{ margin-right: (@margin-base/4); }
 .margin-right--small		{ margin-right: (@margin-base/2); }
 .margin-right				{ margin-right: @margin-base; }
 .margin-right--large		{ margin-right: (@margin-base*2); }
+
+.margin-left--xsmall		{ margin-left: (@margin-base/4); }
+.margin-left--small			{ margin-left: (@margin-base/2); }
+.margin-left				{ margin-left: @margin-base; }
+.margin-left--large			{ margin-left: (@margin-base*2); }
+.margin-left--25p 			{ margin-left: 25%; }
+
+.margin-bottom--xsmall		{ margin-bottom: (@margin-base/4); }
+.margin-bottom--small		{ margin-bottom: (@margin-base/2); }
+.margin-bottom				{ margin-bottom: @margin-base; }
+.margin-bottom--large		{ margin-bottom: (@margin-base*2); }
+
+.padding-top--xsmall		{ padding-top: (@padding-base/4); }
+.padding-top--small		{ padding-top: (@padding-base/2); }
+.padding-top				{ padding-top: @padding-base; }
+.padding-top--large		{ padding-top: (@padding-base*2); }
+
+.padding-bottom--xsmall		{ padding-bottom: (@padding-base/4); }
+.padding-bottom--small		{ padding-bottom: (@padding-base/2); }
+.padding-bottom				{ padding-bottom: @padding-base; }
+.padding-bottom--large		{ padding-bottom: (@padding-base*2); }
 
 // Positions
 .relative			{ position: relative; }
@@ -67,6 +89,9 @@
 .inherit			{ position: inherit; }
 .fixed				{ position: fixed; }
 .static				{ position: static;}
+
+.right--0 			{ right: 0px }
+.left--0 			{ left: 0px }
 
 //overflow
 .overflow-hidden	{overflow: hidden;}
@@ -90,7 +115,18 @@
 //Size
 
 .width--100 		{ width: 100%; }
+.width--50 		{ width: 50%; }
+.width--600p 		{ width: 600px; }
+.width--900p 		{ width: 900px; }
 
 //Color
 
-.color-primary		{ color: @primary; }
+.color-primary		{ color: @color-primary; }
+
+//Border
+
+.border-bottom--primary{ border-top:2px solid @color-primary; }
+.border-top--primary{ border-bottom:2px solid @color-primary; }
+.border-primary { border:2px solid @color-primary; }
+
+.border-radius--20 { border-radius: 20px; }

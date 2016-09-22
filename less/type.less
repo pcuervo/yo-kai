@@ -51,6 +51,12 @@ h4, .h4 { font-size: @font-size-h4; }
 h5, .h5 { font-size: @font-size-h5; }
 h6, .h6 { font-size: @font-size-h6; }
 
+h2 {
+  font-size: 24px;
+  line-height: 35px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
 
 // Body text
 // -------------------------
@@ -299,4 +305,16 @@ address {
   margin-bottom: @line-height-computed;
   font-style: normal;
   line-height: @line-height-base;
+}
+
+a {
+  color: @light;
+  font-weight: 200;
+  letter-spacing: 1px;
+  text-decoration: underline;
+  &:hover{ color: @color-primary; }
+}
+
+p{
+  color: @light;
 }

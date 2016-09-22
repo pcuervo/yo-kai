@@ -31,7 +31,18 @@ body {
   color: @text-color;
   //background-color: @body-bg;
   background-image: url('images/fondo.png');
-  background-size: 100%;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  min-width: 1024px;
+}
+
+.container-primary {
+  width: 1200px;
+  margin: auto;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
 }
 
 // Reset fonts for relevant elements
