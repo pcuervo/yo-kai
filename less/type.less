@@ -54,8 +54,9 @@ h6, .h6 { font-size: @font-size-h6; }
 h2 {
   font-size: 24px;
   line-height: 35px;
-  font-weight: 200;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 
 // Body text
@@ -307,7 +308,7 @@ address {
   line-height: @line-height-base;
 }
 
-a {
+a:not(.btn) {
   color: @light;
   font-weight: 200;
   letter-spacing: 1px;
@@ -317,4 +318,5 @@ a {
 
 p{
   color: @light;
+  letter-spacing: 0.5px;
 }

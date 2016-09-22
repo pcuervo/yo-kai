@@ -1300,8 +1300,9 @@ h6,
 h2 {
   font-size: 24px;
   line-height: 35px;
-  font-weight: 200;
   letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 300;
 }
 p {
   margin: 0 0 10px;
@@ -1544,17 +1545,18 @@ address {
   font-style: normal;
   line-height: 1.42857143;
 }
-a {
+a:not(.btn) {
   color: #fff;
   font-weight: 200;
   letter-spacing: 1px;
   text-decoration: underline;
 }
-a:hover {
+a:not(.btn):hover {
   color: #FDC804;
 }
 p {
   color: #fff;
+  letter-spacing: 0.5px;
 }
 code,
 kbd,
