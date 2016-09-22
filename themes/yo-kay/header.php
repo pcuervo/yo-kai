@@ -52,7 +52,7 @@
 
 
 
-	<?php if ( is_front_page() || is_page('registro') || is_page('recuperar-contrasena') || is_page('terminos-y-condiciones' ) || is_page('aviso-de-privacidad' )) { ?>
+	<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>
 		<body>
 	<?php } else { ?>
 		<body class="bg-image--primary">
