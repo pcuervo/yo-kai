@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-	<div class="[ width--600p ][ margin-auto ]">
+	<div class="[ width--800p ][ margin-auto ]">
 	<div class="row [ margin-bottom--large ]">
-		<div class="col-sm-4">
+		<div class="col-xs-5">
 
 		</div>
-		<div class="col-sm-8">
+		<div class="col-xs-7">
 			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ]">¿Tienes alguna consulta?</h2>
 		</div>
 	</div>
