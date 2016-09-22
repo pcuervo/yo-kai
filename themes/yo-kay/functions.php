@@ -20,13 +20,15 @@ define( 'SITEURL', site_url('/') );
 * Enqueue frontend scripts and styles
 **/
 add_action( 'wp_enqueue_scripts', function(){
+	// styles
+	//wp_enqueue_style( 'styles', get_stylesheet_uri() );
+	//wp_enqueue_style( 'style', THEMEPATH.'style.css');
 
 	// scripts
 	//wp_enqueue_script( 'plugins', JSPATH.'plugins.js', array('jquery'), '1.0', true );
 	//wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 
-	// styles
-	wp_enqueue_style( 'styles', get_stylesheet_uri() );
+
 
 });
 

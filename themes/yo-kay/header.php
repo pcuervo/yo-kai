@@ -33,7 +33,7 @@
 		<meta name="msapplication-wide310x150logo" content="favicon/mstile-310x150.png" />
 		<meta name="msapplication-square310x310logo" content="favicon/mstile-310x310.png" />
 		<!-- CSS -->
-		<!-- <link rel="stylesheet" href="<?php echo THEMEPATH; ?>style.css"> -->
+		<link rel="stylesheet" href="<?php echo THEMEPATH; ?>style.css">
 		<!-- Google font(s) -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
 		<!-- Font awesome -->
