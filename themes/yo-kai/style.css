@@ -6559,13 +6559,15 @@ button.close {
 #myCarousel .carousel-control .left {
   text-align: left;
 }
-#myCarousel .image-perfil {
+#myCarousel .image-perfil,
+#myCarousel .image-card {
   display: inline-block;
   width: 18%;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-#myCarousel .image-perfil .perfil-shadow {
+#myCarousel .image-perfil .perfil-shadow,
+#myCarousel .image-card .perfil-shadow {
   background-color: rgba(0, 0, 0, 0.7);
   width: 95.391px;
   height: 95.391px;
@@ -6573,18 +6575,31 @@ button.close {
   position: absolute;
   top: 0;
 }
-#myCarousel .image-perfil .perfil-shadow.perfil-selected {
+#myCarousel .image-perfil .perfil-shadow.perfil-selected,
+#myCarousel .image-card .perfil-shadow.perfil-selected {
   display: none;
 }
-#myCarousel .image-perfil .perfil-shadow.perfil-unselected {
+#myCarousel .image-perfil .perfil-shadow.perfil-unselected,
+#myCarousel .image-card .perfil-shadow.perfil-unselected {
   display: block;
 }
 #myCarousel.carousel-album .carousel-inner .item {
   width: 730px!important;
 }
-#myCarousel.carousel-album .image-perfil {
+#myCarousel.carousel-album .image-card {
   width: 15%;
   margin-bottom: 30px;
+  position: relative;
+}
+#myCarousel.carousel-album .image-card .multiple-card {
+  position: absolute;
+  bottom: -15px;
+  left: 35px;
+}
+#myCarousel.carousel-album .image-card .multiple-card + p {
+  position: absolute;
+  width: 107px;
+  bottom: -28px;
 }
 #myCarousel.carousel-album .carousel-control {
   margin-top: 185px;
@@ -6822,6 +6837,9 @@ button.close {
 .width--50 {
   width: 50%;
 }
+.width--32 {
+  width: 32%;
+}
 .width--600p {
   width: 600px;
 }
@@ -6845,6 +6863,9 @@ button.close {
 }
 .color-secondary {
   color: #E2262A;
+}
+.color-dark {
+  color: #000 !important;
 }
 .border-bottom--primary {
   border-bottom: 2px solid #FDC804;

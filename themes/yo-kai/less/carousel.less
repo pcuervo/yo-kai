@@ -293,7 +293,8 @@
     .right { text-align: right; }
     .left { text-align: left; }
   }
-  .image-perfil {
+  .image-perfil,
+  .image-card {
     display: inline-block;
     width: 18%;
     margin-right: 0.5%; margin-left: 0.5%;
@@ -312,9 +313,18 @@
 
 #myCarousel.carousel-album {
   .carousel-inner .item { width: 730px!important; }
-  .image-perfil {
+  .image-card {
     width: 15%;
     margin-bottom: 30px;
+    position: relative;
+    .multiple-card {
+      position: absolute; bottom: -15px; left: 35px;
+      & + p {
+        position: absolute;
+        width: 107px;
+        bottom: -28px;
+      }
+    }
   }
   .carousel-control { margin-top: 185px; }
 }
