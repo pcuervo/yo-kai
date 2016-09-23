@@ -111,6 +111,8 @@
 			</div>
 			<div class="[ text-center ]">
 				<input type="hidden" name="action" value="crear-participante">
+				<input type="hidden" id="avatar-participante" name="avatar" value="">
+
 				<div class="[ border-primary border-radius--20 ][ inline-block ]">
 					<button type="submit" class="btn btn--primary">CREAR CUENTA</button>
 				</div>

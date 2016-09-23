@@ -38,6 +38,8 @@ var $=jQuery.noConflict();
                 $( ".image-perfil div.perfil-selected" ).removeClass('perfil-unselected');
             }
 
+            var id = $(this).data('id');
+            $('#avatar-participante').val(id);
         });
 
     });
