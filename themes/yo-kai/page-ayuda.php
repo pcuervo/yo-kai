@@ -16,7 +16,7 @@
 			</div>
 		</div>
 		<div class="col-xs-8">
-			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ]">¿Tienes alguna consulta?</h2>
+			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">¿Tienes alguna consulta?</h2>
 		</div>
 	</div>
 	<div class="form-group [ margin-bottom--large ]">

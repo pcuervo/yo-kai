@@ -73,6 +73,10 @@
 .margin-bottom				{ margin-bottom: @margin-base; }
 .margin-bottom--large		{ margin-bottom: (@margin-base*2); }
 
+.margin-top--large			{ margin-top: (@margin-base*2); }
+.margin-top--xlarge			{ margin-top: (@margin-base*3); }
+.margin-top--xxlarge		{ margin-top: (@margin-base*4); }
+
 .padding-top--xsmall		{ padding-top: (@padding-base/4); }
 .padding-top--small		{ padding-top: (@padding-base/2); }
 .padding-top				{ padding-top: @padding-base; }
@@ -127,6 +131,7 @@
 
 .color-light		{ color: @light; }
 .color-primary		{ color: @color-primary; }
+.color-secondary	{ color: @color-secondary; }
 
 //Border
 
@@ -137,7 +142,7 @@
 .border-radius--20 { border-radius: 23px; }
 
 .portrait-perfil {
-	position: relative; left: -150px;
+	position: relative; left: -50px;
 	img.portrait { width: 261px; }
 	img.avatar {
 		position: absolute;
@@ -178,4 +183,24 @@
 			}
 		}
 	}
+}
+
+.box-raking {
+	height: 410px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	.nombre {
+		text-transform: uppercase;
+		color: @color-secondary;
+		line-height: 15px;
+		position: absolute; top: 40px; left: 130px;
+		margin-bottom: 0px;
+	}
+	.avatar {
+		width: 84px;
+		position: absolute; top: 5px; left: 19px;
+	}
+
+
+
 }

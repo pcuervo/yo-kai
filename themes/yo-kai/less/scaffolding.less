@@ -61,12 +61,26 @@ textarea {
 html,
 body { height: 100%; }
 
+/*Style scroll*/
+.main *::-webkit-scrollbar {
+    width: 12px;
+}
+.main *::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+.main *::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: @color-primary;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .main {
   /*El header es fijo por lo que main requiere top (height-header + margin)*/
-  min-height: -moz-calc(100% - 148px); /* altura header 210*/
-  min-height: -o-calc(100% - 148px);
-  min-height: -webkit-calc(100% - 148px);
-  min-height: calc(100% - 148px);
+  min-height: -moz-calc(100% - 188px); /* altura header 210*/
+  min-height: -o-calc(100% - 188px);
+  min-height: -webkit-calc(100% - 188px);
+  min-height: calc(100% - 188px);
   position: relative;
 }
 
