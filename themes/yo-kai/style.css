@@ -6756,6 +6756,9 @@ button.close {
 .left--0 {
   left: 0px;
 }
+.bottom--48 {
+  bottom: 48px;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -6898,6 +6901,56 @@ button.close {
   position: absolute;
   top: 5px;
   left: 19px;
+}
+.category-card {
+  border-left: 2px solid #E2262A;
+  border-top: 2px solid #E2262A;
+  border-right: 2px solid #E2262A;
+  border-top-right-radius: 21px;
+  border-top-left-radius: 21px;
+  display: inline-block;
+  margin: 0 5px;
+}
+.category-card a {
+  background-color: #E2262A;
+  border-left: 2px solid #FDC804;
+  border-top: 2px solid #FDC804;
+  border-right: 2px solid #FDC804;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.category-card a p {
+  color: #FDC804;
+}
+.category-card a img {
+  margin: auto;
+}
+.category-card a .img-initial {
+  display: block;
+}
+.category-card a .img-hover {
+  display: none;
+}
+.category-card:hover {
+  border-color: #FDC804;
+}
+.category-card:hover a {
+  background-color: #FDC804;
+  border-color: #E2262A;
+  color: #E2262A;
+  width: 75px;
+  height: 75px;
+}
+.category-card:hover a .img-initial {
+  display: none;
+}
+.category-card:hover a .img-hover {
+  display: block;
 }
 @-ms-viewport {
   width: device-width;
