@@ -62,7 +62,7 @@
 						</a>
 					</div>
 
-					<!-- <div class="item">
+					<div class="item">
 						<a href="#" class="image-perfil">
 							<img src="<?php echo THEMEPATH; ?>images/perfil/katie.png" alt="imagen de perfil">
 							<div class="[ perfil-shadow perfil-unselected ]"></div>
@@ -106,7 +106,7 @@
 							<img src="<?php echo THEMEPATH; ?>images/perfil/barnaby.png" alt="imagen de perfil">
 							<div class="[ perfil-shadow perfil-unselected ]"></div>
 						</a>
-					</div> -->
+					</div>
 				</div>
 
 				<!-- Left and right controls -->
