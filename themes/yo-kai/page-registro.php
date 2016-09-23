@@ -28,6 +28,98 @@
 
 			<!-- slider -->
 
+			<div id="myCarousel" class="carousel slide [ margin-bottom--large ]" data-ride="carousel">
+			<!-- Indicators -->
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
+				</ol>
+
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+
+					<div class="item active">
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/nathan.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/tattletell.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/walkappa.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/negatibuzz.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+					</div>
+
+					<!-- <div class="item">
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/katie.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/komajiro.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/komasan.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/mochismo.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/jibanyan.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+					</div>
+
+					<div class="item">
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/chansin.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/cheeksqueek.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/edward.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/hungramps.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/perfil/barnaby.png" alt="imagen de perfil">
+							<div class="[ perfil-shadow perfil-unselected ]"></div>
+						</a>
+					</div> -->
+				</div>
+
+				<!-- Left and right controls -->
+				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+					<img src="<?php echo THEMEPATH; ?>images/perfil/arrow-left.png" alt="arrow de perfil">
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+					<img src="<?php echo THEMEPATH; ?>images/perfil/arrow-right.png" alt="arrow de perfil">
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+
 			<p>Datos TUTOR</p>
 			<div class="row">
 				<div class="form-group col-sm-6">

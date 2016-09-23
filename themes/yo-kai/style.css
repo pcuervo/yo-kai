@@ -6517,6 +6517,46 @@ button.close {
     bottom: 20px;
   }
 }
+.carousel-indicators {
+  display: none;
+}
+.carousel-inner {
+  padding: 0 35px;
+}
+.carousel-inner > .item {
+  width: 530px!important;
+}
+.carousel-control {
+  width: 35px;
+  background: transparent!important;
+  margin-top: 30px;
+}
+.carousel-control .right {
+  text-align: right;
+}
+.carousel-control .left {
+  text-align: left;
+}
+.image-perfil {
+  display: inline-block;
+  width: 18%;
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+}
+.image-perfil .perfil-shadow {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 95.391px;
+  height: 95.391px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+.image-perfil .perfil-shadow.perfil-selected {
+  display: none;
+}
+.image-perfil .perfil-shadow.perfil-unselected {
+  display: block;
+}
 .clearfix:before,
 .clearfix:after,
 .dl-horizontal dd:before,
