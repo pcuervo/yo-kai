@@ -1,8 +1,11 @@
 var $=jQuery.noConflict();
 
 (function($){
+
     "use strict";
+
     $(function(){
+
         /*------------------------------------*\
             #GLOBAL
         \*------------------------------------*/
@@ -13,7 +16,17 @@ var $=jQuery.noConflict();
         $(window).on('resize', function(){
             footerBottom();
         });
+
+
+        /**
+         * LOGOUT AL CERRAR VENTANA
+         */
+        $(window).unload(function() {
+            var url = $('.bt-logout').attr('href');
+            $.get( url );
+        });
     });
+
 })(jQuery);
 
 //Footer fixed
