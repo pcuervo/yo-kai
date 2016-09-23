@@ -39,74 +39,28 @@
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 
-					<div class="item active">
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/nathan.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/tattletell.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/walkappa.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/negatibuzz.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-					</div>
+					<?php $args = array(
+	                        'post_type' => 'post',
+	                        'posts_per_page' => -1
+	                        );
+	                $result = new WP_Query( $args );
 
-					<div class="item">
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/katie.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/komajiro.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/komasan.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/mochismo.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/jibanyan.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-					</div>
-
-					<div class="item">
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/chansin.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/cheeksqueek.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/edward.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/hungramps.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/perfil/barnaby.png" alt="imagen de perfil">
-							<div class="[ perfil-shadow perfil-unselected ]"></div>
-						</a>
-					</div>
+	                if ( !empty($result->posts) ):
+	                	$count = 1;
+	                   	foreach (array_chunk($result->posts, 5) as $key => $avatars):
+	                   		$class = $count == 1 ? 'active' : '';
+	                   		echo '<div class="item '.$class.'">';
+	                    	foreach ($avatars as $key => $avatar):
+	                    		$imagen = attachment_image_url( $avatar->ID, 'full'); ?> 
+	                    		<a href="#" data-id="<?php echo $avatar->ID; ?>" class="image-perfil">
+									<img src="<?php echo $imagen; ?>" alt="imagen de perfil">
+									<div class="[ perfil-shadow perfil-unselected ]"></div>
+								</a>
+	                    	<?php endforeach;
+                    		echo '</div>';
+                    		$count++;
+                    	endforeach;
+                	endif; ?>
 				</div>
 
 				<!-- Left and right controls -->

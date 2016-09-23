@@ -46,4 +46,41 @@ add_action( 'wp_enqueue_scripts', function(){
 
 });
 
-?>
+/**	IMAGEN EN PSOTS */
+if ( function_exists('add_theme_support') ){
+	add_theme_support('post-thumbnails');
+}
+
+// Modify default post-type labels
+function yokai_post_menu_label() {
+	global $menu;
+	global $submenu;
+	$menu[5][0] = 'Avatars';
+	$submenu['edit.php'][5][0] = 'Avatars';
+	echo '';
+}
+	
+function yokai_post_object_label() {
+	global $wp_post_types;
+	$labels = &$wp_post_types['post']->labels;
+	$labels->name = 'Avatars';
+	$labels->singular_name = 'Avatar';
+	$labels->add_new_item = 'Añadir nueva avatar';
+	$labels->edit_item = 'Editar historia';
+	$labels->search_items = 'Buscar Avatars';
+}
+	
+add_action( 'init', 'yokai_post_object_label' );
+add_action( 'admin_menu', 'yokai_post_menu_label' );
+
+/**
+ * Regresa la url del attachment especificado
+ * @param  int     $post_id
+ * @param  string  $size
+ * @return string  url de la imagen
+ */
+function attachment_image_url($post_id, $size){
+	$image_id   = get_post_thumbnail_id($post_id);
+	$image_data = wp_get_attachment_image_src($image_id, $size, true);
+	return isset($image_data[0]) ? $image_data[0] : '';
+}
