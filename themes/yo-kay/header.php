@@ -51,6 +51,7 @@
 	</head>
 
 	<body>
+		<!-- <a href="<?php echo wp_logout_url( site_url('/') ); ?>">LOG OUT</a> -->
 		<header class="[ js-header ]">
 			<a href="<?php echo site_url('/'); ?>">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">

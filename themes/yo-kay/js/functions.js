@@ -12,3 +12,5 @@ function getHeaderHeight(){
 function getFooterHeight(){
     return $('footer').outerHeight();
 }
+
+console.log('asdasd');
