@@ -18,8 +18,14 @@ var $=jQuery.noConflict();
         $('.image-perfil').click(function(e){
             e.preventDefault();
 
-             $(this).find('div').addClass('perfil-selected');
-             console.log('clic');
+            //Cuando ya hay un perfil seleccionado previamente
+                //$( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
+            $( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
+            console.log('perfil-selected removed');
+            $( ".image-perfil div.perfil-selected" ).addClass('perfil-unselected');
+
+            $(this).find('div').addClass('perfil-selected');
+            console.log('perfil seleccionado');
 
             activePerfil();
         });
@@ -44,17 +50,16 @@ function getFooterHeight(){
 
 function activePerfil(){
 
-    if( $('.image-perfil div.perfil-selected').hasClass('block') ){
-        $( ".image-perfil div.perfil-selected" ).removeClass('block');
-        $( ".image-perfil div.perfil-selected" ).addClass('hidden');
-        $( ".image-perfil div.perfil-selected" ).removeClass('hidden');
-        $( ".image-perfil div.perfil-selected" ).addClass('block');
-        $( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
-        console.log('perfil-selected removed');
+    if( $('.image-perfil div.perfil-selected').hasClass('perfil-unselected') ){
+        $( ".image-perfil div.perfil-selected" ).removeClass('perfil-unselected');
+        //$( ".image-perfil div.perfil-selected" ).addClass('hidden');
+        // $( ".image-perfil div" ).removeClass('hidden');
+        // $( ".image-perfil div" ).addClass('perfil-unselected');
 
-        return;
+
+        // return;
     }
-    $( ".image-perfil div.perfil-selected" ).removeClass('hidden');
-    $( ".image-perfil div.perfil-selected" ).addClass('block');
-    $( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
+    // $( ".image-perfil div.perfil-selected" ).removeClass('hidden');
+    // $( ".image-perfil div.perfil-selected" ).addClass('perfil-unselected');
+    // $( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
 }
