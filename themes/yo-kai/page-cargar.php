@@ -25,15 +25,29 @@
 			<div class="col-xs-5">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/no-card--large.png" alt="imagen de interrogacion">
 			</div>
-			<form class="col-xs-7 [ text-center ][ padding-top--xlarge ]" method="POST" data-parsley-validate>
-				<div class="form-group [ margin-bottom--large ]">
-					<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
-					<input type="text" class="form-control" name="nick-name-competitor" id="exampleInputMedalla" placeholder="Medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
-				</div>
-				<div class="[ border-primary border-radius--20 ][ inline-block ]">
-					<button type="submit" class="btn btn--primary">Cargar</button>
-				</div>
-			</form>
+			<div class="col-xs-7 [ text-center ][ padding-top--xlarge ]">
+
+			<!-- Al cargar -->
+				<form method="POST" data-parsley-validate>
+					<div class="form-group [ margin-bottom--large ]">
+						<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
+						<input type="text" class="form-control" name="nick-name-competitor" id="exampleInputMedalla" placeholder="Medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
+					</div>
+					<div class="[ border-primary border-radius--20 ][ inline-block ]">
+						<button type="submit" class="btn btn--primary">Cargar</button>
+					</div>
+				</form>
+
+			<!-- Después de cargar -->
+				<!-- <div class="[ text-center ]">
+					<div class="[ border-primary border-radius--20 ][ inline-block ][ margin-bottom ]">
+						<a href="#" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Nueva carga</a>
+					</div>
+					<div class="[ border-primary border-radius--20 ][ inline-block ]">
+						<a href="<?php echo site_url('/'); ?>album" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Ir al álbum</a>
+					</div>
+				</div> -->
+			</div>
 		</div>
 	</div>
 <?php get_footer(); ?>

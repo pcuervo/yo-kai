@@ -7271,6 +7271,7 @@ header .nav-header > div > div a {
   text-decoration: none;
   padding: 15px 20px;
   display: inline-block;
+  font-weight: 400;
 }
 header .nav-header > div > div a:hover {
   color: #FDC804;
