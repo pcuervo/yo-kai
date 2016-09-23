@@ -6759,6 +6759,9 @@ button.close {
 .padding-top--large {
   padding-top: 40px;
 }
+.padding-top--xlarge {
+  padding-top: 80px;
+}
 .padding-bottom--xsmall {
   padding-bottom: 5px;
 }
@@ -6794,6 +6797,9 @@ button.close {
 }
 .bottom--48 {
   bottom: 48px;
+}
+.bottom--50 {
+  bottom: 50px;
 }
 .top--40 {
   top: 40px;

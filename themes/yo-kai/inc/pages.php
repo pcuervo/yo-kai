@@ -136,4 +136,16 @@ add_action('init', function(){
 		wp_insert_post( $page, true );
 	}
 
+	// Cargar
+	if( ! get_page_by_path('cargar') ){
+		$page = array(
+			'post_author' => 1,
+			'post_status' => 'publish',
+			'post_title'  => 'Cargar',
+			'post_name'   => 'cargar',
+			'post_type'   => 'page'
+		);
+		wp_insert_post( $page, true );
+	}
+
 });
