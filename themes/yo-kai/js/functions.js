@@ -15,6 +15,15 @@ var $=jQuery.noConflict();
             footerBottom();
         });
 
+
+        /**
+         * LOGOUT AL CERRAR VENTANA
+         */
+        $(window).unload(function() {
+            var url = $('.bt-logout').attr('href');
+            $.get( url );
+        });
+
         $('.image-perfil').click(function(e){
             e.preventDefault();
 
@@ -47,3 +56,5 @@ function getHeaderHeight(){
 function getFooterHeight(){
     return $('footer').outerHeight();
 }
+
+console.log('asdasd');

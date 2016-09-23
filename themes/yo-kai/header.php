@@ -50,14 +50,12 @@
 		<!-- <script>try{Typekit.load();}catch(e){}</script> -->
 	</head>
 
-
-
 	<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>
 		<body>
 	<?php } else { ?>
 		<body class="bg-image--primary">
 	<?php } ?>
-
+		<a class="bt-logout hidden" href="<?php echo wp_logout_url( site_url('/') ); ?>">LOG OUT</a>
 		<header class="[ js-header ]">
 
 			<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>

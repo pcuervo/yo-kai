@@ -1,8 +1,14 @@
-<?php
+<?php global $errors;
 
 /*------------------------------------*\
 	#CONSTANTS
 \*------------------------------------*/
+
+/**	
+ * QUITA LA BARRA DE ADMINISTRACION
+ */
+function quitar_barra_administracion(){ return false; }
+add_filter( 'show_admin_bar' , 'quitar_barra_administracion');
 
 /**
 * Define paths to javascript, styles, theme and site.
@@ -13,7 +19,13 @@ define( 'THEMEPATH', get_template_directory_uri() . '/' );
 define( 'SITEURL', site_url('/') );
 
 
+/**	
+ * INCLUDES
+ */
+
 require_once('inc/pages.php');
+require_once('inc/functions-users.php');
+
 
 /*------------------------------------*\
 	#GENERAL FUNCTIONS
