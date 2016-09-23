@@ -1104,10 +1104,11 @@ body {
 }
 .main {
   /*El header es fijo por lo que main requiere top (height-header + margin)*/
-  min-height: -moz-calc(100% - 50px);
-  min-height: -o-calc(100% - 50px);
-  min-height: -webkit-calc(100% - 50px);
-  min-height: calc(100% - 50px);
+  min-height: -moz-calc(100% - 148px);
+  /* altura header 210*/
+  min-height: -o-calc(100% - 148px);
+  min-height: -webkit-calc(100% - 148px);
+  min-height: calc(100% - 148px);
   position: relative;
 }
 a {
@@ -6795,6 +6796,60 @@ button.close {
 }
 .border-radius--20 {
   border-radius: 23px;
+}
+.portrait-perfil {
+  position: relative;
+  left: -150px;
+}
+.portrait-perfil img.portrait {
+  width: 261px;
+}
+.portrait-perfil img.avatar {
+  position: absolute;
+  top: 7px;
+  left: 6px;
+}
+.portrait-perfil .nombre {
+  text-transform: uppercase;
+  color: #E2262A;
+  width: 110px;
+  position: absolute;
+  top: 80px;
+  left: 135px;
+  line-height: 15px;
+}
+.portrait-perfil .puntaje {
+  color: #fff;
+  width: 65px;
+  position: absolute;
+  top: 116px;
+  left: 140px;
+  text-align: center;
+  font-weight: 600;
+}
+.portrait-perfil .border {
+  border: 2px solid #E2262A;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  position: absolute;
+  bottom: 2px;
+  left: 37px;
+}
+.portrait-perfil .border .circle {
+  background-color: #E2262A;
+  border: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding-top: 3px;
+}
+.portrait-perfil .border .circle p {
+  margin: 0px;
+  line-height: 15px;
+  font-size: 12px;
 }
 @-ms-viewport {
   width: device-width;
