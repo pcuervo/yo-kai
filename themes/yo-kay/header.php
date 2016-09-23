@@ -71,9 +71,11 @@
 							<a href="<?php echo site_url('/album'); ?>">Álbum</a>
 							<a href="<?php echo site_url('/cargar'); ?>">Cargar</a>
 							<a href="<?php echo site_url('/ranking'); ?>">Ranking</a>
-							<a href="<?php echo site_url('/'); ?>">
-								<!--<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai">-->
-							</a>
+							<div>
+								<a href="<?php echo site_url('/'); ?>">
+									<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai">
+								</a>
+							</div>
 							<a href="<?php echo site_url('/descargables'); ?>">Descargables</a>
 							<a href="<?php echo site_url('/videos'); ?>">Videos</a>
 							<a href="<?php echo site_url('/ayuda'); ?>">Ayuda</a>

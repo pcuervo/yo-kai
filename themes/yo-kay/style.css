@@ -6989,6 +6989,7 @@ header .nav-header {
   background-color: #E2262A;
   text-align: center;
   padding: 5px 30px;
+  margin-top: 30px;
 }
 header .nav-header > div {
   border-top: 2px solid #FDC804;
@@ -6999,6 +7000,17 @@ header .nav-header > div {
 header .nav-header > div > div {
   border-top: 2px solid #FDC804;
   border-bottom: 2px solid #FDC804;
+}
+header .nav-header > div > div > div {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+}
+header .nav-header > div > div > div a {
+  position: absolute;
+  left: -10px;
+  top: -60px;
+  padding: 0px;
 }
 header .nav-header > div > div a {
   text-transform: uppercase;
