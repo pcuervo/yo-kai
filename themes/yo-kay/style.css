@@ -1082,6 +1082,7 @@ body {
 }
 body.bg-image--primary {
   background-image: url('images/background-2.png');
+  background-size: inherit;
 }
 .container-primary {
   width: 1200px;
@@ -3048,10 +3049,10 @@ input {
 input[type="checkbox"] {
   width: 30px!important;
 }
-.textarea {
-  border: 4px solid #FFF200;
-  border-radius: 20px;
-  padding: 10px 20px;
+textarea {
+  border-radius: 20px!important;
+  border: 4px solid #FDC804 !important;
+  padding: 10px 20px!important;
 }
 .parsley-errors-list {
   padding: 5px 0px 0!important;
@@ -6729,11 +6730,14 @@ button.close {
 .width--600p {
   width: 600px;
 }
-.width--900p {
-  width: 900px;
+.width--800p {
+  width: 800px;
 }
 .height--170p {
   height: 170px;
+}
+.max-width--100 {
+  max-width: 100%;
 }
 .color-light {
   color: #fff;
@@ -6980,5 +6984,42 @@ header {
   width: 100%;
   margin-bottom: 20px;
   padding: 20px 0;
+}
+header .nav-header {
+  background-color: #E2262A;
+  text-align: center;
+  padding: 5px 30px;
+  margin-top: 30px;
+}
+header .nav-header > div {
+  border-top: 2px solid #FDC804;
+  border-bottom: 2px solid #FDC804;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+header .nav-header > div > div {
+  border-top: 2px solid #FDC804;
+  border-bottom: 2px solid #FDC804;
+}
+header .nav-header > div > div > div {
+  width: 200px;
+  display: inline-block;
+  position: relative;
+}
+header .nav-header > div > div > div a {
+  position: absolute;
+  left: -10px;
+  top: -60px;
+  padding: 0px;
+}
+header .nav-header > div > div a {
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: inline-block;
+}
+header .nav-header > div > div a:hover {
+  color: #FDC804;
 }
 /*# sourceMappingURL=bootstrap.css.map */

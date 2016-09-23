@@ -1,3 +1,21 @@
+var $=jQuery.noConflict();
+
+(function($){
+    "use strict";
+    $(function(){
+        /*------------------------------------*\
+            #GLOBAL
+        \*------------------------------------*/
+        $(window).ready(function(){
+            footerBottom();
+        });
+
+        $(window).on('resize', function(){
+            footerBottom();
+        });
+    });
+})(jQuery);
+
 //Footer fixed
 
 function footerBottom(){

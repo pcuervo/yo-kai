@@ -48,7 +48,7 @@ class Participante{
 
 			$this->auto_login($participante_id);
 
-			wp_redirect( site_url('/') );
+			wp_redirect( site_url('/bienvenido/') );
 			exit;
 		}else{
 			$errors = $participante_id->get_error_message();
