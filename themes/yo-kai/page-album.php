@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 	<div class="[ width--800p ][ margin-auto ]">
-		<div class="row [ margin-bottom--large ]">
+		<div class="row [ margin-bottom--large ][ height--450p ]">
 			<div class="col-xs-4">
-				<div class="[ portrait-perfil ]">
+				<div class="[ portrait-perfil ][ z-index--1 ]">
 					<img class="[ portrait ]" src="<?php echo THEMEPATH; ?>images/portrait.png" alt="portada perfil">
 					<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="portada perfil">
 					<p class="[ nombre ]">Juancho panza</p>
@@ -15,28 +15,10 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xs-2">
-				<img src="<?php echo THEMEPATH; ?>/images/card.png" alt="imagen de carta">
-			</div>
-			<div class="col-xs-2">
-				<img src="<?php echo THEMEPATH; ?>/images/card.png" alt="imagen de carta">
-			</div>
-			<div class="col-xs-2">
-				<img src="<?php echo THEMEPATH; ?>/images/card.png" alt="imagen de carta">
-			</div>
-			<div class="col-xs-2">
-				<img src="<?php echo THEMEPATH; ?>/images/card.png" alt="imagen de carta">
-			</div>
-		</div>
 
+			<!-- slider -->
 
-
-
-
-
-		<!-- slider -->
-
-			<div id="myCarousel" class="carousel-album carousel slide [ margin-bottom--large ]" data-ride="carousel">
+			<div id="myCarousel" class="carousel-album carousel slide [ margin-bottom--large ][ absolute top--40 ]" data-ride="carousel">
 			<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -48,69 +30,8 @@
 				<div class="carousel-inner" role="listbox">
 
 					<div class="item active">
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-					</div>
-
-					<div class="item">
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
-						<a href="#" class="image-perfil">
-							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
-						</a>
+						<a href="#" class="image-perfil"></a>
+						<a href="#" class="image-perfil"></a>
 						<a href="#" class="image-perfil">
 							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
 						</a>
@@ -162,12 +83,61 @@
 					</div>
 
 					<div class="item">
+						<a href="#" class="image-perfil"></a>
+						<a href="#" class="image-perfil"></a>
 						<a href="#" class="image-perfil">
 							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
 						</a>
 						<a href="#" class="image-perfil">
 							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
 						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+						<a href="#" class="image-perfil">
+							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
+						</a>
+					</div>
+
+					<div class="item">
+						<a href="#" class="image-perfil"></a>
+						<a href="#" class="image-perfil"></a>
 						<a href="#" class="image-perfil">
 							<img src="<?php echo THEMEPATH; ?>images/card.png" alt="imagen de perfil">
 						</a>
@@ -229,6 +199,15 @@
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
+
+
+		</div>
+
+
+
+
+
+
 
 
 
