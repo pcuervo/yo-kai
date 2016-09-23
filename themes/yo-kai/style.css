@@ -6546,21 +6546,26 @@ button.close {
 .carousel-control {
   width: 35px;
   background: transparent!important;
+}
+#myCarousel .carousel-inner .item {
+  width: 530px!important;
+}
+#myCarousel .carousel-control {
   margin-top: 30px;
 }
-.carousel-control .right {
+#myCarousel .carousel-control .right {
   text-align: right;
 }
-.carousel-control .left {
+#myCarousel .carousel-control .left {
   text-align: left;
 }
-.image-perfil {
+#myCarousel .image-perfil {
   display: inline-block;
   width: 18%;
   margin-right: 0.5%;
   margin-left: 0.5%;
 }
-.image-perfil .perfil-shadow {
+#myCarousel .image-perfil .perfil-shadow {
   background-color: rgba(0, 0, 0, 0.7);
   width: 95.391px;
   height: 95.391px;
@@ -6568,11 +6573,17 @@ button.close {
   position: absolute;
   top: 0;
 }
-.image-perfil .perfil-shadow.perfil-selected {
+#myCarousel .image-perfil .perfil-shadow.perfil-selected {
   display: none;
 }
-.image-perfil .perfil-shadow.perfil-unselected {
+#myCarousel .image-perfil .perfil-shadow.perfil-unselected {
   display: block;
+}
+#myCarousel.carousel-album .carousel-inner .item {
+  width: 730px!important;
+}
+#myCarousel.carousel-album .image-perfil {
+  width: 15%;
 }
 .clearfix:before,
 .clearfix:after,
@@ -6701,6 +6712,12 @@ button.close {
 }
 .margin-bottom--large {
   margin-bottom: 40px;
+}
+.margin-bottom--xlarge {
+  margin-bottom: 80px;
+}
+.margin-bottom--xxlarge {
+  margin-bottom: 120px;
 }
 .margin-top--large {
   margin-top: 40px;
