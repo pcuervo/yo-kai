@@ -72,11 +72,18 @@
 .margin-bottom--small		{ margin-bottom: (@margin-base/2); }
 .margin-bottom				{ margin-bottom: @margin-base; }
 .margin-bottom--large		{ margin-bottom: (@margin-base*2); }
+.margin-bottom--xlarge		{ margin-bottom: (@margin-base*4); }
+.margin-bottom--xxlarge		{ margin-bottom: (@margin-base*6); }
+
+.margin-top--large			{ margin-top: (@margin-base*2); }
+.margin-top--xlarge			{ margin-top: (@margin-base*3); }
+.margin-top--xxlarge		{ margin-top: (@margin-base*4); }
 
 .padding-top--xsmall		{ padding-top: (@padding-base/4); }
 .padding-top--small		{ padding-top: (@padding-base/2); }
 .padding-top				{ padding-top: @padding-base; }
 .padding-top--large		{ padding-top: (@padding-base*2); }
+.padding-top--xlarge		{ padding-top: (@padding-base*4); }
 
 .padding-bottom--xsmall		{ padding-bottom: (@padding-base/4); }
 .padding-bottom--small		{ padding-bottom: (@padding-base/2); }
@@ -92,12 +99,16 @@
 
 .right--0 			{ right: 0px }
 .left--0 			{ left: 0px }
+.bottom--48 		{ bottom: 48px }
+.bottom--50 		{ bottom: 50px }
+.top--40 			{ top: 40px; }
 
 //overflow
 .overflow-hidden	{overflow: hidden;}
 
 // Z-index
 .z-index---1		{ z-index: -1;}
+.z-index--1			{ z-index: 1;}
 
 // Displays
 .hidden				{ display: none; }
@@ -115,11 +126,15 @@
 //Size
 
 .width--100 		{ width: 100%; }
-.width--50 		{ width: 50%; }
+.width--50 			{ width: 50%; }
+.width--32 			{ width: 32%; }
 .width--600p 		{ width: 600px; }
 .width--800p 		{ width: 800px; }
+.width--100vw 		{ width: 100vw; }
+.height--100vh 		{ height: 100vh; }
 
 .height--170p 		{ height: 170px; }
+.height--450p 		{ height: 450px; }
 
 .max-width--100 { max-width: 100%; }
 
@@ -127,6 +142,8 @@
 
 .color-light		{ color: @light; }
 .color-primary		{ color: @color-primary; }
+.color-secondary	{ color: @color-secondary; }
+.color-dark 		{ color: @gray-base!important; }
 
 //Border
 
@@ -135,3 +152,96 @@
 .border-primary { border:2px solid @color-primary; }
 
 .border-radius--20 { border-radius: 23px; }
+
+.portrait-perfil {
+	position: relative; left: -50px;
+	img.portrait { width: 261px; }
+	img.avatar {
+		position: absolute;
+		top: 7px;
+		left: 6px;
+	}
+	.nombre {
+		text-transform: uppercase;
+		color: @color-secondary;
+		width: 110px;
+		position: absolute; top: 80px; left: 135px;
+		line-height: 15px;
+	}
+	.puntaje {
+		color: @light;
+		width: 65px;
+		position: absolute; top: 116px; left: 140px;
+		text-align: center;
+		font-weight: 600;
+	}
+	.border {
+		border: 2px solid @color-secondary;
+		border-radius: 50%;
+		width: 44px; height: 44px;
+		position: absolute; bottom: 2px; left: 37px;
+		.circle {
+			background-color: @color-secondary;
+			border: 2px solid @light;
+			text-align: center;
+			color: @light;
+			border-radius: 50%;
+			width: 40px; height: 40px;
+			padding-top: 3px;
+			p {
+				margin: 0px;
+				line-height: 15px;
+				font-size: 12px;
+			}
+		}
+	}
+}
+
+.box-raking {
+	height: 410px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	.nombre {
+		text-transform: uppercase;
+		color: @color-secondary;
+		line-height: 15px;
+		position: absolute; top: 40px; left: 130px;
+		margin-bottom: 0px;
+	}
+	.avatar {
+		width: 84px;
+		position: absolute; top: 5px; left: 19px;
+	}
+}
+
+.category-card {
+	border-left: 2px solid @color-secondary; border-top: 2px solid @color-secondary; border-right: 2px solid @color-secondary;
+	border-top-right-radius: 21px; border-top-left-radius: 21px;
+	display: inline-block;
+	margin: 0 5px;
+	a {
+		background-color: @color-secondary;
+		border-left: 2px solid @color-primary; border-top: 2px solid @color-primary; border-right: 2px solid @color-primary;
+		border-top-right-radius: 20px; border-top-left-radius: 20px;
+		width: 70px; height: 70px;
+		display: inline-block;
+		text-align: center;
+		text-decoration: none;
+		p { color: @color-primary; }
+		img { margin: auto; }
+		.img-initial { display: block; }
+		.img-hover { display: none; }
+	}
+	&:hover {
+		border-color: @color-primary;
+
+		a {
+			background-color: @color-primary;
+			border-color: @color-secondary;
+			color: @color-secondary;
+			width: 75px; height: 75px;
+			.img-initial { display: none; }
+			.img-hover { display: block; }
+		}
+	}
+}

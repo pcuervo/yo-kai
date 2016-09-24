@@ -280,26 +280,51 @@
   padding: 0 35px;
   & > .item { width: 530px!important; }
 }
+
 .carousel-control {
   width: 35px;
   background: transparent!important;
-  margin-top: 30px;
-  .right { text-align: right; }
-  .left { text-align: left; }
 }
-.image-perfil {
-  display: inline-block;
-  width: 18%;
-  margin-right: 0.5%; margin-left: 0.5%;
-  .perfil-shadow {
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 95.391px;
-    height: 95.391px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    &.perfil-selected { display: none; }
-    &.perfil-unselected { display: block; }
+
+#myCarousel {
+  .carousel-inner .item { width: 530px!important; }
+  .carousel-control {
+    margin-top: 30px;
+    .right { text-align: right; }
+    .left { text-align: left; }
+  }
+  .image-perfil,
+  .image-card {
+    display: inline-block;
+    width: 18%;
+    margin-right: 0.5%; margin-left: 0.5%;
+    .perfil-shadow {
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 95.391px;
+      height: 95.391px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      &.perfil-selected { display: none; }
+      &.perfil-unselected { display: block; }
+    }
   }
 }
 
+#myCarousel.carousel-album {
+  .carousel-inner .item { width: 730px!important; }
+  .image-card {
+    width: 15%;
+    margin-bottom: 30px;
+    position: relative;
+    .multiple-card {
+      position: absolute; bottom: -15px; left: 35px;
+      & + p {
+        position: absolute;
+        width: 107px;
+        bottom: -28px;
+      }
+    }
+  }
+  .carousel-control { margin-top: 185px; }
+}
