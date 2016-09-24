@@ -1,11 +1,12 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $current_user; ?>
 	<div class="[ width--800p ][ margin-auto ]">
 		<div class="row [ margin-bottom--large ][ height--450p ]">
 			<div class="col-xs-4">
 				<div class="[ portrait-perfil ][ z-index--1 ]">
 					<img class="[ portrait ]" src="<?php echo THEMEPATH; ?>images/portrait.png" alt="portada perfil">
 					<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="portada perfil">
-					<p class="[ nombre ]">Juancho panza</p>
+					<p class="[ nombre ]"><?php echo isset($current_user->user_login) ? $current_user->user_login : 'no login'; ?></p>
 					<p class="[ puntaje ]">44/44</p>
 					<div class="[ border ]">
 						<div class="[ circle ]">

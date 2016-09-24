@@ -3,7 +3,7 @@ if (isset($_GET['return']) AND $_GET['return'] == 'error') {
 	echo '<pre>';
 	print_r('Nickname ó contraseña incorrectos.');
 	echo '</pre>';
-}?>
+} ?>
 	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="<?php echo THEMEPATH; ?>images/spining-elements.png" alt="imagen spining elements">
 	<img class="[ absolute left--0 ]" src="<?php echo THEMEPATH; ?>images/chabon.png" alt="imagen chabon">
 	<img class="[ absolute right--0 ]" src="<?php echo THEMEPATH; ?>images/banda.png" alt="imagen banda">

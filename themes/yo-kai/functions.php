@@ -25,6 +25,8 @@ define( 'SITEURL', site_url('/') );
 
 require_once('inc/pages.php');
 require_once('inc/functions-users.php');
+require_once('inc/functions-post-type.php');
+
 
 
 /*------------------------------------*\
@@ -50,28 +52,6 @@ add_action( 'wp_enqueue_scripts', function(){
 if ( function_exists('add_theme_support') ){
 	add_theme_support('post-thumbnails');
 }
-
-// Modify default post-type labels
-function yokai_post_menu_label() {
-	global $menu;
-	global $submenu;
-	$menu[5][0] = 'Avatars';
-	$submenu['edit.php'][5][0] = 'Avatars';
-	echo '';
-}
-	
-function yokai_post_object_label() {
-	global $wp_post_types;
-	$labels = &$wp_post_types['post']->labels;
-	$labels->name = 'Avatars';
-	$labels->singular_name = 'Avatar';
-	$labels->add_new_item = 'Añadir nueva avatar';
-	$labels->edit_item = 'Editar historia';
-	$labels->search_items = 'Buscar Avatars';
-}
-	
-add_action( 'init', 'yokai_post_object_label' );
-add_action( 'admin_menu', 'yokai_post_menu_label' );
 
 /**
  * Regresa la url del attachment especificado
