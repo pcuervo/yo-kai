@@ -6065,6 +6065,22 @@ button.close {
     width: 900px;
   }
 }
+#concurso-terminado .modal-dialog {
+  text-align: center;
+  margin-top: 300px;
+}
+#concurso-terminado .modal-dialog .modal-content {
+  background: #E2262A;
+  border: 4px solid #FDC804;
+  padding: 80px 50px;
+  color: #FDC804;
+  margin-bottom: 50px;
+}
+#concurso-terminado .modal-dialog .modal-content img {
+  position: absolute;
+  top: -50px;
+  left: 190px;
+}
 .tooltip {
   position: absolute;
   z-index: 1070;
@@ -6851,6 +6867,12 @@ button.close {
 }
 .width--800p {
   width: 800px;
+}
+.width--100vw {
+  width: 100vw;
+}
+.height--100vh {
+  height: 100vh;
 }
 .height--170p {
   height: 170px;

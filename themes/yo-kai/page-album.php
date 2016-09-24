@@ -252,7 +252,23 @@
 				</div>
 			</div>
 		</div>
+	</div>
 
+	<!-- Button trigger modal -->
+	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#concurso-terminado">Modal</button>
 
+	<!-- Modal -->
+	<div class="modal fade" id="concurso-terminado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="[ absolute width--100vw height--100vh ]"></div>
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai watch">
+				<p>EL CONCURSO POR LOS PREMIOS HA TERMINADO. PUEDES SEGUIR USANDO EL ÁLBUM DIGITAL PARA DIVERTIRTE, PERO EL RANKING YA NO REGISTRARÁ MOVIMIENTOS A PARTIR DEL 5 DE ENERO DE 2017 A LAS 14 HR.</p>
+				<p>¡ESPERAMOS QUE HAYAS RESULTADO GANADOR!</p>
+			</div>
+			<div class="[ border-primary border-radius--20 ][ inline-block ][ margin-bottom ]">
+				<button type="button" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]" data-dismiss="modal">OK</button>
+			</div>
+		</div>
 	</div>
 <?php get_footer(); ?>
