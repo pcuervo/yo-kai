@@ -24,8 +24,8 @@ var $=jQuery.noConflict();
             $.get( url );
         });
 
-        $('.image-perfil').click(function(e){
-            e.preventDefault();
+        $('.image-perfil').on('click', function(event){
+            event.preventDefault();
 
             //Cuando ya hay un perfil seleccionado previamente
             $( ".image-perfil div.perfil-selected" ).removeClass('perfil-selected');
@@ -37,6 +37,9 @@ var $=jQuery.noConflict();
             if( $('.image-perfil div.perfil-selected').hasClass('perfil-unselected') ){
                 $( ".image-perfil div.perfil-selected" ).removeClass('perfil-unselected');
             }
+
+            var id = $(this).data('id');
+            $('#avatar-participante').val(id);
         });
 
     });

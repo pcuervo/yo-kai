@@ -44,7 +44,7 @@ class Participante{
 
 			$this->set_maquilador_role($participante_id, 'participante');
 
-			// FALTA GUARDAR LOS DATOS DEL TUTOR Y EL NICK NAME DEL PARTICIPANTE
+			$this->save_metadata_participante($participante_id, $args);
 
 			$this->auto_login($participante_id);
 
@@ -78,6 +78,18 @@ class Participante{
 		wp_set_current_user($participante_id, $username);
 		wp_set_auth_cookie($participante_id);
 		return true;
+	}
+
+
+	/**
+	 * METADATA DEL USUARIO
+	 */
+	private function save_metadata_participante($participante_id, $data){
+		update_user_meta($participante_id, '_avatar_id', $data['avatar-participante']);
+		update_user_meta($participante_id, '_nombre_tutor', $data['name-tutor']);
+		update_user_meta($participante_id, '_apellido_tutor', $data['last-name-tutor']);
+		update_user_meta($participante_id, '_telefono_tutor', $data['telephone-tutor']);
+		update_user_meta($participante_id, 'nickname', $data['nick-name-competitor']);
 	}
 
 }
