@@ -60,7 +60,8 @@ class Participante{
 	 * @param [type] $participante_id [description]
 	 * @param [type] $args            [description]
 	 */
-	private function set_completar_registro($participante_id, $args){
+	private function set_completar_registro($participante_id, $args)
+	{
 		$this->set_maquilador_role($participante_id, 'participante');
 
 		$this->save_metadata_participante($participante_id, $args);
@@ -99,7 +100,8 @@ class Participante{
 	/**
 	 * METADATA DEL USUARIO
 	 */
-	private function save_metadata_participante($participante_id, $data){
+	private function save_metadata_participante($participante_id, $data)
+	{
 		$nombre = $data['name-competitor'].' '.$data['last-name-competitor'];
 		update_user_meta($participante_id, '_avatar_id', $data['avatar-participante']);
 		update_user_meta($participante_id, '_nombre_tutor', $data['name-tutor']);
@@ -114,24 +116,19 @@ class Participante{
 	 * LOGIN PARTICIPANTE
 	 * @return [type] [description]
 	 */
-	public function participante_login(){
-
-		$user = get_user_by( 'email', $_POST['init-email'] );
-
+	public function participante_login($data)
+	{
 		$creds = array();
-		$creds['user_login'] = $user->user_login;
-		$creds['user_password'] = $_POST['init-pass'];
+		$creds['user_login'] = $data['login-nickname'];
+		$creds['user_password'] = $data['login-password'];
 
 		$user = wp_signon( $creds, false );
 
 		if ( is_wp_error($user) ) :
 			wp_redirect( '?return=error'); exit;
 		else:
-			if ($_POST['call-new-boom'] == 'new_boom') :
-				wp_redirect( site_url('/boom/nuevo/') ); exit;
-			else:
-				wp_redirect( site_url('/perfil/') ); exit;
-			endif;
+			wp_redirect( site_url('/bienvenido/') ); 
+			exit;
 		endif;
 	}
 

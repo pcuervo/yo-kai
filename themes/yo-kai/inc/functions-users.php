@@ -5,6 +5,20 @@ if (isset($_POST['action']) AND $_POST['action'] == 'crear-participante') {
 	$result = $participante->save($_POST);
 }
 
+/**	
+ * LOGIN DEL PARTICIPANTE
+ * @return [type] [description]
+ */
+function login_participante() {
+	if(isset($_POST['action'] ) && isset($_POST['action'] ) == 'login' ){
+		$user = new Participante();
+		$user->participante_login($_POST);
+	}
+
+}
+
+add_action( 'wp', 'login_participante');
+
 /**
  * REDIRECCIONA AL PARTICIPANTE SI QUIERE ENTRAR AL ADMIN
  */
