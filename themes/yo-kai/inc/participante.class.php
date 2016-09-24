@@ -32,28 +32,43 @@ class Participante{
 	public function save( $args = array() )
 	{
 		global $errors;
-		$nombre    = $args['name-competitor'].' '.$args['last-name-competitor'];
 		$password  = $args['password-competitor'];
 		$userLogin = $args['nick-name-competitor'];
 		$email     = $args['email-tutor'];
 
-		$participante_id = $this->create($nombre, $password, $email);
+		$user_id = username_exists( $userLogin );
 
-		if( ! is_wp_error($participante_id) ){
-			$new_user = true;
+		if ( !$user_id and email_exists($email) == false ) {
+			$participante_id = $this->create($userLogin, $password, $email);
 
-			$this->set_maquilador_role($participante_id, 'participante');
+			if( ! is_wp_error($participante_id) ){
+				return $this->set_completar_registro($participante_id, $args);
+			}elseif(email_exists($email) == true){
+				$errors = $participante_id->get_error_message();
+			}
 
-			$this->save_metadata_participante($participante_id, $args);
-
-			$this->auto_login($participante_id);
-
-			wp_redirect( site_url('/bienvenido/') );
-			exit;
+		}elseif(email_exists($email) == true){
+			$errors = 'El email ya esta registrado.';
 		}else{
-			$errors = $participante_id->get_error_message();
+			$errors = 'El nickname ya esta en uso.';
 		}
 
+	}
+
+	/**
+	 * COMPLETA EL REGISTRO DEL USUARIO
+	 * @param [type] $participante_id [description]
+	 * @param [type] $args            [description]
+	 */
+	private function set_completar_registro($participante_id, $args){
+		$this->set_maquilador_role($participante_id, 'participante');
+
+		$this->save_metadata_participante($participante_id, $args);
+
+		$this->auto_login($participante_id);
+
+		wp_redirect( site_url('/bienvenido/') );
+		exit;
 	}
 
 	/**
@@ -85,11 +100,39 @@ class Participante{
 	 * METADATA DEL USUARIO
 	 */
 	private function save_metadata_participante($participante_id, $data){
+		$nombre = $data['name-competitor'].' '.$data['last-name-competitor'];
 		update_user_meta($participante_id, '_avatar_id', $data['avatar-participante']);
 		update_user_meta($participante_id, '_nombre_tutor', $data['name-tutor']);
 		update_user_meta($participante_id, '_apellido_tutor', $data['last-name-tutor']);
 		update_user_meta($participante_id, '_telefono_tutor', $data['telephone-tutor']);
 		update_user_meta($participante_id, 'nickname', $data['nick-name-competitor']);
+		wp_update_user( [ 'ID' => $participante_id, 'display_name' => $nombre]);
+	}
+
+
+	/**
+	 * LOGIN PARTICIPANTE
+	 * @return [type] [description]
+	 */
+	public function participante_login(){
+
+		$user = get_user_by( 'email', $_POST['init-email'] );
+
+		$creds = array();
+		$creds['user_login'] = $user->user_login;
+		$creds['user_password'] = $_POST['init-pass'];
+
+		$user = wp_signon( $creds, false );
+
+		if ( is_wp_error($user) ) :
+			wp_redirect( '?return=error'); exit;
+		else:
+			if ($_POST['call-new-boom'] == 'new_boom') :
+				wp_redirect( site_url('/boom/nuevo/') ); exit;
+			else:
+				wp_redirect( site_url('/perfil/') ); exit;
+			endif;
+		endif;
 	}
 
 }

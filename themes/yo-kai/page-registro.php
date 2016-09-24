@@ -1,4 +1,10 @@
-<?php get_header(); ?>
+<?php get_header(); 
+global $errors;
+if ($errors != '') {
+	echo '<pre>';
+	print_r($errors);
+	echo '</pre>';
+} ?>
 	<img class="[ absolute ][ width--50 ][ margin-left--25p ][ z-index---1 ]" src="<?php echo THEMEPATH; ?>images/spining-elements.png" alt="imagen spining elements">
 	<div class="[ margin-bottom margin-auto ][ width--600p ]">
 		<h2 class="[ color-primary ][ text-center ]">Introduce tus datos y los de tu papá, mamá o tutor.</h2>
