@@ -42,6 +42,9 @@ var $=jQuery.noConflict();
             $('#avatar-participante').val(id);
         });
 
+
+        // CARGAR MEDALLA
+
     });
 })(jQuery);
 

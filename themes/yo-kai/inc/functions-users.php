@@ -1,8 +1,14 @@
 <?php require_once('participante.class.php');
+require_once('medallas.class.php');
 
 if (isset($_POST['action']) AND $_POST['action'] == 'crear-participante') {
-	$participante = new Participante();
-	$result = $participante->save($_POST);
+	$participante_class = new Participante();
+	$result = $participante_class->save($_POST);
+}
+
+if (isset($_POST['action']) AND $_POST['action'] == 'cargar-nueva-medalla') {
+	$medallas_class = new Medallas();
+	$result = $medallas_class->save($_POST);
 }
 
 /**	
@@ -10,9 +16,9 @@ if (isset($_POST['action']) AND $_POST['action'] == 'crear-participante') {
  * @return [type] [description]
  */
 function login_participante() {
-	if(isset($_POST['action'] ) && isset($_POST['action'] ) == 'login' ){
-		$user = new Participante();
-		$user->participante_login($_POST);
+	if(isset($_POST['action'] ) && $_POST['action'] == 'login' ){
+		$participante_class = new Participante();
+		$participante_class->participante_login($_POST);
 	}
 
 }
@@ -34,21 +40,3 @@ function no_participante_dashboard() {
  */
 $administrator = get_role('author');
 add_role( 'participante', 'Participante', $administrator->capabilities );
-
-// $arr = [
-// 	'85' => [
-// 		'codigo' => '0231892301',
-// 		'count' => '1'
-// 	],
-// 	'80' => [
-// 		'codigo' => '0231892315',
-// 		'count' => '2'
-// 	],
-// 	'70' => [
-// 		'codigo' => '0231892344',
-// 		'count' => '5'
-// 	]
-
-// ];
-
-// update_user_meta(1, 'medallas', $arr);

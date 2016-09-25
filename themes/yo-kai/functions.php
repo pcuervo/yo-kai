@@ -1,4 +1,6 @@
 <?php global $errors;
+global $cargaMedalla;
+global $idMedalla;
 
 /*------------------------------------*\
 	#CONSTANTS
