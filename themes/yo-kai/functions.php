@@ -26,6 +26,8 @@ define( 'SITEURL', site_url('/') );
 require_once('inc/pages.php');
 require_once('inc/functions-users.php');
 require_once('inc/functions-post-type.php');
+require_once('inc/functions-metaboxes.php');
+
 
 
 

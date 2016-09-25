@@ -34,3 +34,21 @@ function no_participante_dashboard() {
  */
 $administrator = get_role('author');
 add_role( 'participante', 'Participante', $administrator->capabilities );
+
+// $arr = [
+// 	'85' => [
+// 		'codigo' => '0231892301',
+// 		'count' => '1'
+// 	],
+// 	'80' => [
+// 		'codigo' => '0231892315',
+// 		'count' => '2'
+// 	],
+// 	'70' => [
+// 		'codigo' => '0231892344',
+// 		'count' => '5'
+// 	]
+
+// ];
+
+// update_user_meta(1, 'medallas', $arr);

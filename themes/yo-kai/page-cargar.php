@@ -3,18 +3,8 @@
 		<img class="[ absolute right--0 bottom--50 ]" src="<?php echo THEMEPATH; ?>images/fondo-cargar.png" alt="fondo de personajes">
 		<div class="row [ margin-bottom--large ]">
 			<div class="col-xs-5">
-				<div class="[ portrait-perfil ]">
-					<img class="[ portrait ]" src="<?php echo THEMEPATH; ?>images/portrait.png" alt="portada perfil">
-					<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="portada perfil">
-					<p class="[ nombre ]">Juancho panza</p>
-					<p class="[ puntaje ]">44/44</p>
-					<div class="[ border ]">
-						<div class="[ circle ]">
-							<p>Nº</p>
-							<p>888</p>
-						</div>
-					</div>
-				</div>
+				<!-- Portrait perfil -->
+				<?php get_template_part( 'templates/portrait', 'perfil' ); ?>
 			</div>
 			<div class="col-xs-7">
 				<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">CARGA TU NUEVA MEDALLA EN TU ÁLBUM DIGITAL. </h2>
