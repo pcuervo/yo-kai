@@ -11,6 +11,8 @@ if (isset($_POST['action']) AND $_POST['action'] == 'cargar-nueva-medalla') {
 	$result = $medallas_class->save($_POST);
 }
 
+Medallas::createTableMedallasParticipante();
+
 /**	
  * LOGIN DEL PARTICIPANTE
  * @return [type] [description]

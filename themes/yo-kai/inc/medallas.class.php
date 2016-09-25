@@ -12,11 +12,7 @@ class Medallas{
 	{
 		global $wpdb;
 		$this->wpdb = &$wpdb;
-		$this->tableNameConteos = $this->wpdb->prefix.'lista_medallas_participantes';
-
-		if($this->wpdb->get_var("SHOW TABLES LIKE '{$this->tableNameConteos}'") != $this->tableNameConteos){
-			$this->createTableMedallasParticipante();
-		}
+		$this->tableNameConteos = $this->wpdb->prefix.'lista_medallas_participantes';	
 	}
 
 
@@ -114,11 +110,13 @@ class Medallas{
 			$this->tableNameConteos,
 			array(
 				'participante_id'    => $participante_id,
-				'numero_de_medallas' => $total
+				'numero_de_medallas' => $total,
+				'fecha_ultima_actualizacion' => date('Y-m-d h:i:s')
 			),
 			array(
 				'%d',
-				'%d'
+				'%d',
+				'%s'
 			)
 		);
 
@@ -133,11 +131,13 @@ class Medallas{
 		$this->wpdb->update( 
 			$this->tableNameConteos, 
 			array( 
-				'numero_de_medallas' => $total
+				'numero_de_medallas' => $total,
+				'fecha_ultima_actualizacion' => date('Y-m-d h:i:s')
 			), 
 			array( 'participante_id' => $participante_id ), 
 			array( 
-				'%d'
+				'%d',
+				'%s'
 			)
 		);
 
@@ -145,15 +145,51 @@ class Medallas{
 	}
 
 	/**	
+	 * REGRESA EL TOTAL DE MEDALLAS DEL PARTICIPANTE
+	 * @param  [type] $participanteId [description]
+	 * @return [type]                 [description]
+	 */
+	static function getTotalMedallasParticipanteTabla($participante_id)
+	{
+		global $wpdb;
+		return $wpdb->get_var( $wpdb->prepare(
+			"SELECT numero_de_medallas FROM {$wpdb->prefix}lista_medallas_participantes
+				WHERE participante_id = %d;",
+			$participante_id
+		));
+	}
+
+	/**
+	 * RANKING DEL PARTICIPANTE 
+	 */
+	static function getRankingParticipanteId($participante_id){
+		global $wpdb;
+		return $wpdb->get_var( $wpdb->prepare(
+			"SELECT FIND_IN_SET( numero_de_medallas, (    
+			SELECT GROUP_CONCAT( numero_de_medallas
+			ORDER BY numero_de_medallas DESC ) 
+			FROM {$wpdb->prefix}lista_medallas_participantes )
+			) AS rank
+			FROM {$wpdb->prefix}lista_medallas_participantes	
+			WHERE participante_id = %d
+			ORDER BY numero_de_medallas DESC",
+			$participante_id
+		));
+		
+	}
+
+	/**	
 	 * CREAR TALA PARA LLEVAR EL CONTEO DE LAS MEDALLAS DE LOS PARTICIPANTES
 	 */
-	private function createTableMedallasParticipante()
+	static function createTableMedallasParticipante()
 	{
-		$this->wpdb->query(
-			"CREATE TABLE IF NOT EXISTS ".$this->tableNameConteos." (
+		global $wpdb;
+		$wpdb->query(
+			"CREATE TABLE IF NOT EXISTS {$wpdb->prefix}lista_medallas_participantes (
 				id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 				participante_id BIGINT(20) NOT NULL,
 				numero_de_medallas BIGINT(20) NOT NULL,
+				fecha_ultima_actualizacion datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
 				PRIMARY KEY (id),
 				KEY participante_id (participante_id)
 			) ENGINE=InnoDB AUTO_INCREMENT=1 CHARSET=utf8;"
