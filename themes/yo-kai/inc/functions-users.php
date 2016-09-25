@@ -42,3 +42,12 @@ function no_participante_dashboard() {
  */
 $administrator = get_role('author');
 add_role( 'participante', 'Participante', $administrator->capabilities );
+
+
+/**	
+ * REGRESA EL AVATAR DEL USUARIO
+ */
+function getAvatarParticipanteId($participante_id){
+	$id_avatar = get_user_meta($participante_id, '_avatar_id', true);
+	return attachment_image_url( $id_avatar, 'full');
+}
