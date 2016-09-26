@@ -33,7 +33,7 @@
 
 	</head>
 
-	<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>
+	<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>
 		<body>
 	<?php } else { ?>
 		<body class="bg-image--primary">
@@ -41,7 +41,7 @@
 		<a class="bt-logout hidden" href="<?php echo wp_logout_url(); ?>">LOG OUT</a>
 		<header class="[ js-header ]">
 
-			<?php if ( is_front_page() || is_page('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad' )) { ?>
+			<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>
 				<a class="[ block ][ text-center ]" href="<?php echo site_url('/'); ?>">
 					<img class="[ width--100 max-width--1024p ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">
 				</a>
