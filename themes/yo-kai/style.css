@@ -2606,7 +2606,7 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 40px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857143;
@@ -2662,7 +2662,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 34px;
+    line-height: 40px;
   }
   input[type="date"].input-sm,
   input[type="time"].input-sm,
@@ -2839,7 +2839,7 @@ select[multiple].input-lg {
   position: relative;
 }
 .has-feedback .form-control {
-  padding-right: 42.5px;
+  padding-right: 50px;
 }
 .form-control-feedback {
   position: absolute;
@@ -2847,9 +2847,9 @@ select[multiple].input-lg {
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   pointer-events: none;
 }
@@ -3062,8 +3062,9 @@ input {
   margin: auto!important;
   border: 4px solid #FDC804!important;
   border-radius: 20px!important;
-  padding: 16px 12px!important;
+  padding: 0px 12px!important;
   font-size: 18px!important;
+  -moz-box-sizing: border-box;
 }
 input[type="checkbox"] {
   width: 30px!important;
@@ -4486,8 +4487,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 @media (min-width: 768px) {
   .navbar-form .form-group {
@@ -4572,8 +4573,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   border-bottom-left-radius: 0;
 }
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .navbar-btn.btn-sm {
   margin-top: 10px;
