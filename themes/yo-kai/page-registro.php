@@ -104,13 +104,13 @@ if ($errors != '') {
 			<div class="row [ margin-bottom--large ]">
 				<div class="form-check col-sm-6">
 					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones">
-					<label for="terminos-y-condiciones"><span></span>
+					<label class="[ line-height--30 ]" for="terminos-y-condiciones"><span></span>
 						<a href="<?php echo site_url('/terminos-y-condiciones'); ?>">Acepto Términos y Condiciones</a>
 					</label>
 				</div>
 				<div class="form-check col-sm-6">
 					<input type="checkbox" id="autorizacion" name="autorizacion">
-					<label class="[ color-light ]" for="autorizacion"><span></span>
+					<label class="[ line-height--30 ][ color-light ]" for="autorizacion"><span></span>
 						Autorizo a mi hijo(a) a utilizar la plataforma y a participar en el concurso Yokai
 					</label>
 				</div>
