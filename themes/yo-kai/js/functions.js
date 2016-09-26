@@ -74,8 +74,9 @@ $('video').hover(function toggleControls() {
     } else {
         this.setAttribute("controls", "controls")
     }
-})
+});
 
+//Display de medalla cargada
 $("#medalla-cargada").delay(3000).queue(function(){
     $(this).removeClass("hidden").dequeue();
     $(this).addClass("block").dequeue();
@@ -83,3 +84,11 @@ $("#medalla-cargada").delay(3000).queue(function(){
 
 console.log('asdasd');
 
+//formato para COOKIES
+// date(DATE_COOKIE);
+//   alert(DATE_COOKIE);
+// function modalOpen(){
+
+
+//     $( ".image-perfil div.perfil-selected" ).addClass('perfil-unselected');
+// }
