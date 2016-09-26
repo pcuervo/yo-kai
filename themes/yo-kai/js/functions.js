@@ -3,6 +3,18 @@ var $=jQuery.noConflict();
 (function($){
     "use strict";
     $(function(){
+         /**
+         * LOGOUT AL CERRAR VENTANA
+         */
+        $(window).unload(function() {
+            var url = $('.bt-logout').attr('href');
+            $.get( url );
+
+            // var xmlHttp = new XMLHttpRequest();
+            // xmlHttp.open( "GET", url, false ); // false para asincrona
+            // xmlHttp.send( null );
+        });
+
         /*------------------------------------*\
             #GLOBAL
         \*------------------------------------*/
@@ -15,14 +27,6 @@ var $=jQuery.noConflict();
             footerBottom();
         });
 
-
-        /**
-         * LOGOUT AL CERRAR VENTANA
-         */
-        $(window).unload(function() {
-            var url = $('.bt-logout').attr('href');
-            $.get( url );
-        });
 
         $('.image-perfil').on('click', function(event){
             event.preventDefault();

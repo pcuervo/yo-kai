@@ -1,4 +1,8 @@
-<?php get_header(); 
+<?php get_header();
+file_put_contents(
+ 	'/Users/alejandrosandoval/Desktop/php.txt',
+ 	var_export( 'siiiiii', true )
+ ); 
 global $errors;
 global $cargaMedalla;
 global $idMedalla;
