@@ -1,9 +1,9 @@
-<?php get_header(); 
-global $current_user; 
+<?php get_header();
+global $current_user;
 $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 	<div class="[ width--800p ][ margin-auto ]">
 		<div class="row [ margin-bottom--large ][ height--450p ]">
-			
+
 			<div class="col-xs-4">
 				<!-- Portrait perfil -->
 				<?php get_template_part( 'templates/portrait', 'perfil' ); ?>
@@ -22,12 +22,12 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 
-					<?php $result = new WP_Query( 
+					<?php $result = new WP_Query(
 						array(
-							'posts_per_page' => -1, 
+							'posts_per_page' => -1,
 							'post_type' => 'medallas',
 							'category_name' => $category_slug
-						) 
+						)
 					);
 
 					if ( !empty($result->posts) ):
@@ -38,11 +38,11 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 	                   		echo '<div class="item '.$class.'">';
 		                   		echo '<div class="[ inline-block width--32 ]"></div>';
 		                    	foreach ($medallas as $key => $medalla):
-		                    		$imagen = attachment_image_url( $medalla->ID, 'full'); ?> 
+		                    		$imagen = attachment_image_url( $medalla->ID, 'full'); ?>
 		                    		<a href="#" class="image-card">
 		                    			<?php $url_image = THEMEPATH.'images/no-card.png';
 		                    			$url_image = isset($medallas_participante[$medalla->ID]) ? $imagen : $url_image; ?>
-										
+
 										<img src="<?php echo $url_image; ?>" alt="imagen de perfil">
 										<?php if (isset($medallas_participante[$medalla->ID]) AND $medallas_participante[$medalla->ID]['count'] > 1 ): ?>
 											<img class="[ multiple-card ]" src="<?php echo THEMEPATH; ?>images/multiple.png" alt="imagen de perfil">
@@ -56,7 +56,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
                     endif; ?>
                 </div>
 
-					
+
 				<!-- Left and right controls -->
 				<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
 					<img src="<?php echo THEMEPATH; ?>images/perfil/arrow-left.png" alt="arrow de perfil">
@@ -77,6 +77,16 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 		<div class="[ absolute bottom--48 ]">
 			<div class="[ text-center ]">
 				<div class="[ category-card ]">
+					<a href="<?php echo site_url('/album/'); ?>">
+						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
+						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
+					</a>
+				</div><div class="[ category-card ]">
+					<a href="<?php echo site_url('/album/'); ?>">
+						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
+						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
+					</a>
+				</div><div class="[ category-card ]">
 					<a href="<?php echo site_url('/album/'); ?>">
 						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
 						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">

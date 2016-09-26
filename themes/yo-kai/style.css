@@ -7033,6 +7033,10 @@ button.close {
   border-top-left-radius: 21px;
   display: inline-block;
   margin: 0 5px;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .category-card a {
   background-color: #E2262A;
@@ -7046,6 +7050,10 @@ button.close {
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  -webkit-transition: all 0.15s ease-in-out;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .category-card a p {
   color: #FDC804;
