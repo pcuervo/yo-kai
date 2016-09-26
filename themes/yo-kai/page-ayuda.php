@@ -11,7 +11,7 @@
 	</div>
 	<div class="form-group [ margin-bottom--large ]">
 		<label for="exampleTextarea" class="[ hidden ]">Mensaje</label>
-		<textarea class="form-control" id="exampleTextarea" rows="9"></textarea>
+		<textarea class="form-control" id="exampleTextarea" rows="9" placeholder="Escríbe aquí tu consulta"></textarea>
 	</div>
 	<div class="[ text-center ]">
 		<div class="[ border-primary border-radius--20 ][ inline-block ]">

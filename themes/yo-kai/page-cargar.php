@@ -43,7 +43,7 @@ if ($errors != '') {
 					<form method="POST" data-parsley-validate>
 						<div class="form-group [ margin-bottom--large ]">
 							<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
-							<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
+							<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
 						</div>
 						<div class="[ border-primary border-radius--20 ][ inline-block ]">
 							<input type="hidden" name="action" value="cargar-nueva-medalla">

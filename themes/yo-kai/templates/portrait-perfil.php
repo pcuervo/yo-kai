@@ -13,7 +13,7 @@ $imagen_perfil = getAvatarParticipanteId($current_user->ID) ?>
 	<div class="[ border ]">
 		<div class="[ circle ]">
 			<p>Nº</p>
-			<p><?php echo $rankingParticipante != '' ? $rankingParticipante : 0; ?></p>
+			<p class="[ font-peace_sansregular ]"><?php echo $rankingParticipante != '' ? $rankingParticipante : 0; ?></p>
 		</div>
 	</div>
 </div>

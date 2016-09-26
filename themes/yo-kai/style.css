@@ -1071,7 +1071,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'GillSans', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -1204,6 +1204,69 @@ hr {
 [role="button"] {
   cursor: pointer;
 }
+@font-face {
+  font-family: 'peace_sansregular';
+  src: url('fonts/peace_sans-webfont.woff2') format('woff2'), url('fonts/peace_sans-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans';
+  src: url('fonts/GillSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Italic';
+  src: url('fonts/GillSans-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GillSans-SemiBoldItalic';
+  src: url('fonts/GillSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GillSans-SemiBold';
+  src: url('fonts/GillSans-SemiBold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-Light';
+  src: url('fonts/GillSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GillSans-LightItalic';
+  src: url('fonts/GillSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GillSans-Bold';
+  src: url('fonts/GillSans-Bold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GillSans-BoldItalic';
+  src: url('fonts/GillSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'GillSans-UltraBold';
+  src: url('fonts/GillSans-UltraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+.font-peace_sansregular {
+  font-family: 'peace_sansregular';
+}
 h1,
 h2,
 h3,
@@ -1216,7 +1279,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: inherit;
+  font-family: 'peace_sansregular';
   font-weight: 500;
   line-height: 1.1;
   color: inherit;
@@ -1328,6 +1391,11 @@ h2 {
 }
 p {
   margin: 0 0 10px;
+  font-size: 18px;
+}
+a,
+label {
+  font-size: 18px;
 }
 .lead {
   margin-bottom: 20px;
@@ -3580,13 +3648,15 @@ input[type="button"].btn-block {
   width: 100%;
 }
 .btn--primary {
+  font-family: 'peace_sansregular';
   background-color: #FDC804;
   color: #E2262A;
   border: 2px solid #E2262A;
-  height: 60px;
+  height: 50px;
+  line-height: 38px;
   text-transform: uppercase;
-  border-radius: 20px;
-  font-size: 26px;
+  border-radius: 15px;
+  font-size: 24px;
   font-weight: 600;
   width: 296px;
 }
@@ -6966,7 +7036,7 @@ a:hover .color-primary--hover {
   border: 2px solid #FDC804;
 }
 .border-radius--20 {
-  border-radius: 23px;
+  border-radius: 18px;
 }
 .portrait-perfil {
   position: relative;
@@ -6981,6 +7051,7 @@ a:hover .color-primary--hover {
   left: 6px;
 }
 .portrait-perfil .nombre {
+  font-family: 'peace_sansregular';
   text-transform: uppercase;
   color: #E2262A;
   width: 110px;
@@ -7368,7 +7439,7 @@ header .nav-header > div > div a {
   text-decoration: none;
   padding: 15px 20px;
   display: inline-block;
-  font-weight: 400;
+  font-family: 'peace_sansregular';
 }
 header .nav-header > div > div a:hover,
 header .nav-header > div > div a.active {

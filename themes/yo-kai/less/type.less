@@ -2,13 +2,79 @@
 // Typography
 // --------------------------------------------------
 
+//Font Face
+
+@font-face {
+    font-family: 'peace_sansregular';
+    src: url('fonts/peace_sans-webfont.woff2') format('woff2'),
+         url('fonts/peace_sans-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GillSans';
+    src: url('fonts/GillSans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GillSans-Italic';
+    src: url('fonts/GillSans-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GillSans-SemiBoldItalic';
+    src: url('fonts/GillSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+
+}
+@font-face {
+    font-family: 'GillSans-SemiBold';
+    src: url('fonts/GillSans-SemiBold.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GillSans-Light';
+    src: url('fonts/GillSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GillSans-LightItalic';
+    src: url('fonts/GillSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GillSans-Bold';
+    src: url('fonts/GillSans-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GillSans-BoldItalic';
+    src: url('fonts/GillSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'GillSans-UltraBold';
+    src: url('fonts/GillSans-UltraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.font-peace_sansregular { font-family: 'peace_sansregular'; }
 
 // Headings
 // -------------------------
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: @headings-font-family;
+  font-family: 'peace_sansregular';
   font-weight: @headings-font-weight;
   line-height: @headings-line-height;
   color: @headings-color;
@@ -64,7 +130,10 @@ h2 {
 
 p {
   margin: 0 0 (@line-height-computed / 2);
+  font-size: 18px;
 }
+
+a, label { font-size: 18px; }
 
 .lead {
   margin-bottom: @line-height-computed;

@@ -9,7 +9,7 @@ if ($errors != '') {
 	<div class="[ margin-bottom margin-auto ][ width--600p ]">
 		<h2 class="[ color-primary ][ text-center ]">Introduce tus datos y los de tu papá, mamá o tutor.</h2>
 		<form method="POST" class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>
-			<p>Datos del participante</p>
+			<p class="[ font-peace_sansregular ]">Datos del participante</p>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputName">Nombre</label>
@@ -80,7 +80,7 @@ if ($errors != '') {
 				</a>
 			</div>
 
-			<p>Datos TUTOR</p>
+			<p class="[ font-peace_sansregular ]">Datos TUTOR</p>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputNameTutor">Nombre</label>

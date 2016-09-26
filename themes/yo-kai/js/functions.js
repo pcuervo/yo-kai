@@ -88,7 +88,15 @@ console.log('asdasd');
 // date(DATE_COOKIE);
 //   alert(DATE_COOKIE);
 // function modalOpen(){
-
+function display() {
+  var now = new Date();
+  var time = now.getTime();
+  var expireTime = time + 1000*36000;
+  now.setTime(expireTime);
+  var tempExp = 'Wed, 31 Oct 2012 08:50:17 GMT';
+  document.cookie = 'cookie=ok;expires='+now.toGMTString()+';path=/';
+  //console.log(document.cookie);
+}
 
 //     $( ".image-perfil div.perfil-selected" ).addClass('perfil-unselected');
 // }
