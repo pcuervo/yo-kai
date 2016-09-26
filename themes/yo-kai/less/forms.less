@@ -646,3 +646,21 @@ textarea {
   }
 }
 
+
+//Style input checkout
+input[type="checkbox"]{ display: none; }
+input[type="checkbox"] + label span{
+    display: inline-block;
+    width: 25px; height: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid @light;
+    margin: 4px 4px 5px 0;
+    vertical-align: middle;
+    cursor:pointer;
+    &:after{
+      content: '';
+      position: relative;
+    }
+}
+input[type="checkbox"]:checked + label span{ background-color: @light; }

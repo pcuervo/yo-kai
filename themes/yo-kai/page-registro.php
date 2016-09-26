@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php get_header();
 global $errors;
 if ($errors != '') {
 	echo '<pre>';
@@ -57,7 +57,7 @@ if ($errors != '') {
 	                   		$class = $count == 1 ? 'active' : '';
 	                   		echo '<div class="item '.$class.'">';
 	                    	foreach ($avatars as $key => $avatar):
-	                    		$imagen = attachment_image_url( $avatar->ID, 'full'); ?> 
+	                    		$imagen = attachment_image_url( $avatar->ID, 'full'); ?>
 	                    		<a href="#" data-id="<?php echo $avatar->ID; ?>" class="image-perfil">
 									<img src="<?php echo $imagen; ?>" alt="imagen de perfil">
 									<div class="[ perfil-shadow perfil-unselected ]"></div>
@@ -103,14 +103,14 @@ if ($errors != '') {
 			</div>
 			<div class="row [ margin-bottom--large ]">
 				<div class="form-check col-sm-6">
-					<label class="form-check-label [ color-light ]">
-						<input type="checkbox" data-parsley-mincheck="2" class="form-check-input">
+					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones">
+					<label for="terminos-y-condiciones"><span></span>
 						<a href="<?php echo site_url('/terminos-y-condiciones'); ?>">Acepto Términos y Condiciones</a>
 					</label>
 				</div>
 				<div class="form-check col-sm-6">
-					<label class="form-check-label [ color-light ]">
-						<input type="checkbox" class="form-check-input">
+					<input type="checkbox" id="autorizacion" name="autorizacion">
+					<label class="[ color-light ]" for="autorizacion"><span></span>
 						Autorizo a mi hijo(a) a utilizar la plataforma y a participar en el concurso Yokai
 					</label>
 				</div>
