@@ -81,16 +81,6 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
 						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
 					</a>
-				</div><div class="[ category-card ]">
-					<a href="<?php echo site_url('/album/'); ?>">
-						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
-						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
-					</a>
-				</div><div class="[ category-card ]">
-					<a href="<?php echo site_url('/album/'); ?>">
-						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
-						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
-					</a>
 				</div>
 				<?php $terms = get_terms( 'category', ['hide_empty' => false] );
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):

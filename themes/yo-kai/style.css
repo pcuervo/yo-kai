@@ -1585,6 +1585,9 @@ p {
 .text-uppercase {
   text-transform: uppercase;
 }
+.text-decoration-none {
+  text-decoration: none!important;
+}
 .font-size--24 {
   font-size: 24px;
 }
@@ -6938,6 +6941,9 @@ button.close {
 }
 .color-dark {
   color: #000 !important;
+}
+a:hover .color-primary--hover {
+  color: #FDC804;
 }
 .border-bottom--primary {
   border-bottom: 2px solid #FDC804;

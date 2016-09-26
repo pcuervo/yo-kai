@@ -11,7 +11,7 @@
 	</div>
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-12">
-			<video class="[ max-width--100 ]" controls>
+			<video class="[ max-width--100 ]">
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
@@ -21,7 +21,7 @@
 	</div>
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-6">
-			<video class="[ max-width--100 ]" controls>
+			<video class="[ max-width--100 ]">
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
@@ -29,7 +29,7 @@
 			<h3 class="[ color-light ][ text-uppercase ]">Nombre del video 2</h3>
 		</div>
 		<div class="col-xs-6">
-			<video class="[ max-width--100 ]" controls>
+			<video class="[ max-width--100 ]">
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
@@ -39,12 +39,16 @@
 	</div>
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-6">
-			<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/productos.png" alt="productos">
-			<h3 class="[ color-light ][ text-uppercase ]">Encuentra aquí los productos Yo-kai</h3>
+			<a href="#" class="[ text-decoration-none block ]">
+				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/productos.png" alt="productos">
+				<h3 class="[ color-light ][ text-uppercase ][ color-primary--hover ]">Encuentra aquí los productos Yo-kai</h3>
+			</a>
 		</div>
 		<div class="col-xs-6">
-			<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/mas-videos.png" alt="imagen más videos">
-			<h3 class="[ color-light ][ text-uppercase ]">¡Mira más videos!</h3>
+			<a href="#" class="[ text-decoration-none block ]">
+				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/mas-videos.png" alt="imagen más videos">
+				<h3 class="[ color-light ][ text-uppercase ][ color-primary--hover ]">¡Mira más videos!</h3>
+			</a>
 		</div>
 	</div>
 </div>

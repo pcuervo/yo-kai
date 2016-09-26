@@ -67,4 +67,14 @@ function getFooterHeight(){
     return $('footer').outerHeight();
 }
 
+//Show controls video
+$('video').hover(function toggleControls() {
+    if (this.hasAttribute("controls")) {
+        this.removeAttribute("controls")
+    } else {
+        this.setAttribute("controls", "controls")
+    }
+})
+
 console.log('asdasd');
+
