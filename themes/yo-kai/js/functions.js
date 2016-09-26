@@ -83,11 +83,26 @@ $("#medalla-cargada").delay(3000).queue(function(){
     $(this).addClass("block").dequeue();
 });
 
+
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    alert(d);
+    d.setTime(d.getTime() + (exdays*1*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+
+
 //Open Modal
 function openModal(){
-     $('.circle').on('click', function(event){
-        $('#concurso-terminado').modal('show');
-    });
+    document.cookie="Limite=finalConcurso; expires=5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
+    console.log(document.cookie);
+    console.log(new Date().toGMTString());
+    if (document.cookie.indexOf("Limite") < 0) {
+       $('#concurso-terminado').modal('show');
+    }
 }
+
 
 console.log('asdasd');
