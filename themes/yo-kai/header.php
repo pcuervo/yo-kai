@@ -49,17 +49,17 @@
 				<div class="[ nav-header ]">
 					<div>
 						<div>
-							<a href="<?php echo site_url('/album'); ?>">Álbum</a>
-							<a href="<?php echo site_url('/cargar'); ?>">Cargar</a>
-							<a href="<?php echo site_url('/ranking'); ?>">Ranking</a>
+							<a class="<?php if(is_page('album')) echo 'active'; ?>" href="<?php echo site_url('/album'); ?>">Álbum</a>
+							<a class="<?php if(is_page('cargar')) echo 'active'; ?>" href="<?php echo site_url('/cargar'); ?>">Cargar</a>
+							<a class="<?php if(is_page('ranking')) echo 'active'; ?>" href="<?php echo site_url('/ranking'); ?>">Ranking</a>
 							<div>
 								<a href="<?php echo site_url('/'); ?>">
 									<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai">
 								</a>
 							</div>
-							<a href="<?php echo site_url('/descargables'); ?>">Descargables</a>
-							<a href="<?php echo site_url('/videos'); ?>">Videos</a>
-							<a href="<?php echo site_url('/ayuda'); ?>">Ayuda</a>
+							<a class="<?php if(is_page('descargables')) echo 'active'; ?>" href="<?php echo site_url('/descargables'); ?>">Descargables</a>
+							<a class="<?php if(is_page('videos')) echo 'active'; ?>" href="<?php echo site_url('/videos'); ?>">Videos</a>
+							<a class="<?php if(is_page('ayuda')) echo 'active'; ?>" href="<?php echo site_url('/ayuda'); ?>">Ayuda</a>
 						</div>
 					</div>
 

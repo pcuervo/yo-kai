@@ -6871,6 +6871,9 @@ button.close {
 .width--100vw {
   width: 100vw;
 }
+.width--200p {
+  width: 200px!important;
+}
 .height--100vh {
   height: 100vh;
 }
@@ -7295,7 +7298,8 @@ header .nav-header > div > div a {
   display: inline-block;
   font-weight: 400;
 }
-header .nav-header > div > div a:hover {
+header .nav-header > div > div a:hover,
+header .nav-header > div > div a.active {
   color: #FDC804;
 }
 /*# sourceMappingURL=bootstrap.css.map */
