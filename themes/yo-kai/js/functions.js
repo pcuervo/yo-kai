@@ -21,6 +21,7 @@ var $=jQuery.noConflict();
         $(window).ready(function(){
             footerBottom();
             $('.carousel').carousel();
+            openModal();
         });
 
         $(window).on('resize', function(){
@@ -46,8 +47,8 @@ var $=jQuery.noConflict();
             $('#avatar-participante').val(id);
         });
 
-
         // CARGAR MEDALLA
+
 
     });
 })(jQuery);
@@ -82,21 +83,11 @@ $("#medalla-cargada").delay(3000).queue(function(){
     $(this).addClass("block").dequeue();
 });
 
-console.log('asdasd');
-
-//formato para COOKIES
-// date(DATE_COOKIE);
-//   alert(DATE_COOKIE);
-// function modalOpen(){
-function display() {
-  var now = new Date();
-  var time = now.getTime();
-  var expireTime = time + 1000*36000;
-  now.setTime(expireTime);
-  var tempExp = 'Wed, 31 Oct 2012 08:50:17 GMT';
-  document.cookie = 'cookie=ok;expires='+now.toGMTString()+';path=/';
-  //console.log(document.cookie);
+//Open Modal
+function openModal(){
+     $('.circle').on('click', function(event){
+        $('#concurso-terminado').modal('show');
+    });
 }
 
-//     $( ".image-perfil div.perfil-selected" ).addClass('perfil-unselected');
-// }
+console.log('asdasd');

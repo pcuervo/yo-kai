@@ -28,7 +28,7 @@ if ($errors != '') {
 			<div class="col-xs-5">
 				<?php $imagen = attachment_image_url( $idMedalla, 'full');
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';  ?>
-				<img class="[ absolute ][ width--315 ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
+				<img id="medalla-cargada" class="[ absolute ][ width--315 ][ hidden ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
 				<img class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
 				<img class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
 			</div>
