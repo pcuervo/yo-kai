@@ -1083,6 +1083,11 @@ body {
 body.bg-image--primary {
   background-image: url('images/background-2.png');
 }
+@media (max-width: 1024px) {
+  body.bg-image--primary {
+    background-size: inherit;
+  }
+}
 .container-primary {
   width: 1200px;
   margin: auto;
