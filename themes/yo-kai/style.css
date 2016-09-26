@@ -6874,6 +6874,9 @@ button.close {
 .width--200p {
   width: 200px!important;
 }
+.width--315 {
+  width: 315.828px;
+}
 .height--100vh {
   height: 100vh;
 }
@@ -7033,6 +7036,12 @@ button.close {
 }
 .category-card:hover a .img-hover {
   display: block;
+}
+.gif-cargar {
+  position: absolute;
+  width: 144%;
+  left: -22%;
+  top: -30.5%;
 }
 @-ms-viewport {
   width: device-width;

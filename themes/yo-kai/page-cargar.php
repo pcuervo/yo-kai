@@ -2,7 +2,7 @@
 file_put_contents(
  	'/Users/alejandrosandoval/Desktop/php.txt',
  	var_export( 'siiiiii', true )
- ); 
+ );
 global $errors;
 global $cargaMedalla;
 global $idMedalla;
@@ -32,6 +32,8 @@ if ($errors != '') {
 			<div class="col-xs-5">
 				<?php $imagen = attachment_image_url( $idMedalla, 'full');
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';  ?>
+				<img class="[ absolute ][ width--315 ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
+				<img class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
 				<img class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
 			</div>
 			<div class="col-xs-7 [ text-center ][ padding-top--xlarge ]">
