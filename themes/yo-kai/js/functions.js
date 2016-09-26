@@ -76,5 +76,10 @@ $('video').hover(function toggleControls() {
     }
 })
 
+$("#medalla-cargada").delay(3000).queue(function(){
+    $(this).removeClass("hidden").dequeue();
+    $(this).addClass("block").dequeue();
+});
+
 console.log('asdasd');
 
