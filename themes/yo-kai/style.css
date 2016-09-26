@@ -1117,12 +1117,12 @@ body {
 }
 .main {
   /*El header es fijo por lo que main requiere top (height-header + margin)*/
-  min-height: -moz-calc(100% - 188px);
-  /* altura header 210*/
-  min-height: -o-calc(100% - 188px);
-  min-height: -webkit-calc(100% - 188px);
-  min-height: calc(100% - 188px);
+  min-height: -moz-calc(100% - 230px);
+  min-height: -o-calc(100% - 230px);
+  min-height: -webkit-calc(100% - 230px);
+  min-height: calc(100% - 230px);
   position: relative;
+  overflow-y: hidden;
 }
 a {
   color: #337ab7;
@@ -6892,17 +6892,23 @@ button.close {
 .width--600p {
   width: 600px;
 }
-.width--800p {
-  width: 800px;
-}
-.width--100vw {
-  width: 100vw;
-}
 .width--200p {
   width: 200px!important;
 }
 .width--315 {
   width: 315.828px;
+}
+.width--800p {
+  width: 800px;
+}
+.width--1024p {
+  width: 1024px;
+}
+.max-width--1024p {
+  max-width: 1024px;
+}
+.width--100vw {
+  width: 100vw;
 }
 .height--100vh {
   height: 100vh;
@@ -7302,8 +7308,8 @@ header .nav-header {
   background-color: #E2262A;
   text-align: center;
   padding: 5px 30px;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 42px;
+  margin-bottom: 50px;
 }
 header .nav-header > div {
   border-top: 2px solid #FDC804;
