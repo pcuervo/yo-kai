@@ -106,6 +106,3 @@ function finalConcurso(){
        $('#ranking-abierto').addClass('hidden');
     }
 }
-
-
-console.log('asdasd');
