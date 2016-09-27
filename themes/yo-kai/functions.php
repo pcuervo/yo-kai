@@ -62,6 +62,6 @@ if ( function_exists('add_theme_support') ){
  */
 function attachment_image_url($post_id, $size){
 	$image_id   = get_post_thumbnail_id($post_id);
-	$image_data = wp_get_attachment_image_src($image_id, $size, true);
-	return isset($image_data[0]) ? $image_data[0] : '';
+	$image_data = wp_get_attachment_image_src($image_id, $size, false);
+	return isset($image_data[0]) ? $image_data[0] : THEMEPATH.'images/card.png';
 }
