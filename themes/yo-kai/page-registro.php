@@ -9,7 +9,7 @@ if ($errors != '') {
 	<div class="[ margin-bottom margin-auto ][ width--600p ]">
 		<h2 class="[ color-primary ][ text-center ]">Introduce tus datos y los de tu papá, mamá o tutor.</h2>
 		<form method="POST" class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>
-			<p>Datos del participante</p>
+			<p class="[ font-peace_sansregular ]">Datos del participante</p>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputName">Nombre</label>
@@ -80,7 +80,7 @@ if ($errors != '') {
 				</a>
 			</div>
 
-			<p>Datos TUTOR</p>
+			<p class="[ font-peace_sansregular ]">Datos TUTOR</p>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputNameTutor">Nombre</label>
@@ -103,13 +103,13 @@ if ($errors != '') {
 			</div>
 			<div class="row [ margin-bottom--large ]">
 				<div class="form-check col-sm-6">
-					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones">
+					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones" required required data-parsley-required-message="ERROR TEXT">
 					<label class="[ line-height--30 ]" for="terminos-y-condiciones"><span></span>
 						<a href="<?php echo site_url('/terminos-y-condiciones'); ?>">Acepto Términos y Condiciones</a>
 					</label>
 				</div>
 				<div class="form-check col-sm-6">
-					<input type="checkbox" id="autorizacion" name="autorizacion">
+					<input type="checkbox" id="autorizacion" name="autorizacion" required required data-parsley-required-message="ERROR TEXT">
 					<label class="[ line-height--30 ][ color-light ]" for="autorizacion"><span></span>
 						Autorizo a mi hijo(a) a utilizar la plataforma y a participar en el concurso Yokai
 					</label>

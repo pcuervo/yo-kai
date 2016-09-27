@@ -6,8 +6,11 @@
 			<?php get_template_part( 'templates/portrait', 'perfil' ); ?>
 		</div>
 		<div class="col-xs-8">
-			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">¡Posiciónate entre los primeros 10 y gana un premio!</h2>
-			<p class="[ text-center ]">El concurso termina el 5 de enero de 2017 a las 14hrs. En caso de empate, se ubicará en mejor posición quien haya registrado primero sus medallas.</p>
+			<div id="ranking-abierto">
+				<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">¡Posiciónate entre los primeros 10 y gana un premio!</h2>
+				<p class="[ text-center ]">El concurso termina el 5 de enero de 2017 a las 14hrs. En caso de empate, se ubicará en mejor posición quien haya registrado primero sus medallas.</p>
+			</div>
+			<h2 id="ranking-cerrado" class="[ hidden ][ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">Estas son las posiciones finales. ¡Sigue usando el album digital!</h2>
 		</div>
 	</div>
 	<div class="[ box-raking ][ margin-bottom--large ]">

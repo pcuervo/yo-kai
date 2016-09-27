@@ -28,7 +28,7 @@ if ($errors != '') {
 			<div class="col-xs-5">
 				<?php $imagen = attachment_image_url( $idMedalla, 'full');
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';  ?>
-				<img class="[ absolute ][ width--315 ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
+				<img id="medalla-cargada" class="[ absolute ][ width--315 ][ hidden ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
 				<img class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
 				<img class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
 			</div>
@@ -39,7 +39,7 @@ if ($errors != '') {
 					<form method="POST" data-parsley-validate>
 						<div class="form-group [ margin-bottom--large ]">
 							<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
-							<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
+							<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
 						</div>
 						<div class="[ border-primary border-radius--20 ][ inline-block ]">
 							<input type="hidden" name="action" value="cargar-nueva-medalla">
