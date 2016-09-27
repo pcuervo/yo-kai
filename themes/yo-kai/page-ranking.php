@@ -25,71 +25,27 @@
 				<h3 class="[ color-light ]">Medallas</h3>
 			</div>
 		</div>
-		<div class="row [ margin-bottom ]">
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
-			</div>
-			<div class="col-xs-6">
-				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
-				<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="fondo de perfil">
-				<p class="[ nombre ]">Juancho Panza</p>
-			</div>
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
-			</div>
-		</div>
-		<div class="row [ margin-bottom ]">
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
-			</div>
-			<div class="col-xs-6">
-				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
-				<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="fondo de perfil">
-				<p class="[ nombre ]">Juancho Panza</p>
-			</div>
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
-			</div>
-		</div>
-		<div class="row [ margin-bottom ]">
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
-			</div>
-			<div class="col-xs-6">
-				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
-				<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="fondo de perfil">
-				<p class="[ nombre ]">Juancho Panza</p>
-			</div>
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
-			</div>
-		</div>
-		<div class="row [ margin-bottom ]">
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
-			</div>
-			<div class="col-xs-6">
-				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
-				<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="fondo de perfil">
-				<p class="[ nombre ]">Juancho Panza</p>
-			</div>
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
-			</div>
-		</div>
-		<div class="row [ margin-bottom ]">
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
-			</div>
-			<div class="col-xs-6">
-				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
-				<img class="[ avatar ]" src="<?php echo THEMEPATH; ?>images/perfil/whisper.png" alt="fondo de perfil">
-				<p class="[ nombre ]">Juancho Panza</p>
-			</div>
-			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
-			</div>
-		</div>
+		<?php $participantes_ranking = Medallas::ranking();
+		if (!empty($participantes_ranking)):
+			$count_medallas = wp_count_posts('medallas');
+			foreach ($participantes_ranking as $key => $paricipante):
+			$imagen_perfil = getAvatarParticipanteId($paricipante->participante_id);
+			$user_info = get_userdata($paricipante->participante_id); ?>
+				<div class="row [ margin-bottom ]">
+					<div class="col-xs-3">
+						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº <?php echo $paricipante->rank; ?></p>
+					</div>
+					<div class="col-xs-6">
+						<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
+						<img class="[ avatar ]" src="<?php echo $imagen_perfil; ?>" alt="fondo de perfil">
+						<p class="[ nombre ]"><?php echo $user_info->user_login; ?></p>
+					</div>
+					<div class="col-xs-3">
+						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]"><?php echo $paricipante->numero_de_medallas; ?>/<?php echo $count_medallas->publish; ?></p>
+					</div>
+				</div>
+			<?php endforeach;
+		endif; ?>
 	</div>
 
 </div>
