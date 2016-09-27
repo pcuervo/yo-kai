@@ -27,7 +27,7 @@
 		</div>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº 1</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
 			</div>
 			<div class="col-xs-6">
 				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -35,12 +35,12 @@
 				<p class="[ nombre ]">Juancho Panza</p>
 			</div>
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">43/44</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
 			</div>
 		</div>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº 1</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
 			</div>
 			<div class="col-xs-6">
 				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -48,12 +48,12 @@
 				<p class="[ nombre ]">Juancho Panza</p>
 			</div>
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">43/44</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
 			</div>
 		</div>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº 1</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
 			</div>
 			<div class="col-xs-6">
 				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -61,12 +61,12 @@
 				<p class="[ nombre ]">Juancho Panza</p>
 			</div>
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">43/44</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
 			</div>
 		</div>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº 1</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
 			</div>
 			<div class="col-xs-6">
 				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -74,12 +74,12 @@
 				<p class="[ nombre ]">Juancho Panza</p>
 			</div>
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">43/44</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
 			</div>
 		</div>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº 1</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº 1</p>
 			</div>
 			<div class="col-xs-6">
 				<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -87,7 +87,7 @@
 				<p class="[ nombre ]">Juancho Panza</p>
 			</div>
 			<div class="col-xs-3">
-				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">43/44</p>
+				<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">43/44</p>
 			</div>
 		</div>
 	</div>

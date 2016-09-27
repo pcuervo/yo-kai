@@ -16,11 +16,11 @@ if ($errors != '') {
 			</div>
 			<div class="col-xs-7">
 				<?php if($cargaMedalla != 1): ?>
-					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">CARGA TU NUEVA MEDALLA EN TU ÁLBUM DIGITAL. </h2>
-					<p>Introduce el código que aparece debajo del código QR en el revés de tu medalla.</p>
+					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">CARGA TU NUEVA MEDALLA EN TU ÁLBUM DIGITAL. </h2>
+					<p class="[ text-center ][ margin-top ]">Introduce el código que aparece debajo del código QR en el revés de tu medalla.</p>
 				<?php else: ?>
-					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">!LISTO, TIENES UNA NUEVA MEDALLA YO-KAI!</h2>
-					<p>Ahora puedes cargar otra medalla o volver al álbum.</p>
+					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">!LISTO, TIENES UNA NUEVA MEDALLA YO-KAI!</h2>
+					<p class="[ text-center ][ margin-top ]">Ahora puedes cargar otra medalla o volver al álbum.</p>
 				<?php endif; ?>
 			</div>
 		</div>

@@ -277,7 +277,7 @@
 // }
 .carousel-indicators { display: none; }
 .carousel-inner {
-  padding: 0 35px;
+  padding: 0px;
   & > .item { width: 530px!important; }
 }
 
@@ -287,21 +287,26 @@
 }
 
 #myCarousel {
-  .carousel-inner .item { width: 530px!important; }
+  .carousel-inner .item { width: 600px!important; }
   .carousel-control {
     margin-top: 30px;
-    .right { text-align: right; }
-    .left { text-align: left; }
+    .right { text-align: right; right: -40px!important; }
+    .left { text-align: left; left: -40px!important; }
+    &.right { right: -40px!important; }
+    &.left { left: -40px!important; }
   }
+  //Ocultar imagen vacia de perfil
+  //.item:last-child .image-perfil:last-of-type
+  //.item:last-of-type { display: none; }
   .image-perfil,
   .image-card {
     display: inline-block;
     width: 18%;
-    margin-right: 0.5%; margin-left: 0.5%;
+    margin-right: 0.6%; margin-left: 0.6%;
     .perfil-shadow {
       background-color: rgba(0, 0, 0, 0.7);
-      width: 95.391px;
-      height: 95.391px;
+      width:107.986px;
+      height:107.986px;
       border-radius: 50%;
       position: absolute;
       top: 0;
@@ -312,7 +317,7 @@
 }
 
 #myCarousel.carousel-album {
-  .carousel-inner .item { width: 730px!important; }
+  .carousel-inner .item { width: 800px!important; }
   .image-card {
     width: 15%;
     margin-bottom: 30px;

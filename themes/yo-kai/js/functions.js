@@ -20,7 +20,9 @@ var $=jQuery.noConflict();
         \*------------------------------------*/
         $(window).ready(function(){
             footerBottom();
-            $('.carousel').carousel();
+            $('.carousel').carousel({
+                interval:false;
+            });
             finalConcurso();
         });
 
@@ -96,10 +98,10 @@ function setCookie(cname,cvalue,exdays) {
 
 //Open Modal
 function finalConcurso(){
-    document.cookie="Limite=finalConcurso; expires=5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
-    //document.cookie="Limite=finalConcurso; expires=26 Sep 2016 22:06:00 GMT";
+    //document.cookie="Limite=finalConcurso; expires=5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
+    document.cookie="Limite=finalConcurso; expires=27 Sep 2015 11:06:00 GMT";
     console.log(document.cookie);
-    console.log(new Date().toGMTString());
+    //console.log(new Date().toGMTString());
     if (document.cookie.indexOf("Limite") < 0) {
        $('#concurso-terminado').modal('show');
        $('#ranking-cerrado').removeClass('hidden');

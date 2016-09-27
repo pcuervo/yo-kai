@@ -2,7 +2,7 @@
 global $current_user;
 $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 	<div class="[ width--800p ][ margin-auto ]">
-		<div class="row [ margin-bottom--large ][ height--450p ]">
+		<div class="row [ margin-bottom--large ][ height--500p ]">
 
 			<div class="col-xs-4">
 				<!-- Portrait perfil -->
@@ -15,8 +15,8 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 			<!-- Indicators -->
 				<ol class="carousel-indicators">
 					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<!-- <li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li> -->
+					<li data-target="#myCarousel" data-slide-to="1"></li>
+					<li data-target="#myCarousel" data-slide-to="2"></li>
 				</ol>
 
 				<!-- Wrapper for slides -->

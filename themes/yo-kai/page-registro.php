@@ -80,7 +80,7 @@ if ($errors != '') {
 				</a>
 			</div>
 
-			<p class="[ font-peace_sansregular ]">Datos TUTOR</p>
+			<p class="[ font-peace_sansregular ]">Datos tutor</p>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputNameTutor">Nombre</label>
@@ -102,17 +102,21 @@ if ($errors != '') {
 				</div>
 			</div>
 			<div class="row [ margin-bottom--large ]">
-				<div class="form-check col-sm-6">
-					<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones" required required data-parsley-required-message="ERROR TEXT">
-					<label class="[ line-height--30 ]" for="terminos-y-condiciones"><span></span>
-						<a href="<?php echo site_url('/terminos-y-condiciones'); ?>">Acepto Términos y Condiciones</a>
-					</label>
+				<div class=" col-sm-6">
+					<div class="form-check">
+						<input type="checkbox" id="terminos-y-condiciones" name="terminos-y-condiciones" required required data-parsley-required-message="ERROR TEXT">
+						<label class="[ flex ][ line-height--30 ]" for="terminos-y-condiciones"><span class="[ width--25 ]"></span>
+							<a href="<?php echo site_url('/terminos-y-condiciones'); ?>" class="[ font-size--16 ]">Acepto Términos y Condiciones</a>
+						</label>
+					</div>
 				</div>
-				<div class="form-check col-sm-6">
-					<input type="checkbox" id="autorizacion" name="autorizacion" required required data-parsley-required-message="ERROR TEXT">
-					<label class="[ line-height--30 ][ color-light ]" for="autorizacion"><span></span>
-						Autorizo a mi hijo(a) a utilizar la plataforma y a participar en el concurso Yokai
-					</label>
+				<div class=" col-sm-6">
+					<div class="form-check">
+						<input type="checkbox" id="autorizacion" name="autorizacion" required required data-parsley-required-message="ERROR TEXT">
+						<label class="[ flex ][ font-size--16 ][ line-height--30 ][ color-light ]" for="autorizacion"><span></span>
+							Autorizo a mi hijo(a) a utilizar la plataforma y a participar en el concurso Yokai
+						</label>
+					</div>
 				</div>
 			</div>
 			<div class="[ text-center ]">
@@ -126,7 +130,7 @@ if ($errors != '') {
 		</form>
 	</div>
 	<div class="[ text-center ][ margin-bottom--large ]">
-		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/terminos-y-condiciones'); ?>">Términos y Condiciones</a>
-		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/aviso-de-privacidad'); ?>">Aviso de Privacidad</a>
+		<a class="[ font-size--16 ][ margin-left ][ margin-right ]" href="<?php echo site_url('/terminos-y-condiciones'); ?>">Términos y Condiciones</a>
+		<a class="[ font-size--16 ][ margin-left ][ margin-right ]" href="<?php echo site_url('/aviso-de-privacidad'); ?>">Aviso de Privacidad</a>
 	</div>
 <?php get_footer(); ?>

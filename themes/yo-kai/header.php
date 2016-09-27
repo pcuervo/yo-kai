@@ -43,7 +43,7 @@
 
 			<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>
 				<a class="[ block ][ text-center ]" href="<?php echo site_url('/'); ?>">
-					<img class="[ width--100 max-width--1024p ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai">
+					<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai"> <!--  max-width--1024p -->
 				</a>
 			<?php } else { ?>
 				<div class="[ nav-header ]">

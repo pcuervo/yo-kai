@@ -6,7 +6,7 @@
 			<?php get_template_part( 'templates/portrait', 'perfil' ); ?>
 		</div>
 		<div class="col-xs-8">
-			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">¡ENTRE MÁS MEDALLAS CONSIGAS, PODRÁS DESCARGAR MÁS SORPRESAS YO-KAI!</h2>
+			<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">¡ENTRE MÁS MEDALLAS CONSIGAS, PODRÁS DESCARGAR MÁS SORPRESAS YO-KAI!</h2>
 		</div>
 	</div>
 	<div class="[ row ][ text-center ]">
