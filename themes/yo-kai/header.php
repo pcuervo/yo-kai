@@ -38,6 +38,7 @@
 	<?php } else { ?>
 		<body class="bg-image--primary">
 	<?php } ?>
+		<img class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla_old.gif" alt="gif de interrogacion">
 		<a class="bt-logout hidden" href="<?php echo wp_logout_url(); ?>">LOG OUT</a>
 		<header class="[ js-header ]">
 
