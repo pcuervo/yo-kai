@@ -10,7 +10,7 @@ function redirect_index_login() {
 	endif;
 
 	if (is_user_logged_in() && pageNoViewIsParticipanteLogin()) {
-		wp_redirect( site_url('/bienvenido/') );
+		wp_redirect( site_url('/album/') );
 		exit();
 	}
 

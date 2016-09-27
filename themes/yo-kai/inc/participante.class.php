@@ -68,7 +68,7 @@ class Participante{
 
 		$this->auto_login($participante_id);
 
-		wp_redirect( site_url('/bienvenido/') );
+		wp_redirect( site_url('/album/') );
 		exit;
 	}
 
@@ -127,7 +127,7 @@ class Participante{
 		if ( is_wp_error($user) ) :
 			wp_redirect( '?return=error'); exit;
 		else:
-			wp_redirect( site_url('/bienvenido/') ); 
+			wp_redirect( site_url('/album/') ); 
 			exit;
 		endif;
 	}
