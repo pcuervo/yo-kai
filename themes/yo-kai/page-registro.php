@@ -1,5 +1,14 @@
 <?php get_header();
 global $errors;
+$errors_compare = 'El nickname ya esta en uso.';
+$nombre = isset($_POST['name-competitor']) ? $_POST['name-competitor'] : '';
+$lastName = isset($_POST['last-name-competitor']) ? $_POST['last-name-competitor'] : '';
+$nickName = (isset($_POST['nick-name-competitor']) AND $errors != $errors_compare) ? $_POST['nick-name-competitor'] : '';
+$nameTutor = isset($_POST['name-tutor']) ? $_POST['name-tutor'] : '';
+$lastNameTutor = isset($_POST['last-name-tutor']) ? $_POST['last-name-tutor'] : '';
+$telefonoTutor = isset($_POST['telephone-tutor']) ? $_POST['telephone-tutor'] : '';
+$emailTutor = isset($_POST['email-tutor']) ? $_POST['email-tutor'] : '';
+
 if ($errors != '') {
 	echo '<pre>';
 	print_r($errors);
@@ -13,17 +22,17 @@ if ($errors != '') {
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputName">Nombre</label>
-					<input type="text" class="form-control" name="name-competitor" id="exampleInputName" placeholder="Nombre" aria-describedby="nombreHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="text" class="form-control" name="name-competitor" id="exampleInputName" placeholder="Nombre" aria-describedby="nombreHelp" value="<?php echo $nombre; ?>" required data-parsley-required-message="ERROR TEXT">
 				</div>
 				<div class="form-group [ margin-bottom--large ] col-sm-6">
 					<label class="[ hidden ]" for="exampleInputApellido">Apellido</label>
-					<input type="text" class="form-control" name="last-name-competitor" id="exampleInputApellido" placeholder="Apellido" aria-describedby="apellidoHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="text" class="form-control" name="last-name-competitor" id="exampleInputApellido" placeholder="Apellido" value="<?php echo $lastName; ?>" aria-describedby="apellidoHelp" required data-parsley-required-message="ERROR TEXT">
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputNickName">Nickname</label>
-					<input type="text" class="form-control" name="nick-name-competitor" id="exampleInputNickName" placeholder="Nickname" aria-describedby="nicknameHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="text" class="form-control" name="nick-name-competitor" id="exampleInputNickName" placeholder="Nickname" value="<?php echo $nickName; ?>" aria-describedby="nicknameHelp" required data-parsley-required-message="ERROR TEXT">
 				</div>
 				<div class="form-group [ margin-bottom--large ] col-sm-6">
 					<label class="[ hidden ]" for="exampleInputPassword">Contraseña</label>
@@ -84,21 +93,21 @@ if ($errors != '') {
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputNameTutor">Nombre</label>
-					<input type="text" class="form-control" name="name-tutor" id="exampleInputNameTutor" placeholder="Nombre" aria-describedby="nombreTutorHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="text" class="form-control" name="name-tutor" id="exampleInputNameTutor" placeholder="Nombre" value="<?php echo $nameTutor; ?>" aria-describedby="nombreTutorHelp" required data-parsley-required-message="ERROR TEXT">
 				</div>
 				<div class="form-group [ margin-bottom--large ] col-sm-6">
 					<label class="[ hidden ]" for="exampleInputApellidoTutor">Apellido</label>
-					<input type="text" class="form-control" name="last-name-tutor" id="exampleInputApellidoTutor" placeholder="Apellido" aria-describedby="apellidoTutorHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="text" class="form-control" name="last-name-tutor" id="exampleInputApellidoTutor" placeholder="Apellido" value="<?php echo $lastNameTutor; ?>" aria-describedby="apellidoTutorHelp" required data-parsley-required-message="ERROR TEXT">
 				</div>
 			</div>
 			<div class="row">
 				<div class="form-group col-sm-6">
 					<label class="[ hidden ]" for="exampleInputTelefono">Telefono</label>
-					<input type="tel" class="form-control" name="telephone-tutor" id="exampleInputTelefono" placeholder="Telefono" aria-describedby="telefonoHelp" required data-parsley-required-message="ERROR TEXT">
+					<input type="tel" class="form-control" name="telephone-tutor" id="exampleInputTelefono" placeholder="Telefono" value="<?php echo $telefonoTutor; ?>" aria-describedby="telefonoHelp" required data-parsley-required-message="ERROR TEXT">
 				</div>
 				<div class="form-group [ margin-bottom--large ] col-sm-6">
 					<label class="[ hidden ]" for="exampleInputEmail">Email</label>
-					<input type="email" class="form-control" name="email-tutor" id="exampleInputEmail" placeholder="Email" required data-parsley-type-message="ERROR TEXT"  data-parsley-required-message="ERROR TEXT">
+					<input type="email" class="form-control" name="email-tutor" id="exampleInputEmail" placeholder="Email" value="<?php echo $emailTutor; ?>" required data-parsley-type-message="ERROR TEXT"  data-parsley-required-message="ERROR TEXT">
 				</div>
 			</div>
 			<div class="row [ margin-bottom--large ]">
