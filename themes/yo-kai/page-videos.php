@@ -11,7 +11,7 @@
 	</div>
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-12">
-			<video class="[ max-width--100 ]">
+			<video class="[ max-width--100 ]" controls>
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
@@ -21,7 +21,7 @@
 	</div>
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-6">
-			<video class="[ max-width--100 ]">
+			<video class="[ max-width--100 ]" controls>
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
@@ -29,7 +29,7 @@
 			<h3 class="[ color-light ][ text-uppercase ]">Nombre del video 2</h3>
 		</div>
 		<div class="col-xs-6">
-			<video class="[ max-width--100 ]">
+			<video class="[ max-width--100 ]" controls>
 				<source src="<?php echo THEMEPATH; ?>video/landing.mp4" type="video/mp4">
 				<source src="<?php echo THEMEPATH; ?>video/landing.webm" type="video/webm">
 				<source src="<?php echo THEMEPATH; ?>video/landing.ogv" type="video/ogg">
