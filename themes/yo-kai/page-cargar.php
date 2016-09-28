@@ -24,7 +24,7 @@ if ($errors != '') {
 				<?php endif; ?>
 			</div>
 		</div>
-		<div class="row [ margin-bottom--large ]">
+		<div class="row [ margin-bottom--xxlarge ]">
 			<div class="col-xs-5">
 				<?php $imagen = attachment_image_url( $idMedalla, 'full');
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';  ?>

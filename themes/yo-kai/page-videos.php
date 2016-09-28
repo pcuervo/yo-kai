@@ -37,7 +37,7 @@
 			<h3 class="[ color-light ][ text-uppercase ]">Nombre del video 3</h3>
 		</div>
 	</div>
-	<div class="row [ margin-bottom--large ]">
+	<div class="row [ margin-bottom--xxlarge ]">
 		<div class="col-xs-6">
 			<a href="#" class="[ text-decoration-none block ]">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/productos.png" alt="productos">

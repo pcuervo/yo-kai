@@ -13,7 +13,7 @@
 		<label for="exampleTextarea" class="[ hidden ]">Mensaje</label>
 		<textarea class="form-control" id="exampleTextarea" rows="9" placeholder="Escríbe aquí tu consulta"></textarea>
 	</div>
-	<div class="[ text-center ]">
+	<div class="[ text-center ][ margin-bottom--xxlarge ]">
 		<div class="[ border-primary border-radius--20 ][ inline-block ]">
 			<button type="submit" class="btn btn--primary">Enviar</button>
 		</div>

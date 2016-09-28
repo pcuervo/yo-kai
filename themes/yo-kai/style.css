@@ -6882,6 +6882,9 @@ button.close {
 .margin-bottom--xxlarge {
   margin-bottom: 120px;
 }
+.margin-bottom--xxxlarge {
+  margin-bottom: 200px;
+}
 .margin-top {
   margin-top: 20px;
 }
@@ -7464,7 +7467,7 @@ header .nav-header > div > div a {
   text-transform: uppercase;
   color: #fff;
   text-decoration: none;
-  padding: 15px 20px;
+  padding: 15px 13px;
   display: inline-block;
   font-family: 'peace_sansregular';
 }

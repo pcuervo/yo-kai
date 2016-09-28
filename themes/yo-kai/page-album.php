@@ -69,7 +69,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 			</div>
 		</div>
 
-		<div class="[ text-center ][ margin-bottom--xxlarge ]">
+		<div class="[ text-center ][ margin-bottom--xxxlarge ]">
 			<div class="[ border-primary border-radius--20 ][ inline-block ]">
 				<a href="<?php echo site_url('/cargar/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Cargar</a>
 			</div>

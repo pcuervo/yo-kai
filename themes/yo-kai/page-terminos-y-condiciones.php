@@ -9,7 +9,7 @@
 			<p>Nam vitae arcu ut tortor congue cursus. Nam dignissim lobortis dignissim. Etiam tristique sit amet ante nec consequat. Aliquam vitae velit massa. Nullam pulvinar, sapien in tempus feugiat, nunc tellus elementum magna, quis congue est sapien ac nunc. Nunc in ante fermentum, sollicitudin ligula eget, lacinia est. Sed ornare pretium vulputate. Mauris malesuada eros magna, ac condimentum enim aliquet interdum. Sed finibus magna nec elit sagittis, et lobortis tellus accumsan. Nulla ut orci faucibus, hendrerit urna eu, commodo nunc. Vestibulum vel pharetra quam. Quisque id massa nibh. Maecenas eu nisl eget enim egestas ultrices ut at tortor. Integer facilisis libero sem, sed posuere eros consequat a.</p>
 		</div>
 	</div>
-	<div class="[ text-center ][ margin-bottom--large ]">
+	<div class="[ text-center ][ margin-bottom--xxlarge ]">
 		<div class="[ border-primary border-radius--20 ][ inline-block ]">
 			<a href="<?php echo site_url('/registro'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">VOLVER</a>
 		</div>
