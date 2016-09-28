@@ -8,7 +8,7 @@ $nameTutor = isset($_POST['name-tutor']) ? $_POST['name-tutor'] : '';
 $lastNameTutor = isset($_POST['last-name-tutor']) ? $_POST['last-name-tutor'] : '';
 $telefonoTutor = isset($_POST['telephone-tutor']) ? $_POST['telephone-tutor'] : '';
 $emailTutor = isset($_POST['email-tutor']) ? $_POST['email-tutor'] : '';
-
+$avatar_default = '';
 if ($errors != '') {
 	echo '<pre>';
 	print_r($errors);
@@ -66,10 +66,13 @@ if ($errors != '') {
 	                   		$class = $count == 1 ? 'active' : '';
 	                   		echo '<div class="item '.$class.'">';
 	                    	foreach ($avatars as $key => $avatar):
+	                    		$class_act = ($key == 2 AND $count == 1) ? 'perfil-selected' : 'perfil-unselected';
+	                    		$avatar_default = ($key == 2 AND $count == 1) ? $avatar->ID : $avatar_default;
+
 	                    		$imagen = attachment_image_url( $avatar->ID, 'full'); ?>
 	                    		<a href="#" data-id="<?php echo $avatar->ID; ?>" class="image-perfil">
 									<img src="<?php echo $imagen; ?>" alt="imagen de perfil">
-									<div class="[ perfil-shadow perfil-unselected ]"></div>
+									<div class="[ perfil-shadow <?php echo $class_act; ?> ]"></div>
 								</a>
 	                    	<?php endforeach;
                     		echo '</div>';
@@ -130,7 +133,7 @@ if ($errors != '') {
 			</div>
 			<div class="[ text-center ]">
 				<input type="hidden" name="action" value="crear-participante">
-				<input type="hidden" id="avatar-participante" name="avatar-participante" value="">
+				<input type="hidden" id="avatar-participante" name="avatar-participante" value="<?php echo $avatar_default; ?>">
 
 				<div class="[ border-primary border-radius--20 ][ inline-block ]">
 					<button type="submit" class="btn btn--primary">CREAR CUENTA</button>

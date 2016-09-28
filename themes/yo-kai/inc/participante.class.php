@@ -38,8 +38,8 @@ class Participante{
 
 		$user_id = username_exists( $userLogin );
 
-		if ( !$user_id and email_exists($email) == false ) {
-			$participante_id = $this->create($userLogin, $password, $email);
+		if ( !$user_id ) {
+			$participante_id = $this->create($userLogin, $password, '');
 
 			if( ! is_wp_error($participante_id) ){
 				return $this->set_completar_registro($participante_id, $args);
@@ -47,8 +47,6 @@ class Participante{
 				$errors = $participante_id->get_error_message();
 			}
 
-		}elseif(email_exists($email) == true){
-			$errors = 'El email ya esta registrado.';
 		}else{
 			$errors = 'El nickname ya esta en uso.';
 		}
@@ -107,7 +105,9 @@ class Participante{
 		update_user_meta($participante_id, '_nombre_tutor', $data['name-tutor']);
 		update_user_meta($participante_id, '_apellido_tutor', $data['last-name-tutor']);
 		update_user_meta($participante_id, '_telefono_tutor', $data['telephone-tutor']);
+		update_user_meta($participante_id, '_email_tutor', $data['email-tutor']);
 		update_user_meta($participante_id, 'nickname', $data['nick-name-competitor']);
+
 		wp_update_user( [ 'ID' => $participante_id, 'display_name' => $nombre]);
 	}
 
