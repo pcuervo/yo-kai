@@ -21,7 +21,7 @@ var $=jQuery.noConflict();
         $(window).ready(function(){
             footerBottom();
             $('.carousel').carousel({
-                interval:false;
+                interval:false
             });
             finalConcurso();
         });

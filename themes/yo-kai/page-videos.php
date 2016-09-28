@@ -32,13 +32,13 @@
 	</div>
 	<div class="row [ margin-bottom--xxlarge ]">
 		<div class="col-xs-6">
-			<a href="#" class="[ text-decoration-none block ]">
+			<a href="http://www.hasbro.com/es-mx/toys-games/yokai" target="_blank" class="[ text-decoration-none block ]">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/productos.png" alt="productos">
 				<h3 class="[ color-light ][ text-uppercase ][ color-primary--hover ]">Encuentra aquí los productos Yo-kai</h3>
 			</a>
 		</div>
 		<div class="col-xs-6">
-			<a href="#" class="[ text-decoration-none block ]">
+			<a href="https://www.youtube.com/channel/UCZWFPpoheQVPrcG68A3ayVw" target="_blank" class="[ text-decoration-none block ]">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/mas-videos.png" alt="imagen más videos">
 				<h3 class="[ color-light ][ text-uppercase ][ color-primary--hover ]">¡Mira más videos!</h3>
 			</a>
