@@ -12,20 +12,37 @@ add_action('add_meta_boxes', function(){
 
 function show_metabox_extras_video($post){
 	global $post;
-	wp_nonce_field(__FILE__, 'destacado_nonce');
+	wp_nonce_field(__FILE__, 'videos_nonce');
 	$id_video = get_post_meta( $post->ID, 'id_video', true );
 
 	$orden_videos = get_post_meta( $post->ID, 'orden_videos', true );
-
-	$checked = $post_destacado ? 'checked' : ''; ?>
-	<br/><br/><label for='id_video' class='label-paquetes'>ID video: </label>
+	echo '<pre>';
+	 print_r($orden_videos);
+	 echo '</pre>'; ?>
+	<br/><label for='id_video' class='label-paquetes'>ID video: </label>
 	<input type='text' name='id_video' class='widefat' value='<?php echo $id_video; ?>' id='id_video'/>
-	<?php for ($i=1; $i < 6; $i++) { 
-		# code...
+	<br/><br/><label for='orden_videos' class='label-paquetes'><strong>Posición video:</strong> </label><br/>
+	<br/>
+	<?php 
+	for ($i=1; $i < 6; $i++) { 
+		$libre = 'si';
+		if (!empty($orden_videos)) {
+			foreach ($orden_videos as $key => $orden) {
+				if ($orden == $i AND $key != $post->ID) {
+					echo '<p>Posicion '.$i.' ('.get_the_title($key).')</p>';
+					$libre = 'no';
+				}
+				
+			}
+		}
+		if ($libre == 'si') {
+			$checked = (isset($orden_videos[$post->ID]) AND $orden_videos[$post->ID] == $i) ? 'checked' : ''; ?>
+			<input type="radio" name="orden-video" id="orden_videos" value="<?php echo $i; ?>"  <?php echo $checked; ?> /> Posición <?php echo $i; ?><br><br>
+		
+		<?php }
 	}
-	<input type="checkbox" name="post_destacado" id="post_destacado" value="1"  <?php echo $checked; ?> /> Check destacado<br><br>
 	
-<?php }
+}
 
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
@@ -47,10 +64,15 @@ add_action('save_post', function($post_id){
 		return $post_id;
 
 
-	if ( isset($_POST['new_destacado'])){
-		update_post_meta($post_id, 'new_destacado', $_POST['new_destacado']);
-	}else if ( ! defined('DOING_AJAX') ){
-		delete_post_meta($post_id, 'new_destacado');
+	if (isset($_POST['id_video']) AND check_admin_referer(__FILE__, 'videos_nonce')) {
+		update_post_meta( $post_id, 'id_video', $_POST['id_video'] );
+		
+		$orden_videos = get_post_meta( $post_id, 'orden_videos', true );
+		if ($orden_videos == '') $orden_videos = [];
+
+		$orden_videos[$post_id] = $_POST['orden-video'];
+		update_post_meta( $post_id, 'orden_videos', $orden_videos );
+
 	}
 
 
