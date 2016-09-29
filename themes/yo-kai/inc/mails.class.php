@@ -17,7 +17,7 @@ class Mails{
 	 * @param  [type] $wpParticipante [description]
 	 * @return [type]                 [description]
 	 */
-	public function sendMailNickPassChilds($wpParticipantes)
+	public function sendMailNickPassChilds($wpParticipantes, $email_send)
 	{
 		global $success;
 		$subject = 'YO-KAI - Recuperación de contraseña';
@@ -45,7 +45,7 @@ class Mails{
 		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
 
 		//SEND EMAIL CONFIRMATION
-		$resp = wp_mail( 'alex.cervantes@losmaquiladores.com', $subject, $message, $headers );
+		$resp = wp_mail( $email_send, $subject, $message, $headers );
 		
 		if ($resp) {
 			$success = 'Se enviaron con exito su nickname y contraseña';

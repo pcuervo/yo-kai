@@ -154,10 +154,11 @@ class Participante{
 		$wpParticipante = $wpParticipanteMail ? $wpParticipanteMail : FALSE;
 		$wpParticipante = $wpParticipanteLogin ? [$wpParticipanteLogin] : $wpParticipanteMail;
 
-
+		$mail_send = $wpParticipanteMail ? $valorRecuperar : get_user_meta($wpParticipanteLogin->ID, '_email_tutor', true);
+		
 		if ($wpParticipanteMail || $wpParticipanteLogin) {
 			$mail_class = new Mails;
-			$mail_class = $mail_class->sendMailNickPassChilds($wpParticipante);
+			$mail_class = $mail_class->sendMailNickPassChilds($wpParticipante, $mail_send);
 		}else{
 			$errors = 'El Email ó nickname no existen';
 		}

@@ -26,22 +26,11 @@ function show_metabox_extras_video($post){
 	<br/>
 	<?php 
 	for ($i=1; $i < 6; $i++) { 
-		$libre = 'si';
-		if (!empty($orden_videos)) {
-			foreach ($orden_videos as $key => $orden) {
-				if ($orden == $i AND $key != $post->ID) {
-					echo '<p>Posicion '.$i.' ('.get_the_title($key).')</p>';
-					$libre = 'no';
-				}
-				
-			}
-		}
-		if ($libre == 'si') {
-			$checked = (isset($orden_videos[$post->ID]) AND $orden_videos[$post->ID] == $i) ? 'checked' : ''; ?>
-			<input type="radio" name="orden-video" id="orden_videos" value="<?php echo $i; ?>"  <?php echo $checked; ?> /> Posición <?php echo $i; ?><br><br>
 		
-		<?php }
-	}
+		$checked = (isset($orden_videos[$post->ID]) AND $orden_videos[$post->ID] == $i) ? 'checked' : ''; ?>
+		<input type="radio" name="orden-video" id="orden_videos" value="<?php echo $i; ?>"  <?php echo $checked; ?> /> Posición <?php echo $i; ?><br><br>
+		
+	<?php }
 	
 }
 
