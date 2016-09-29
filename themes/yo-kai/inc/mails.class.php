@@ -46,14 +46,14 @@ class Mails{
 
 		//SEND EMAIL CONFIRMATION
 		$resp = wp_mail( 'alex.cervantes@losmaquiladores.com', $subject, $message, $headers );
-		
+
 		if ($resp) {
 			$success = 'Se enviaron con exito su nickname y contraseña';
 		}
 	}
 
 
-	/**	
+	/**
 	 * REGRESA LA CONTRASEÑA DEL PARTICIPANTE
 	 */
 	public function get_password_participantes($participante_id)
@@ -67,6 +67,6 @@ class Mails{
 		return $partB.$partA;
 
 	}
-	
+
 
 }
