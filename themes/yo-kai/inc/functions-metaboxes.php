@@ -13,12 +13,7 @@ add_action('add_meta_boxes', function(){
 function show_metabox_extras_video($post){
 	global $post;
 	wp_nonce_field(__FILE__, 'videos_nonce');
-	$id_video = get_post_meta( $post->ID, 'id_video', true );
-
-	$orden_videos = get_post_meta( $post->ID, 'orden_videos', true );
-	echo '<pre>';
-	 print_r($orden_videos);
-	 echo '</pre>'; ?>
+	$id_video = get_post_meta( $post->ID, 'id_video', true ); ?>
 	<br/><label for='id_video' class='label-paquetes'>ID video: </label>
 	<input type='text' name='id_video' class='widefat' value='<?php echo $id_video; ?>' id='id_video'/>
 
@@ -26,9 +21,10 @@ function show_metabox_extras_video($post){
 	<br/>
 	<?php 
 	for ($i=1; $i < 6; $i++) { 
-		
-		$checked = (isset($orden_videos[$post->ID]) AND $orden_videos[$post->ID] == $i) ? 'checked' : ''; ?>
-		<input type="radio" name="orden-video" id="orden_videos" value="<?php echo $i; ?>"  <?php echo $checked; ?> /> Posición <?php echo $i; ?><br><br>
+		$orden_videos = get_option( 'orden_videos_'.$i);
+		$video = $orden_videos != '' ? '('.get_the_title($orden_videos).')' : '';
+		$checked = ($orden_videos == $post->ID) ? 'checked' : ''; ?>
+		<input type="radio" name="orden-video" id="orden_videos" value="<?php echo $i; ?>"  <?php echo $checked; ?> /> Posición <?php echo $i; ?> <?php echo $video; ?><br><br>
 		
 	<?php }
 	
@@ -57,12 +53,23 @@ add_action('save_post', function($post_id){
 	if (isset($_POST['id_video']) AND check_admin_referer(__FILE__, 'videos_nonce')) {
 		update_post_meta( $post_id, 'id_video', $_POST['id_video'] );
 		
-		$orden_videos = get_post_meta( $post_id, 'orden_videos', true );
-		if ($orden_videos == '') $orden_videos = [];
+		$orden_videos = get_option( 'orden_videos_'.$_POST['orden-video']);
+		$new_value = $post_id;
 
-		$orden_videos[$post_id] = $_POST['orden-video'];
-		update_post_meta( $post_id, 'orden_videos', $orden_videos );
+		if ( get_option( 'orden_videos_'.$_POST['orden-video'] ) !== false ):
+		    update_option('orden_videos_'.$_POST['orden-video'], $new_value );
+		else:
+		    $deprecated = null;
+		    $autoload = 'no';
+		    add_option( 'orden_videos_'.$_POST['orden-video'], $new_value, $deprecated, $autoload );
+		endif;
 
+		for ($i=1; $i < 6; $i++) { 
+			$orden_videos = get_option( 'orden_videos_'.$i);
+			if ($orden_videos == $post_id AND $_POST['orden-video'] != $i) {
+				update_option('orden_videos_'.$i, '' );
+			}
+		}
 	}
 
 
