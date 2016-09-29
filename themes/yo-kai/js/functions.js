@@ -59,9 +59,10 @@ var $=jQuery.noConflict();
         // CARGAR MEDALLA
 
         if (document.getElementById('gifCargando')) {
-            $('#imgMedalla').hide(0);
+            
             var $img = $('#gifCargando');
-            $img.show();
+            $img.show(0);
+            $('#imgMedalla').hide(0);
             setTimeout(function() {
                 $img.attr('src', $img.attr('src'));
             }, 0);
@@ -70,7 +71,7 @@ var $=jQuery.noConflict();
                 $img.hide(0);
                 $('#textoCargaExitosa').removeClass('hidden');
                 $('.formCargaMedalla').addClass('hidden');
-            }, 3500);
+            }, 3700);
         }
             
 
