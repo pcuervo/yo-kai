@@ -110,6 +110,9 @@ function finalConcurso(){
     console.log(document.cookie);
     console.log(new Date().toGMTString());
      if (document.cookie.indexOf("Limite") < 0) {
+        $(".modal").one( "load", function() {
+            alert("Hola, soy una alerta que sólo aparecerá 1 vez.");
+        });
         //var ejecutado=ejecutado+1;
         $('#concurso-terminado').modal('show');
         $('#ranking-cerrado').removeClass('hidden');
