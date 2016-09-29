@@ -30,8 +30,9 @@ if ($errors != '') {
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';
 				if($cargaMedalla == 1): ?>
 					<img id="gifCargando" class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
-				<?php endif; ?>
-				<img id="imgMedalla" class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
+				<?php endif; 
+				$css_medalla = $cargaMedalla == 1 ? 'display: none;' : ''; ?>
+				<img id="imgMedalla" class="[ width--100 ]" style="<?php echo $css_medalla; ?>" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/transparente.png" alt="imagen de interrogacion">
 
 

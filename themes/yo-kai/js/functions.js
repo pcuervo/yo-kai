@@ -63,10 +63,13 @@ var $=jQuery.noConflict();
             }, 0);
             setTimeout(function() {
                 $('#imgMedalla').show(0);
+            }, 3200);
+            setTimeout(function() {
                 $img.hide(0);
-                $('#textoCargaExitosa').removeClass('hidden');
                 $('.formCargaMedalla').addClass('hidden');
+                $('#textoCargaExitosa').removeClass('hidden');
             }, 3700);
+           
         }
 
 
