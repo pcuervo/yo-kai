@@ -7,6 +7,9 @@
 			<p>Estos son los datos de tu cuenta:</p>
 			<p>Nickname: <span>lorem ipsum</span></p>
 			<p>Contraseña: <span>loremipsum</span></p>
+			<div>';
+				<img style="width: 100%" src="<?php echo THEMEPATH; ?>images/fantasma.png" alt="imagen spining elements">';
+			<div>';
 		</div>
 	</div>
 <?php get_footer(); ?>

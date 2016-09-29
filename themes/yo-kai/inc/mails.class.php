@@ -17,26 +17,36 @@ class Mails{
 	 * @param  [type] $wpParticipante [description]
 	 * @return [type]                 [description]
 	 */
-	public function sendMailNickPassChilds($wpParticipantes)
+	public function sendMailNickPassChilds($wpParticipantes, $email_send)
 	{
 		global $success;
 		$subject = 'YO-KAI - Recuperación de contraseña';
 		$body = 'Hemos enviado los datos de acceso a las cuentas de tus hijos: <br />';
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: YO-KAI <no-reply@yo-kay.com>' . "\r\n";
-		$message = '<html><body>';
+		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
 
-		$message .= '<img class="" src="<?php echo THEMEPATH; ?>images/spining-elements.png" alt="imagen spining elements">';
-		$message .= '<h2 class="">Recuperar contraseña</h2>';
-		$message .= '<div class="">';
+		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
+			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
+				$message .= '<img style="width: 100%" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
+			$message .= '</a>';
+		$message .= '</div>';
+		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
+		$message .= '<div style="padding-left:50px; padding-right:50px; padding-bottom:50px;">';
+			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Recuperar contraseña</h2>';
 			$message .= '<div class="">';
-				$message .= '<p>Tú o tu hijo solicitaron la recuperación de la contraseña para la página yo-kay. Recuerda que el concurso por los premios termina el 5 de enero de 2017 a las 14 horas.</p>';
-				$message .= '<p>Estos son los datos de tu cuenta:</p>';
-				foreach ($wpParticipantes as $key => $participante) {
-					$pass = $this->get_password_participantes($participante->ID);
-					$message .= '<p>Nickname: <span>'.$participante->user_login.'</span></p>';
-					$message .= '<p>Contraseña: <span>'.$pass.'</span></p>';
-				}
+				$message .= '<div class="">';
+					$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Tú o tu hijo solicitaron la recuperación de la contraseña para la página yo-kay. Recuerda que el concurso por los premios termina el 5 de enero de 2017 a las 14 horas.</p>';
+					$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Estos son los datos de tu cuenta:</p>';
+					foreach ($wpParticipantes as $key => $participante) {
+						$pass = $this->get_password_participantes($participante->ID);
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Nickname: <span style="color: #FDC804">'.$participante->user_login.'</span></p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Contraseña: <span style="color: #FDC804">'.$pass.'</span></p>';
+					}
+					$message .= '<div style="text-align: right;">';
+						$message .= '<img style="width: 150px;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
+					$message .= '<div>';
+				$message .= '</div>';
 			$message .= '</div>';
 		$message .= '</div>';
 
@@ -45,8 +55,7 @@ class Mails{
 		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
 
 		//SEND EMAIL CONFIRMATION
-		$resp = wp_mail( 'alex.cervantes@losmaquiladores.com', $subject, $message, $headers );
-
+		$resp = wp_mail( $email_send, $subject, $message, $headers );
 		if ($resp) {
 			$success = 'Se enviaron con exito su nickname y contraseña';
 		}
