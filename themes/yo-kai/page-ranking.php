@@ -13,7 +13,7 @@
 			<h2 id="ranking-cerrado" class="[ hidden ][ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">Estas son las posiciones finales. ¡Sigue usando el album digital!</h2>
 		</div>
 	</div>
-	<div class="[ box-raking ][ margin-bottom--large ]">
+	<div class="[ box-raking ][ margin-bottom--xxlarge ]">
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
 				<h3 class="[ color-light ]">Posición</h3>

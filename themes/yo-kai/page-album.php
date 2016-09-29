@@ -68,8 +68,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 				</a>
 			</div>
 		</div>
-
-		<div class="[ text-center ][ margin-bottom--xxlarge ]">
+		<div class="[ text-center ][ margin-bottom--xxxlarge ]">
 			<div class="[ border-primary border-radius--20 ][ inline-block ]">
 				<a href="<?php echo site_url('/cargar/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Cargar</a>
 			</div>
@@ -111,7 +110,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 				<p class="[ color-primary ]">¡ESPERAMOS QUE HAYAS RESULTADO GANADOR!</p>
 			</div>
 			<div class="[ border-primary border-radius--20 ][ inline-block ][ margin-bottom ]">
-				<button type="button" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]" data-dismiss="modal">OK</button>
+				<button id="modal-ok" type="button" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]" data-dismiss="modal">OK</button>
 			</div>
 		</div>
 	</div>

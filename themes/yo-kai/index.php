@@ -1,4 +1,4 @@
-<?php get_header(); 
+<?php get_header();
 if (isset($_GET['return']) AND $_GET['return'] == 'error') {
 	echo '<pre>';
 	print_r('Nickname ó contraseña incorrectos.');
@@ -22,7 +22,7 @@ if (isset($_GET['return']) AND $_GET['return'] == 'error') {
 			<div class="[ border-primary border-radius--20 ][ inline-block ]"><button type="submit" class="btn btn--primary">Ingresar</button></div>
 		</form>
 	</div>
-	<div class="[ text-center ]">
+	<div class="[ text-center ][ margin-bottom--xxlarge ]">
 		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/registro'); ?>">Crear cuenta</a>
 		<a class="[ margin-left ][ margin-right ]" href="<?php echo site_url('/recuperar-contrasena'); ?>">Recuperar contraseña</a>
 	</div>

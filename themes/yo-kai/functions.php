@@ -7,7 +7,7 @@ global $success;
 	#CONSTANTS
 \*------------------------------------*/
 
-/**	
+/**
  * QUITA LA BARRA DE ADMINISTRACION
  */
 function quitar_barra_administracion(){ return false; }
@@ -22,7 +22,7 @@ define( 'THEMEPATH', get_template_directory_uri() . '/' );
 define( 'SITEURL', site_url('/') );
 
 
-/**	
+/**
  * INCLUDES
  */
 require_once('inc/pages.php');
@@ -50,6 +50,10 @@ add_action( 'wp_enqueue_scripts', function(){
 	//wp_enqueue_script( 'bootstrap', 'http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js', array('jquery'), '1.0', true );
 	//wp_enqueue_script( 'functions', JSPATH.'functions.js', array('plugins'), '1.0', true );
 	//wp_enqueue_script( 'parsley', JSPATH.'parsley.min.js', array('plugins'), '1.0', true );
+
+	// localize scripts
+	wp_localize_script( 'functions', 'isAlbum', (string) is_page('album') );
+	wp_localize_script( 'functions', 'isRegistro', (string) is_page('registro') );
 
 });
 
