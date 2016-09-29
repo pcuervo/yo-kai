@@ -53,21 +53,21 @@ var $=jQuery.noConflict();
 
         // CARGAR MEDALLA
 
-        if (document.getElementById('gifCargando')) {
+        // if (document.getElementById('gifCargando')) {
 
-            var $img = $('#gifCargando');
-            $img.show(0);
-            $('#imgMedalla').hide(0);
-            setTimeout(function() {
-                $img.attr('src', $img.attr('src'));
-            }, 0);
-            setTimeout(function() {
-                $('#imgMedalla').show(0);
-                $img.hide(0);
-                $('#textoCargaExitosa').removeClass('hidden');
-                $('.formCargaMedalla').addClass('hidden');
-            }, 3700);
-        }
+        //     var $img = $('#gifCargando');
+        //     $img.show(0);
+        //     $('#imgMedalla').hide(0);
+        //     setTimeout(function() {
+        //         $img.attr('src', $img.attr('src'));
+        //     }, 0);
+        //     setTimeout(function() {
+        //         $('#imgMedalla').show(0);
+        //         $img.hide(0);
+        //         $('#textoCargaExitosa').removeClass('hidden');
+        //         $('.formCargaMedalla').addClass('hidden');
+        //     }, 3700);
+        // }
 
 
 

@@ -20,12 +20,9 @@ function show_metabox_extras_video($post){
 	$checked = $post_destacado ? 'checked' : ''; ?>
 	<br/><br/><label for='id_video' class='label-paquetes'>ID video: </label>
 	<input type='text' name='id_video' class='widefat' value='<?php echo $id_video; ?>' id='id_video'/>
-	<?php for ($i=1; $i < 6; $i++) { 
-		# code...
-	}
+	<?php for ($i=1; $i < 6; $i++) { ?>
 	<input type="checkbox" name="post_destacado" id="post_destacado" value="1"  <?php echo $checked; ?> /> Check destacado<br><br>
-	
-<?php }
+<?php } }
 
 
 // SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
@@ -35,15 +32,15 @@ function show_metabox_extras_video($post){
 add_action('save_post', function($post_id){
 
 
-	if ( ! current_user_can('edit_page', $post_id)) 
+	if ( ! current_user_can('edit_page', $post_id))
 		return $post_id;
 
 
-	if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE ) 
+	if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE )
 		return $post_id;
-	
-	
-	if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) ) 
+
+
+	if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) )
 		return $post_id;
 
 
@@ -56,8 +53,8 @@ add_action('save_post', function($post_id){
 
 });
 
-// META TERMS 
-// 
+// META TERMS
+//
 // OTHER METABOXES ELEMENTS ///////////////////////////////////////////////////////
 
 add_action( 'category_add_form_fields', 'add_category_field', 10, 2 );
@@ -85,9 +82,9 @@ function save_feature_meta( $term_id, $tt_id ){
 
 add_action( 'category_edit_form_fields', 'edit_feature_category', 10, 2 );
 function edit_feature_category( $term, $taxonomy ){
-                
+
     $imagen_term = get_term_meta( $term->term_id, 'imagen_term', true );
-                
+
     echo "<tr class='form-field term-group-wrap'>";
     	echo "<th scope='row'>";
 	    	echo "<label for='imagen_term' class='label-paquetes'>Imagen: </label>";
@@ -99,7 +96,7 @@ function edit_feature_category( $term, $taxonomy ){
 	echo "</tr>";
 
 	$imagen_term_hover = get_term_meta( $term->term_id, 'imagen_term_hover', true );
-                
+
     echo "<tr class='form-field term-group-wrap'>";
     	echo "<th scope='row'>";
 	    	echo "<label for='imagen_term_hover' class='label-paquetes'>Imagen hover: </label>";
