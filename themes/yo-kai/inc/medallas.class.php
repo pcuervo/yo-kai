@@ -201,9 +201,9 @@ class Medallas{
 		return $wpdb->get_results( "SELECT participante_id, fecha_ultima_actualizacion, numero_de_medallas, FIND_IN_SET( numero_de_medallas, (    
 			SELECT GROUP_CONCAT( numero_de_medallas
 			ORDER BY numero_de_medallas DESC ) 
-			FROM lab_lista_medallas_participantes )
+			FROM {$wpdb->prefix}lista_medallas_participantes )
 			) AS rank
-			FROM lab_lista_medallas_participantes	
+			FROM {$wpdb->prefix}lista_medallas_participantes	
 			ORDER BY numero_de_medallas DESC", OBJECT
 		 );
 		

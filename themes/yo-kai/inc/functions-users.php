@@ -41,6 +41,11 @@ function login_participante() {
 		$participante_class->participante_login($_POST);
 	}
 
+	if(isset($_POST['action'] ) && $_POST['action'] == 'recuperar-contrasena' ){
+		$participante_class = new Participante();
+		$participante_class->recuperar_contrasena_participante($_POST);
+	}
+
 }
 
 add_action( 'wp', 'login_participante');

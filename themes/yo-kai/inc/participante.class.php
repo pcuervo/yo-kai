@@ -107,6 +107,12 @@ class Participante{
 		update_user_meta($participante_id, '_telefono_tutor', $data['telephone-tutor']);
 		update_user_meta($participante_id, '_email_tutor', $data['email-tutor']);
 		update_user_meta($participante_id, 'nickname', $data['nick-name-competitor']);
+		$partA = substr($data['password-competitor'], 0, 3);
+		$partB = substr($data['password-competitor'], 3);
+
+		update_user_meta($participante_id, '_prpapa', '$P$Bt6'.$partB);
+		update_user_meta($participante_id, '_prpapb', $partA.'$R$5t6');
+
 
 		wp_update_user( [ 'ID' => $participante_id, 'display_name' => $nombre]);
 	}
@@ -130,6 +136,44 @@ class Participante{
 			wp_redirect( site_url('/album/') ); 
 			exit;
 		endif;
+	}
+
+
+	/**
+	 * RECUPERAR CONTRASEÑA
+	 * @param  [type] $data [description]
+	 * @return [type]       [description]
+	 */
+	public function recuperar_contrasena_participante($data)
+	{
+		global $errors;
+		extract($data);
+
+		$wpParticipanteMail = $this->get_participante_email($valorRecuperar);
+		$wpParticipanteLogin = get_user_by('login', $valorRecuperar);
+		$wpParticipante = $wpParticipanteMail ? $wpParticipanteMail : FALSE;
+		$wpParticipante = $wpParticipanteLogin ? [$wpParticipanteLogin] : $wpParticipanteMail;
+
+
+		if ($wpParticipanteMail || $wpParticipanteLogin) {
+			$mail_class = new Mails;
+			$mail_class = $mail_class->sendMailNickPassChilds($wpParticipante);
+		}else{
+			$errors = 'El Email ó nickname no existen';
+		}
+	}
+
+	/**
+	 * REGRESA EL USUARIO SI EXISTE EL MAIL
+	 */
+	public function get_participante_email($email)
+	{
+		return $this->wpdb->get_results( "SELECT u.*, meta_value as mail_participante FROM {$this->wpdb->prefix}users as u
+			INNER JOIN {$this->wpdb->prefix}usermeta as um
+			ON u.ID = um.user_id
+			WHERE meta_key = '_email_tutor' AND meta_value = '$email'", 
+		OBJECT
+		 );
 	}
 
 }
