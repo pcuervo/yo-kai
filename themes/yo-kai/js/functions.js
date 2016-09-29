@@ -33,11 +33,6 @@ var $=jQuery.noConflict();
             footerBottom();
         });
 
-        // $('#modal-ok').on('click', function(){
-        //     var ejecutado=1;
-        //     alert(ejecutado);
-        // });
-
         $('.image-perfil').on('click', function(event){
             event.preventDefault();
 
@@ -58,22 +53,22 @@ var $=jQuery.noConflict();
 
         // CARGAR MEDALLA
 
-        if (document.getElementById('gifCargando')) {
-            
-            var $img = $('#gifCargando');
-            $img.show(0);
-            $('#imgMedalla').hide(0);
-            setTimeout(function() {
-                $img.attr('src', $img.attr('src'));
-            }, 0);
-            setTimeout(function() {
-                $('#imgMedalla').show(0);
-                $img.hide(0);
-                $('#textoCargaExitosa').removeClass('hidden');
-                $('.formCargaMedalla').addClass('hidden');
-            }, 3700);
-        }
-            
+        // if (document.getElementById('gifCargando')) {
+
+        //     var $img = $('#gifCargando');
+        //     $img.show(0);
+        //     $('#imgMedalla').hide(0);
+        //     setTimeout(function() {
+        //         $img.attr('src', $img.attr('src'));
+        //     }, 0);
+        //     setTimeout(function() {
+        //         $('#imgMedalla').show(0);
+        //         $img.hide(0);
+        //         $('#textoCargaExitosa').removeClass('hidden');
+        //         $('.formCargaMedalla').addClass('hidden');
+        //     }, 3700);
+        // }
+
 
 
     });
@@ -127,9 +122,6 @@ function finalConcurso(){
     console.log(document.cookie);
     console.log(new Date().toGMTString());
      if (document.cookie.indexOf("Limite") < 0) {
-        $(".modal").one( "load", function() {
-            alert("Hola, soy una alerta que sólo aparecerá 1 vez.");
-        });
         //var ejecutado=ejecutado+1;
         $('#concurso-terminado').modal('show');
         $('#ranking-cerrado').removeClass('hidden');
