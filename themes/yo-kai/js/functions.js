@@ -53,6 +53,23 @@ var $=jQuery.noConflict();
 
         // CARGAR MEDALLA
 
+        if (document.getElementById('gifCargando')) {
+
+            var $img = $('#gifCargando');
+            $img.show(0);
+            $('#imgMedalla').hide(0);
+            setTimeout(function() {
+                $img.attr('src', $img.attr('src'));
+            }, 0);
+            setTimeout(function() {
+                $('#imgMedalla').show(0);
+                $img.hide(0);
+                $('#textoCargaExitosa').removeClass('hidden');
+                $('.formCargaMedalla').addClass('hidden');
+            }, 3700);
+        }
+
+
 
     });
 })(jQuery);
@@ -100,8 +117,8 @@ function setCookie(cname,cvalue,exdays) {
 
 //Open Modal
 function finalConcurso(){
-    document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
-    //document.cookie="Limite=finalConcurso; expires=Thu, 29 Sep 2016 00:06:40 GMT";
+    //document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
+    document.cookie="Limite=finalConcurso; expires=Thu, 30 Sep 2016 00:06:40 GMT";
     console.log(document.cookie);
     console.log(new Date().toGMTString());
      if (document.cookie.indexOf("Limite") < 0) {

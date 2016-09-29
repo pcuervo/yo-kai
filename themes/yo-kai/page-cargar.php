@@ -27,36 +27,36 @@ if ($errors != '') {
 		<div class="row [ margin-bottom--xxlarge ]">
 			<div class="col-xs-5">
 				<?php $imagen = attachment_image_url( $idMedalla, 'full');
-				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';  ?>
-				<img id="medalla-cargada" class="[ absolute ][ width--315 ][ hidden ]" src="<?php echo THEMEPATH; ?>images/medalla.png" alt="imagen de interrogacion">
-				<img class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
-				<img class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
+				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';
+				if($cargaMedalla == 1): ?>
+					<img id="gifCargando" class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
+				<?php endif; ?>
+				<img id="imgMedalla" class="[ width--100 ]" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
+				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/transparente.png" alt="imagen de interrogacion">
+
+
 			</div>
 			<div class="col-xs-7 [ text-center ][ padding-top--xlarge ]">
-
 				<!-- Al cargar -->
-				<?php if($cargaMedalla != 1): ?>
-					<form method="POST" data-parsley-validate>
-						<div class="form-group [ margin-bottom--large ]">
-							<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
-							<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
-						</div>
-						<div class="[ border-primary border-radius--20 ][ inline-block ]">
-							<input type="hidden" name="action" value="cargar-nueva-medalla">
-							<button type="submit" class="btn btn--primary">Cargar</button>
-						</div>
-					</form>
-				<?php elseif($cargaMedalla == 1): ?>
-					<!-- Después de cargar -->
-					<div class="[ text-center ]">
-						<div class="[ border-primary border-radius--20 ][ inline-block ][ margin-bottom ]">
-							<a href="<?php echo site_url('/cargar/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Nueva carga</a>
-						</div>
-						<div class="[ border-primary border-radius--20 ][ inline-block ]">
-							<a href="<?php echo site_url('/album/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Ir al álbum</a>
-						</div>
+				<form class="formCargaMedalla" method="POST" data-parsley-validate>
+					<div class="form-group [ margin-bottom--large ]">
+						<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
+						<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
 					</div>
-				<?php endif; ?>
+					<div class="[ border-primary border-radius--20 ][ inline-block ]">
+						<input type="hidden" name="action" value="cargar-nueva-medalla">
+						<button type="submit" class="btn btn--primary">Cargar</button>
+					</div>
+				</form>
+				<!-- Después de cargar -->
+				<div id="textoCargaExitosa" class="[ text-center hidden ]">
+					<div class="[ border-primary border-radius--20 ][ inline-block ][ margin-bottom ]">
+						<a href="<?php echo site_url('/cargar/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Nueva carga</a>
+					</div>
+					<div class="[ border-primary border-radius--20 ][ inline-block ]">
+						<a href="<?php echo site_url('/album/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Ir al álbum</a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

@@ -1,6 +1,64 @@
-<?php // OTHER METABOXES ELEMENTS ///////////////////////////////////////////////////////
+<?php // CUSTOM METABOXES //////////////////////////////////////////////////////////////////
+
+add_action('add_meta_boxes', function(){
+
+	add_meta_box( 'meta-box-extras_video', 'Extras video', 'show_metabox_extras_video', 'videos', 'side', 'high' );;
+
+});
+
+
+
+// CUSTOM METABOXES CALLBACK FUNCTIONS ///////////////////////////////////////////////
+
+function show_metabox_extras_video($post){
+	global $post;
+	wp_nonce_field(__FILE__, 'destacado_nonce');
+	$id_video = get_post_meta( $post->ID, 'id_video', true );
+
+	$orden_videos = get_post_meta( $post->ID, 'orden_videos', true );
+
+	$checked = $post_destacado ? 'checked' : ''; ?>
+	<br/><br/><label for='id_video' class='label-paquetes'>ID video: </label>
+	<input type='text' name='id_video' class='widefat' value='<?php echo $id_video; ?>' id='id_video'/>
+	<?php for ($i=1; $i < 6; $i++) { 
+		# code...
+	}
+	<input type="checkbox" name="post_destacado" id="post_destacado" value="1"  <?php echo $checked; ?> /> Check destacado<br><br>
+	
+<?php }
+
+
+// SAVE METABOXES DATA ///////////////////////////////////////////////////////////////
+
+
+
+add_action('save_post', function($post_id){
+
+
+	if ( ! current_user_can('edit_page', $post_id)) 
+		return $post_id;
+
+
+	if ( defined('DOING_AUTOSAVE') and DOING_AUTOSAVE ) 
+		return $post_id;
+	
+	
+	if ( wp_is_post_revision($post_id) OR wp_is_post_autosave($post_id) ) 
+		return $post_id;
+
+
+	if ( isset($_POST['new_destacado'])){
+		update_post_meta($post_id, 'new_destacado', $_POST['new_destacado']);
+	}else if ( ! defined('DOING_AJAX') ){
+		delete_post_meta($post_id, 'new_destacado');
+	}
+
+
+});
 
 // META TERMS 
+// 
+// OTHER METABOXES ELEMENTS ///////////////////////////////////////////////////////
 
 add_action( 'category_add_form_fields', 'add_category_field', 10, 2 );
 function add_category_field($taxonomy) {

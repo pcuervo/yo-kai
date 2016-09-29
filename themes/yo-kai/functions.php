@@ -1,6 +1,7 @@
 <?php global $errors;
 global $cargaMedalla;
 global $idMedalla;
+global $success;
 
 /*------------------------------------*\
 	#CONSTANTS
@@ -25,9 +26,12 @@ define( 'SITEURL', site_url('/') );
  * INCLUDES
  */
 require_once('inc/pages.php');
+require_once('inc/mails.class.php');
 require_once('inc/functions-users.php');
 require_once('inc/functions-post-type.php');
 require_once('inc/functions-metaboxes.php');
+
+
 
 
 /*------------------------------------*\

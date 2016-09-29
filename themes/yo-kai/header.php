@@ -38,7 +38,7 @@
 	<?php } else { ?>
 		<body class="bg-image--primary">
 	<?php } ?>
-		<!-- <a class="bt-logout" href="<?php echo wp_logout_url(); ?>">LOG OUT</a> -->
+		<a class="bt-logout" href="<?php echo wp_logout_url(); ?>">LOG OUT</a>
 		<header class="[ js-header ]">
 
 			<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>

@@ -27,7 +27,7 @@ add_action( 'admin_menu', 'yokai_post_menu_label' );
 add_action('init', function(){
 
 
-	// quick booms
+	// MEDALLAS
 	$labels = array(
 		'name'          => 'Medallas',
 		'singular_name' => 'Medalla',
@@ -58,6 +58,37 @@ add_action('init', function(){
 		'supports'           => array( 'title', 'thumbnail' )
 	);
 	register_post_type( 'medallas', $args );
+
+	// VIDEOS
+	$labels = array(
+		'name'          => 'Videos',
+		'singular_name' => 'Video',
+		'add_new'       => 'Nuevo Video',
+		'add_new_item'  => 'Nuevo Video',
+		'edit_item'     => 'Editar Video',
+		'new_item'      => 'Nuevo Video',
+		'all_items'     => 'Todos',
+		'view_item'     => 'Ver Video',
+		'search_items'  => 'Buscar Video',
+		'not_found'     => 'No se encontro',
+		'menu_name'     => 'Videos'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'videos' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'thumbnail' )
+	);
+	register_post_type( 'videos', $args );
 
 
 });
