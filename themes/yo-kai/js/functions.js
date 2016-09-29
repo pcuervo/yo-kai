@@ -24,12 +24,19 @@ var $=jQuery.noConflict();
                 interval:false
             });
             finalConcurso();
+            if(window.location.href.indexOf("album/?cat=") > -1) {
+                $( ".carousel-control" ).addClass('hidden');
+            };
         });
 
         $(window).on('resize', function(){
             footerBottom();
         });
 
+        // $('#modal-ok').on('click', function(){
+        //     var ejecutado=1;
+        //     alert(ejecutado);
+        // });
 
         $('.image-perfil').on('click', function(event){
             event.preventDefault();
@@ -98,13 +105,14 @@ function setCookie(cname,cvalue,exdays) {
 
 //Open Modal
 function finalConcurso(){
-    //document.cookie="Limite=finalConcurso; expires=5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
-    document.cookie="Limite=finalConcurso; expires=27 Sep 2015 11:06:00 GMT";
+    //document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
+    document.cookie="Limite=finalConcurso; expires=Thu, 29 Sep 2016 00:06:40 GMT";
     console.log(document.cookie);
-    //console.log(new Date().toGMTString());
-    if (document.cookie.indexOf("Limite") < 0) {
-       $('#concurso-terminado').modal('show');
-       $('#ranking-cerrado').removeClass('hidden');
-       $('#ranking-abierto').addClass('hidden');
+    console.log(new Date().toGMTString());
+     if (document.cookie.indexOf("Limite") < 0) {
+        //var ejecutado=ejecutado+1;
+        $('#concurso-terminado').modal('show');
+        $('#ranking-cerrado').removeClass('hidden');
+        $('#ranking-abierto').addClass('hidden');
     }
 }
