@@ -77,5 +77,49 @@ class Mails{
 
 	}
 
+	/**	
+	 * ENVIA LA CONSULTA POR MAIL
+	 * @return [type]       [description]
+	 */
+	public function sendMailConsulta($data, $participante)
+	{
+		global $success;
+		$email = get_user_meta($participante->ID, '_email_tutor', true);
+		$telefono = get_user_meta($participante->ID, '_telefono_tutor', true);
+		$subject = 'YO-KAI - Consulta de '.$participante->user_login;
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+		$headers = 'From: YO-KAI - Consultas <no-reply@yo-kay.com>' . "\r\n";
+		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
+
+		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
+			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
+				$message .= '<img style="width: 100%" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
+			$message .= '</a>';
+		$message .= '</div>';
+		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
+		$message .= '<div style="padding-left:50px; padding-right:50px; padding-bottom:50px;">';
+			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Consulta participante</h2>';
+			$message .= '<div class="">';
+				$message .= '<div class="">';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Nickname: <span style="color: #FDC804">'.$participante->user_login.'</span></p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Consulta: <span style="color: #FDC804">'.$data['contenido-consulta'].'</span></p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Email: <span style="color: #FDC804">'.$email.'</span></p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Teléfono: <span style="color: #FDC804">'.$telefono.'</span></p>';
+
+				$message .= '</div>';
+			$message .= '</div>';
+		$message .= '</div>';
+
+		$message .= '</body></html>';
+
+		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
+
+		//SEND EMAIL CONFIRMATION
+		$resp = wp_mail( 'raul@pcuervo.com', $subject, $message, $headers );
+		if ($resp) {
+			$success = 'Se enviaron con exito su nickname y contraseña';
+		}
+	}
+
 
 }

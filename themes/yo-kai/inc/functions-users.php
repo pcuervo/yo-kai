@@ -29,6 +29,11 @@ if (isset($_POST['action']) AND $_POST['action'] == 'cargar-nueva-medalla') {
 	$result = $medallas_class->save($_POST);
 }
 
+if (isset($_POST['action']) AND $_POST['action'] == 'guarda-consulta') {
+	$participante_class = new Participante();
+	$participante_class->createConsulta($_POST);
+}
+
 Medallas::createTableMedallasParticipante();
 
 /**	

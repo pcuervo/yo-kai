@@ -177,4 +177,44 @@ class Participante{
 		 );
 	}
 
+	/**
+	 * GUARDA LA CONSULTA
+	 */
+	public function saveConsulta($data_consulta){
+
+		// Create post object
+		$current_user = wp_get_current_user();
+
+		$description = isset($data_consulta['contenido-consulta']) ? $data_consulta['contenido-consulta'] : '';
+		$new_consulta = array(
+			'post_title'   => 'Participante: '.$current_user->user_login,
+			'post_content' => $description,
+			'post_status'  => 'publish',
+			'post_date'    => current_time('mysql'),
+			'post_author'  => $current_user->ID,
+			'post_type'    => 'consulta'
+		);
+
+		return wp_insert_post($new_consulta);
+	}
+
+	/**
+	 * CREA LA CONSULTA
+	 */
+	public function createConsulta($data){
+		global $current_user;
+		global $errors;
+
+		$consulta_id = $this->saveConsulta($data);
+
+		if ($consulta_id) {
+			update_post_meta( $consulta_id, '_participante_consulta', $current_user->ID );
+			$mail_class = new Mails;
+			$mail_class = $mail_class->sendMailConsulta($data, $current_user);
+		}else{
+			$errors = 'Error al enviar tu consulta, intentalo de nuevo.';
+		}
+
+	}
+
 }

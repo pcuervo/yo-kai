@@ -90,5 +90,36 @@ add_action('init', function(){
 	);
 	register_post_type( 'videos', $args );
 
+	// CONSULTAS
+	$labels = array(
+		'name'          => 'Consultas',
+		'singular_name' => 'Consulta',
+		'add_new'       => 'Nueva Consulta',
+		'add_new_item'  => 'Nueva Consulta',
+		'edit_item'     => 'Editar Consulta',
+		'new_item'      => 'Nueva Consulta',
+		'all_items'     => 'Todas',
+		'view_item'     => 'Ver Consulta',
+		'search_items'  => 'Buscar Consulta',
+		'not_found'     => 'No se encontro',
+		'menu_name'     => 'Consultas'
+	);
+
+	$args = array(
+		'labels'             => $labels,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'consulta' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => 6,
+		'supports'           => array( 'title', 'editor' )
+	);
+	register_post_type( 'consulta', $args );
+
 
 });

@@ -2,7 +2,9 @@
 
 add_action('add_meta_boxes', function(){
 
-	add_meta_box( 'meta-box-extras_video', 'Extras video', 'show_metabox_extras_video', 'videos', 'side', 'high' );;
+	add_meta_box( 'meta-box-extras_video', 'Extras video', 'show_metabox_extras_video', 'videos', 'side', 'high' );
+	add_meta_box( 'meta-box-extras_consulta', 'Participante', 'show_metabox_extras_consulta', 'consulta', 'side', 'high' );
+
 
 });
 
@@ -28,6 +30,22 @@ function show_metabox_extras_video($post){
 		
 	<?php }
 	
+}
+
+function show_metabox_extras_consulta($post){
+	global $post;
+	wp_nonce_field(__FILE__, 'consulta_nonce');
+	$participante_id = get_post_meta( $post->ID, '_participante_consulta', true );
+	if ($participante_id != '') {
+		$participante_info = get_userdata($participante_id);
+		$email = get_user_meta($participante_info->ID, '_email_tutor', true);
+		$telefono = get_user_meta($participante_info->ID, '_telefono_tutor', true); ?>
+		<p><strong>Nombre: </strong> <?php echo $participante_info->user_login; ?></p>
+		<p><strong>Email: </strong> <?php echo $email; ?></p>
+		<p><strong>Teléfono: </strong> <?php echo $telefono; ?></p>
+	<?php }
+	
+
 }
 
 
