@@ -66,8 +66,11 @@ class Medallas{
 		$medallas_participante[$id_exist]['codigo'] = 1;
 
 		update_user_meta($current_user->ID, 'medallas', $medallas_participante);
-	
-		$this->saveTotalMedallasPArticipante($current_user->ID, count($medallas_participante));
+
+		if ( date('Y-m-d H:i:s') < '2017-01-05 14:00:00' ) {
+			$this->saveTotalMedallasPArticipante($current_user->ID, count($medallas_participante));
+		}
+		
 
 	}
 
