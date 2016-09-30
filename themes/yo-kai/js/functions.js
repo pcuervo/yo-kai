@@ -10,10 +10,8 @@ var $=jQuery.noConflict();
             var url = $('.bt-logout').attr('href');
             $.get( url );
 
-            // var xmlHttp = new XMLHttpRequest();
-            // xmlHttp.open( "GET", url, false ); // false para asincrona
-            // xmlHttp.send( null );
         });
+        
 
         /*------------------------------------*\
             #GLOBAL

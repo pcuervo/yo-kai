@@ -7,6 +7,7 @@
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>
 		<script src="<?php echo THEMEPATH; ?>js/functions.js"></script>
 		<script src="<?php echo THEMEPATH; ?>js/parsley.min.js"></script>
+		
 		<?php wp_footer(); ?>
 	</body>
 </html>
