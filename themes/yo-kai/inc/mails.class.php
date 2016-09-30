@@ -117,7 +117,7 @@ class Mails{
 		//SEND EMAIL CONFIRMATION
 		$resp = wp_mail( 'raul@pcuervo.com', $subject, $message, $headers );
 		if ($resp) {
-			$success = 'Se enviaron con exito su nickname y contraseña';
+			$success = 'Se envio tu consulta correctamente';
 		}
 	}
 
