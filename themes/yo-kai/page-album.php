@@ -26,7 +26,9 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 						array(
 							'posts_per_page' => -1,
 							'post_type' => 'medallas',
-							'category_name' => $category_slug
+							'category_name' => $category_slug,
+							'orderby' => 'date',
+							'order'   => 'ASC'
 						)
 					);
 
