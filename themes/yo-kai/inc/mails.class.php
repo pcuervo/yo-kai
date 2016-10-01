@@ -116,7 +116,7 @@ class Mails{
 		//SEND EMAIL CONFIRMATION
 		$resp = wp_mail( 'nayeli@pcuervo.com', $subject, $message, $headers );
 		if ($resp) {
-			$success = 'Se enviaron con exito su nickname y contraseña';
+			$success = 'Se envío tu consulta correctamente';
 		}
 	}
 
