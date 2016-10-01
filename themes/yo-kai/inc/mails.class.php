@@ -89,7 +89,7 @@ class Mails{
 		$subject = 'YO-KAI - Consulta de '.$participante->user_login;
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: YO-KAI - Consultas <no-reply@yo-kay.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
+		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
 			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
@@ -107,6 +107,9 @@ class Mails{
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Teléfono: <span style="color: #FDC804">'.$telefono.'</span></p>';
 				$message .= '</div>';
 			$message .= '</div>';
+			$message .= '<div style="text-align: right;">';
+				$message .= '<img style="width: 150px;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
+			$message .= '<div>';
 		$message .= '</div>';
 
 		$message .= '</body></html>';
