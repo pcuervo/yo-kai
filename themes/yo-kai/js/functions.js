@@ -118,8 +118,8 @@ function setCookie(cname,cvalue,exdays) {
 
 //Open Modal
 function finalConcurso(){
-    //document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
-    document.cookie="Limite=finalConcurso; expires=Thu, 30 Sep 2016 00:06:40 GMT";
+    document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
+    // document.cookie="Limite=finalConcurso; expires=Thu, 30 Sep 2016 00:06:40 GMT";
     console.log(document.cookie);
     console.log(new Date().toGMTString());
      if (document.cookie.indexOf("Limite") < 0) {
