@@ -6883,7 +6883,7 @@ button.close {
   margin-bottom: 120px;
 }
 .margin-bottom--xxxlarge {
-  margin-bottom: 200px;
+  margin-bottom: 160px;
 }
 .margin-top {
   margin-top: 20px;
@@ -7182,20 +7182,24 @@ a:hover .color-primary--hover {
 .category-card a .img-hover {
   display: none;
 }
-.category-card:hover {
+.category-card:hover,
+.category-card.active {
   border-color: #FDC804;
 }
-.category-card:hover a {
+.category-card:hover a,
+.category-card.active a {
   background-color: #FDC804;
   border-color: #E2262A;
   color: #E2262A;
   width: 75px;
   height: 75px;
 }
-.category-card:hover a .img-initial {
+.category-card:hover a .img-initial,
+.category-card.active a .img-initial {
   display: none;
 }
-.category-card:hover a .img-hover {
+.category-card:hover a .img-hover,
+.category-card.active a .img-hover {
   display: block;
 }
 .category-card:last-child {
@@ -7206,6 +7210,12 @@ a:hover .color-primary--hover {
   width: 144%;
   left: -22%;
   top: -30.5%;
+}
+.main > pre {
+  background: #FDC804;
+  border: 0px;
+  border-radius: 0;
+  text-align: center;
 }
 @-ms-viewport {
   width: device-width;

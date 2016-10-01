@@ -68,14 +68,14 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 				</a>
 			</div>
 		</div>
-		<div class="[ text-center ][ margin-bottom--xxxlarge ]">
+		<div class="[ text-center ][ margin-bottom--xxlarge ]">
 			<div class="[ border-primary border-radius--20 ][ inline-block ]">
 				<a href="<?php echo site_url('/cargar/'); ?>" class="[ inline-block ][ btn btn--primary ][ text-center ][ margin-auto ]">Cargar</a>
 			</div>
 		</div>
 		<div class="[ absolute bottom--48 ]">
 			<div class="[ text-center ]">
-				<div class="[ category-card ]">
+				<div class="[ category-card ]">  <?php //if(site_url('album/?cat=slippery')) echo 'active'; ?>
 					<a href="<?php echo site_url('/album/'); ?>">
 						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
 						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">

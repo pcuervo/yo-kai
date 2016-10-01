@@ -77,7 +77,7 @@ class Mails{
 
 	}
 
-	/**	
+	/**
 	 * ENVIA LA CONSULTA POR MAIL
 	 * @return [type]       [description]
 	 */
@@ -105,7 +105,6 @@ class Mails{
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Consulta: <span style="color: #FDC804">'.$data['contenido-consulta'].'</span></p>';
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Email: <span style="color: #FDC804">'.$email.'</span></p>';
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Teléfono: <span style="color: #FDC804">'.$telefono.'</span></p>';
-
 				$message .= '</div>';
 			$message .= '</div>';
 		$message .= '</div>';
@@ -115,7 +114,7 @@ class Mails{
 		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
 
 		//SEND EMAIL CONFIRMATION
-		$resp = wp_mail( 'raul@pcuervo.com', $subject, $message, $headers );
+		$resp = wp_mail( 'nayeli@pcuervo.com', $subject, $message, $headers );
 		if ($resp) {
 			$success = 'Se enviaron con exito su nickname y contraseña';
 		}

@@ -74,7 +74,7 @@
 .margin-bottom--large		{ margin-bottom: (@margin-base*2); }
 .margin-bottom--xlarge		{ margin-bottom: (@margin-base*4); }
 .margin-bottom--xxlarge		{ margin-bottom: (@margin-base*6); }
-.margin-bottom--xxxlarge		{ margin-bottom: (@margin-base*10); }
+.margin-bottom--xxxlarge		{ margin-bottom: (@margin-base*8); }
 
 .margin-top					{ margin-top: @margin-base; }
 .margin-top--large			{ margin-top: (@margin-base*2); }
@@ -257,7 +257,8 @@ a:hover .color-primary--hover	{ color: @color-primary; }
 		.img-initial { display: block; }
 		.img-hover { display: none; }
 	}
-	&:hover {
+	&:hover,
+	&.active {
 		border-color: @color-primary;
 
 		a {

@@ -33,7 +33,7 @@
 			$user_info = get_userdata($paricipante->participante_id); ?>
 				<div class="row [ margin-bottom ]">
 					<div class="col-xs-3">
-						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]">Nº <?php echo $paricipante->rank; ?></p>
+						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº <?php echo $paricipante->rank; ?></p>
 					</div>
 					<div class="col-xs-6">
 						<img src="<?php echo THEMEPATH; ?>images/portrait-1.png" alt="fondo de perfil">
@@ -41,7 +41,7 @@
 						<p class="[ nombre ]"><?php echo $user_info->user_login; ?></p>
 					</div>
 					<div class="col-xs-3">
-						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ]"><?php echo $paricipante->numero_de_medallas; ?>/<?php echo $count_medallas->publish; ?></p>
+						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]"><?php echo $paricipante->numero_de_medallas; ?>/<?php echo $count_medallas->publish; ?></p>
 					</div>
 				</div>
 			<?php endforeach;
