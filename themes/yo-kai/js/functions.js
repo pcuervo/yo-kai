@@ -6,11 +6,11 @@ var $=jQuery.noConflict();
          /**
          * LOGOUT AL CERRAR VENTANA
          */
-        $(window).unload(function() {
-            var url = $('.bt-logout').attr('href');
-            $.get( url );
+        // $(window).unload(function() {
+        //     var url = $('.bt-logout').attr('href');
+        //     $.get( url );
 
-        });
+        // });
         
 
         /*------------------------------------*\

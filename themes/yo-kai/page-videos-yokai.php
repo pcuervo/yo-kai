@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	<div class="[ width--800p ][ margin-auto ]">
+<div class="[ width--800p ][ margin-auto ]">
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-sm-4">
 			<!-- Portrait perfil -->

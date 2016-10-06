@@ -58,7 +58,7 @@
 								</a>
 							</div>
 							<a class="<?php if(is_page('descargables')) echo 'active'; ?>" href="<?php echo site_url('/descargables'); ?>">Descargables</a>
-							<a class="<?php if(is_page('videos')) echo 'active'; ?>" href="<?php echo site_url('/videos'); ?>">Videos</a>
+							<a class="<?php if(is_page('videos')) echo 'active'; ?>" href="<?php echo site_url('/videos-yokai'); ?>">Videos</a>
 							<a class="<?php if(is_page('ayuda')) echo 'active'; ?>" href="<?php echo site_url('/ayuda'); ?>">Ayuda</a>
 						</div>
 					</div>
