@@ -1074,7 +1074,7 @@ body {
   font-family: 'GillSans', Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #fff;
   background-image: url('images/fondo.png');
   background-size: cover;
   background-repeat-x: no-repeat;
@@ -3047,7 +3047,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #ffffff;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -3667,6 +3667,15 @@ input[type="button"].btn-block {
 .btn--primary:hover {
   background-color: #E2262A;
   color: #FDC804;
+}
+.btn--primary.btn-sm {
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 15px;
+  padding: 8px 20px 5px 20px;
 }
 .fade {
   opacity: 0;
@@ -5219,7 +5228,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #fff;
 }
 .alert {
   padding: 15px;
@@ -6738,11 +6747,11 @@ button.close {
 #myCarousel.carousel-album .image-card .multiple-card {
   position: absolute;
   bottom: -15px;
-  left: 35px;
+  left: 40px;
 }
 #myCarousel.carousel-album .image-card .multiple-card + p {
   position: absolute;
-  width: 107px;
+  width: 119px;
   bottom: -28px;
 }
 #myCarousel.carousel-album .carousel-control {
@@ -7119,6 +7128,11 @@ a:hover .color-primary--hover {
   margin: 0px;
   line-height: 15px;
   font-size: 12px;
+}
+.portrait-perfil .logout {
+  position: absolute;
+  top: 10px;
+  left: 150px;
 }
 .box-raking {
   height: 410px;

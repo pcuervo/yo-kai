@@ -181,4 +181,11 @@ input[type="button"] {
     background-color: @color-secondary;
     color: @color-primary;
   }
+
+  &.btn-sm {
+    width: auto; height: auto;
+    .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; 15px);
+    padding: 8px 20px 5px 20px;
+  }
+
 }

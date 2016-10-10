@@ -2,11 +2,7 @@
 global $errors;
 global $cargaMedalla;
 global $idMedalla;
-if ($errors != '') {
-	echo '<pre>';
-	print_r($errors);
-	echo '</pre>';
-} ?>
+?>
 	<div class="[ width--800p ][ margin-auto ]">
 		<img class="[ absolute right--0 bottom--50 ]" src="<?php echo THEMEPATH; ?>images/fondo-cargar.png" alt="fondo de personajes">
 		<div class="row [ margin-bottom--large ]">
@@ -19,7 +15,7 @@ if ($errors != '') {
 					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">CARGA TU NUEVA MEDALLA EN TU ÁLBUM DIGITAL. </h2>
 					<p class="[ text-center ][ margin-top ]">Introduce el código que aparece debajo del código QR en el revés de tu medalla.</p>
 				<?php else: ?>
-					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">!LISTO, TIENES UNA NUEVA MEDALLA YO-KAI!</h2>
+					<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--large1 ]">¡LISTO, TIENES UNA NUEVA MEDALLA YO-KAI!</h2>
 					<p class="[ text-center ][ margin-top ]">Ahora puedes cargar otra medalla o volver al álbum.</p>
 				<?php endif; ?>
 			</div>
@@ -30,12 +26,10 @@ if ($errors != '') {
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';
 				if($cargaMedalla == 1): ?>
 					<img id="gifCargando" class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
-				<?php endif; 
+				<?php endif;
 				$css_medalla = $cargaMedalla == 1 ? 'display: none;' : ''; ?>
 				<img id="imgMedalla" class="[ width--100 ]" style="<?php echo $css_medalla; ?>" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
 				<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/transparente.png" alt="imagen de interrogacion">
-
-
 			</div>
 			<div class="col-xs-7 [ text-center ][ padding-top--xlarge ]">
 				<!-- Al cargar -->
@@ -43,6 +37,9 @@ if ($errors != '') {
 					<div class="form-group [ margin-bottom--large ]">
 						<label class="[ hidden ]" for="exampleInputMedalla">Ingresa el código de tu medalla</label>
 						<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ERROR TEXT">
+						<?php if ($errors != ''): ?>
+							<ul class="parsley-errors-list filled" id="parsley-id-5"><li class="parsley-required"><?php echo $errors; ?></li></ul>
+						<?php endif; ?>
 					</div>
 					<div class="[ border-primary border-radius--20 ][ inline-block ]">
 						<input type="hidden" name="action" value="cargar-nueva-medalla">

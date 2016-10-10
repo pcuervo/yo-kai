@@ -77,7 +77,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 		</div>
 		<div class="[ absolute bottom--48 ]">
 			<div class="[ text-center ]">
-				<div class="[ category-card ]">  <?php //if(site_url('album/?cat=slippery')) echo 'active'; ?>
+				<div class="[ category-card ]">
 					<a href="<?php echo site_url('/album/'); ?>">
 						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
 						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
