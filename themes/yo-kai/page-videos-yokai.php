@@ -24,10 +24,10 @@
 		$video_2 = get_option( 'orden_videos_2');
 		if ($video_2 != ''):
 			$id_video_2 = get_post_meta( $video_2, 'id_video', true );
-			$video_2 = getVideo($id_video_2); ?>
+			$video = getVideo($id_video_2); ?>
 			<div class="col-xs-6">
 				<div class="embed-responsive embed-responsive-16by9">
-					<?php echo $video_2; ?>
+					<?php echo $video; ?>
 				</div>
 				<h3 class="[ color-light ][ text-uppercase ]"><?php echo get_the_title($video_2); ?></h3>
 			</div>
