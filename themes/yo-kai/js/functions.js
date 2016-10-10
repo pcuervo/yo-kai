@@ -3,15 +3,6 @@ var $=jQuery.noConflict();
 (function($){
     "use strict";
     $(function(){
-         /**
-         * LOGOUT AL CERRAR VENTANA
-         */
-        // $(window).unload(function() {
-        //     var url = $('.bt-logout').attr('href');
-        //     $.get( url );
-
-        // });
-        
 
         /*------------------------------------*\
             #GLOBAL
@@ -67,10 +58,8 @@ var $=jQuery.noConflict();
                 $('.formCargaMedalla').addClass('hidden');
                 $('#textoCargaExitosa').removeClass('hidden');
             }, 3700);
-           
+
         }
-
-
 
     });
 })(jQuery);
@@ -115,17 +104,40 @@ function setCookie(cname,cvalue,exdays) {
 }
 
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
 
 //Open Modal
 function finalConcurso(){
-    document.cookie="Limite=finalConcurso; expires=Thu, 5 Jan 2017 19:00:00 GMT"; //5hrs. de diferencia
-    // document.cookie="Limite=finalConcurso; expires=Thu, 30 Sep 2016 00:06:40 GMT";
-    console.log(document.cookie);
-    console.log(new Date().toGMTString());
-     if (document.cookie.indexOf("Limite") < 0) {
-        //var ejecutado=ejecutado+1;
-        $('#concurso-terminado').modal('show');
-        $('#ranking-cerrado').removeClass('hidden');
-        $('#ranking-abierto').addClass('hidden');
+
+    $today = new Date().getTime();
+    $endDate = new Date('5 Jan 2017 19:00:00 GMT').getTime() //5hrs. de diferencia
+
+    if ( $endDate > $today ){
+        //console.log('aún no pasa');
+    } else{
+        //console.log('ya pasó');
+        var $limiteCookie = getCookie("Concurso");
+        //console.log( $limiteCookie );
+
+        if ($limiteCookie == '') {
+            $('#concurso-terminado').modal('show');
+            $('#ranking-cerrado').removeClass('hidden');
+            $('#ranking-abierto').addClass('hidden');
+            document.cookie="Concurso=acabo; expires=Thu, 30 Sep 2018 00:06:40 GMT";
+        }
     }
 }
