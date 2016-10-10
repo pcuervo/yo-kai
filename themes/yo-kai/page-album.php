@@ -77,7 +77,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 		</div>
 		<div class="[ absolute bottom--48 ]">
 			<div class="[ text-center ]">
-				<div class="[ category-card ]">
+				<div class="[ category-card <?php echo $category_slug == '' ? 'active' : ''; ?> ]">
 					<a href="<?php echo site_url('/album/'); ?>">
 						<img class="[ img-initial ]" src="<?php echo THEMEPATH; ?>/icons/icon_0.png" alt="icono categoría carta">
 						<img class="[ img-hover ]" src="<?php echo THEMEPATH; ?>/icons/icon_0a.png" alt="icono categoría carta">
@@ -87,8 +87,9 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ):
 				    foreach ( $terms as $term ):
 				    	$imagen_term = get_term_meta( $term->term_id, 'imagen_term', true );
-				    	$imagen_term_hover = get_term_meta( $term->term_id, 'imagen_term_hover', true ); ?>
-				        <div class="[ category-card ]">
+				    	$imagen_term_hover = get_term_meta( $term->term_id, 'imagen_term_hover', true );
+				    	$class_cat = $term->slug == $category_slug ? 'active' : ''; ?>
+				        <div class="[ category-card <?php echo $class_cat; ?> ]">
 							<a href="<?php echo site_url('/album/'); ?>?cat=<?php echo $term->slug; ?>">
 								<img class="[ img-initial ]" src="<?php echo $imagen_term; ?>" alt="icono categoría carta">
 								<img class="[ img-hover ]" src="<?php echo $imagen_term_hover; ?>" alt="icono categoría carta">
