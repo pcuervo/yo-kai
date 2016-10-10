@@ -17,7 +17,7 @@ function show_metabox_extras_video($post){
 	wp_nonce_field(__FILE__, 'videos_nonce');
 	$id_video = get_post_meta( $post->ID, 'id_video', true ); ?>
 	<br/>
-	<label for='id_video' class='label-paquetes'>ID video: </label>
+	<label for='id_video' class='label-paquetes'>Url video: </label>
 	<input type='text' name='id_video' class='widefat' value='<?php echo $id_video; ?>' id='id_video'/>
 
 	<br/><br/><label for='orden_videos' class='label-paquetes'><strong>Posición video:</strong> </label><br/>

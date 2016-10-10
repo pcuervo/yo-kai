@@ -12,20 +12,23 @@
 	<div class="row [ margin-bottom--large ]">
 		<?php $video_1 = get_option( 'orden_videos_1');
 		if ($video_1 != ''):
-			$id_video_1 = get_post_meta( $video_1, 'id_video', true ); ?>
+			$id_video_1 = get_post_meta( $video_1, 'id_video', true );
+			$video = getVideo($id_video_1); ?>
 			<div class="col-xs-6">
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $id_video_1; ?>" frameborder="0" allowfullscreen></iframe>
+					<?php echo $video; ?>
 				</div>
 				<h3 class="[ color-light ][ text-uppercase ]"><?php echo get_the_title($video_1); ?></h3>
 			</div>
 		<?php endif;
 		$video_2 = get_option( 'orden_videos_2');
 		if ($video_2 != ''):
-			$id_video_2 = get_post_meta( $video_2, 'id_video', true ); ?>
+			$id_video_2 = get_post_meta( $video_2, 'id_video', true );
+			$video_2 = getVideo($id_video_2); ?>
 			<div class="col-xs-6">
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<?php echo $id_video_2; ?>" frameborder="0" allowfullscreen></iframe>			</div>
+					<?php echo $video_2; ?>
+				</div>
 				<h3 class="[ color-light ][ text-uppercase ]"><?php echo get_the_title($video_2); ?></h3>
 			</div>
 		<?php endif; ?>

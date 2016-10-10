@@ -75,3 +75,34 @@ function attachment_image_url($post_id, $size){
 	$image_data = wp_get_attachment_image_src($image_id, $size, false);
 	return isset($image_data[0]) ? $image_data[0] : THEMEPATH.'images/card.png';
 }
+
+
+function getVideo($url){
+	$src_video = getTypeVideo($url);
+
+	return '<iframe src="'.$src_video.'" frameborder="0" allowfullscreen></iframe>';
+}
+
+function getTypeVideo($url){
+	$parsed = parse_url($url);
+	if ($parsed['host'] == 'www.youtube.com') {
+		return 'https://www.youtube.com/embed/'.id_youtube($url);
+	}elseif($parsed['host'] == 'vimeo.com'){
+		return 'https://player.vimeo.com/video/'.substr(parse_url($url, PHP_URL_PATH), 1);
+	}
+}
+
+/**	
+ * REGRESA EL ID DE YOUTUBE
+ * @param  [type] $url [description]
+ * @return [type]      [description]
+ */
+function id_youtube($url) {
+    $patron = '%^ (?:https?://)? (?:www\.)? (?: youtu\.be/ | youtube\.com (?: /embed/ | /v/ | /watch\?v= ) ) ([\w-]{10,12}) $%x';
+    $array = preg_match($patron, $url, $parte);
+    if (false !== $array) {
+        return $parte[1];
+    }
+    return false;
+}
+
