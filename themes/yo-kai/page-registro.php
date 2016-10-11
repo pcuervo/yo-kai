@@ -1,6 +1,6 @@
 <?php get_header();
 global $errors;
-$errors_compare = 'El nickname ya esta en uso.';
+$errors_compare = 'El nickname ya existe. Por favor elige otro.';
 $nombre = isset($_POST['name-competitor']) ? $_POST['name-competitor'] : '';
 $lastName = isset($_POST['last-name-competitor']) ? $_POST['last-name-competitor'] : '';
 $nickName = (isset($_POST['nick-name-competitor']) AND $errors != $errors_compare) ? $_POST['nick-name-competitor'] : '';

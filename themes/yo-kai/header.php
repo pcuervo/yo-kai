@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Yo-Kai Watch México | <?php bloginfo('description'); ?></title>
+		<title>Yo-Kai Watch México</title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
-		<meta name="keywords" content="">
+		<meta name="keywords" content="yo-kai, yo kai, yokai, medallas yo-kai, colecciona, nintendo, nintendo 2ds, las medallas yo-kai, colecciona las medallas, yo-kai watch, yo-kai watch mexico, méxico, yokai watch, yokai mexico, yo-kai méxico, album digital, álbum, ">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -39,7 +39,7 @@
 		<body class="bg-image--primary">
 	<?php } ?>
 		<header class="[ js-header ]">
-
+			<h1></h1>
 			<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>
 				<a class="[ block ][ text-center ]" href="<?php echo site_url('/'); ?>">
 					<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai"> <!--  max-width--1024p -->

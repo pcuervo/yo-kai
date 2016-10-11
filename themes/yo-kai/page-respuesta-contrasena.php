@@ -3,7 +3,7 @@
 	<h2 class="[ color-primary ][ text-center ]">Recuperar contraseña</h2>
 	<div class="[ margin-bottom--large margin-auto ][ width--600p ]">
 		<div class="[ border-top--primary ][ padding-top--large padding-bottom--large ][ text-uppercase ]">
-			<p>Tú o tu hijo solicitaron la recuperación de la contraseña para la página yo-kay. Recuerda que el concurso por los premios termina el 5 de enero de 2017 a las 14 horas.</p>
+			<p>Tú o tu hijo solicitaron la recuperación de la contraseña para la página Yo-Kai. Recuerda que el concurso por los premios termina el 5 de enero de 2017 a las 14 horas.</p>
 			<p>Estos son los datos de tu cuenta:</p>
 			<p>Nickname: <span>lorem ipsum</span></p>
 			<p>Contraseña: <span>loremipsum</span></p>

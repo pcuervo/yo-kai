@@ -12,7 +12,7 @@ class Medallas{
 	{
 		global $wpdb;
 		$this->wpdb = &$wpdb;
-		$this->tableNameConteos = $this->wpdb->prefix.'lista_medallas_participantes';	
+		$this->tableNameConteos = $this->wpdb->prefix.'lista_medallas_participantes';
 	}
 
 
@@ -33,20 +33,20 @@ class Medallas{
 			$idMedalla = $id_exist;
 		}else{
 			global $errors;
-			$errors = 'El codigo que ingresaste no corresponde a ninguna medalla.';
+			$errors = 'El código que ingresaste no corresponde a ninguna medalla.';
 		}
 
 		// SI EXISTE AGREGAR LA MEDALLA AL PARTICIPANTE
 
 	}
 
-	/**	
-	 * CHECA SI EXISTE LA MEDALLA 
+	/**
+	 * CHECA SI EXISTE LA MEDALLA
 	 */
 	public function checkMedallaExist($nuevaMedallaCompetitor)
 	{
 		return $this->wpdb->get_var( $this->wpdb->prepare(
-			"SELECT id FROM ".$this->wpdb->prefix."posts 
+			"SELECT id FROM ".$this->wpdb->prefix."posts
 				WHERE post_title = '%s' AND post_type = 'medallas' AND post_status = 'publish';",
 			$nuevaMedallaCompetitor
 		));
@@ -70,7 +70,7 @@ class Medallas{
 		if ( date('Y-m-d H:i:s') < '2017-01-05 14:00:00' ) {
 			$this->saveTotalMedallasPArticipante($current_user->ID, count($medallas_participante));
 		}
-		
+
 
 	}
 
@@ -82,7 +82,7 @@ class Medallas{
 	private function saveTotalMedallasPArticipante($participante_id, $total)
 	{
 		$exist = $this->existParticipanteConteo($participante_id);
-	
+
 		if ($exist != '') {
 			$this->updateParticipanteConteo($participante_id, $total);
 		}else{
@@ -98,7 +98,7 @@ class Medallas{
 	private function existParticipanteConteo($participante_id)
 	{
 		return $this->wpdb->get_var( $this->wpdb->prepare(
-			"SELECT id FROM {$this->tableNameConteos} 
+			"SELECT id FROM {$this->tableNameConteos}
 				WHERE participante_id = %d;",
 			$participante_id
 		));
@@ -126,19 +126,19 @@ class Medallas{
 		return $this->wpdb->insert_id;
 	}
 
-	/**	
+	/**
 	 * ACTUALIZA EL TOTAL DE MEDALLAS DEL PARTICIPANTE
 	 */
 	private function updateParticipanteConteo($participante_id, $total)
 	{
-		$this->wpdb->update( 
-			$this->tableNameConteos, 
-			array( 
+		$this->wpdb->update(
+			$this->tableNameConteos,
+			array(
 				'numero_de_medallas' => $total,
 				'fecha_ultima_actualizacion' => date('Y-m-d h:i:s')
-			), 
-			array( 'participante_id' => $participante_id ), 
-			array( 
+			),
+			array( 'participante_id' => $participante_id ),
+			array(
 				'%d',
 				'%s'
 			)
@@ -147,7 +147,7 @@ class Medallas{
 		return true;
 	}
 
-	/**	
+	/**
 	 * REGRESA EL TOTAL DE MEDALLAS DEL PARTICIPANTE
 	 * @param  [type] $participanteId [description]
 	 * @return [type]                 [description]
@@ -163,25 +163,25 @@ class Medallas{
 	}
 
 	/**
-	 * RANKING DEL PARTICIPANTE 
+	 * RANKING DEL PARTICIPANTE
 	 */
 	static function getRankingParticipanteId($participante_id){
 		global $wpdb;
 		return $wpdb->get_var( $wpdb->prepare(
-			"SELECT FIND_IN_SET( numero_de_medallas, (    
+			"SELECT FIND_IN_SET( numero_de_medallas, (
 			SELECT GROUP_CONCAT( numero_de_medallas
-			ORDER BY numero_de_medallas DESC ) 
+			ORDER BY numero_de_medallas DESC )
 			FROM {$wpdb->prefix}lista_medallas_participantes )
 			) AS rank
-			FROM {$wpdb->prefix}lista_medallas_participantes	
+			FROM {$wpdb->prefix}lista_medallas_participantes
 			WHERE participante_id = %d
 			ORDER BY numero_de_medallas DESC",
 			$participante_id
 		));
-		
+
 	}
 
-	/**	
+	/**
 	 * CREAR TALA PARA LLEVAR EL CONTEO DE LAS MEDALLAS DE LOS PARTICIPANTES
 	 */
 	static function createTableMedallasParticipante()
@@ -201,14 +201,14 @@ class Medallas{
 
 	static function ranking(){
 		global $wpdb;
-		return $wpdb->get_results( "SELECT participante_id, fecha_ultima_actualizacion, numero_de_medallas, FIND_IN_SET( numero_de_medallas, (    
+		return $wpdb->get_results( "SELECT participante_id, fecha_ultima_actualizacion, numero_de_medallas, FIND_IN_SET( numero_de_medallas, (
 			SELECT GROUP_CONCAT( numero_de_medallas
-			ORDER BY numero_de_medallas DESC ) 
+			ORDER BY numero_de_medallas DESC )
 			FROM {$wpdb->prefix}lista_medallas_participantes )
 			) AS rank
-			FROM {$wpdb->prefix}lista_medallas_participantes	
+			FROM {$wpdb->prefix}lista_medallas_participantes
 			ORDER BY numero_de_medallas DESC", OBJECT
 		 );
-		
+
 	}
 }

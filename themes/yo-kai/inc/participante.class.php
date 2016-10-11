@@ -133,7 +133,7 @@ class Participante{
 		if ( is_wp_error($user) ) :
 			wp_redirect( '?return=error'); exit;
 		else:
-			wp_redirect( site_url('/album/') ); 
+			wp_redirect( site_url('/album/') );
 			exit;
 		endif;
 	}
@@ -155,12 +155,12 @@ class Participante{
 		$wpParticipante = $wpParticipanteLogin ? [$wpParticipanteLogin] : $wpParticipanteMail;
 
 		$mail_send = $wpParticipanteMail ? $valorRecuperar : get_user_meta($wpParticipanteLogin->ID, '_email_tutor', true);
-		
+
 		if ($wpParticipanteMail || $wpParticipanteLogin) {
 			$mail_class = new Mails;
 			$mail_class = $mail_class->sendMailNickPassChilds($wpParticipante, $mail_send);
 		}else{
-			$errors = 'El Email ó nickname no existen';
+			$errors = 'El email o nickname no existen.';
 		}
 	}
 
@@ -172,7 +172,7 @@ class Participante{
 		return $this->wpdb->get_results( "SELECT u.*, meta_value as mail_participante FROM {$this->wpdb->prefix}users as u
 			INNER JOIN {$this->wpdb->prefix}usermeta as um
 			ON u.ID = um.user_id
-			WHERE meta_key = '_email_tutor' AND meta_value = '$email'", 
+			WHERE meta_key = '_email_tutor' AND meta_value = '$email'",
 		OBJECT
 		 );
 	}
@@ -212,7 +212,7 @@ class Participante{
 			$mail_class = new Mails;
 			$mail_class = $mail_class->sendMailConsulta($data, $current_user);
 		}else{
-			$errors = 'Error al enviar tu consulta, intentalo de nuevo.';
+			$errors = 'Error al enviar tu consulta, por favor inténtalo de nuevo.';
 		}
 
 	}
