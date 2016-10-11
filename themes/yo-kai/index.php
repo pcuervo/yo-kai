@@ -8,10 +8,10 @@ if (isset($_GET['return']) AND $_GET['return'] == 'error') {
 	<img class="[ absolute left--0 ]" src="<?php echo THEMEPATH; ?>images/chabon.png" alt="imagen chabon">
 	<img class="[ absolute right--0 ]" src="<?php echo THEMEPATH; ?>images/banda.png" alt="imagen banda">
 	<div class="[ text-center ][ margin-bottom margin-auto ][ width--600p ]">
-		<h2 class="[ color-primary ]">COLECCIONA LAS MEDALLAS YO-KAI Y GANA UN NINTENDO 2DS Y MUCHOS PREMIOS MÁS. REGÍSTRATE Y CREA TU ÁLBUM DIGITAL.</h2>
+		<h1 class="[ color-primary ][ h2 ]">COLECCIONA LAS MEDALLAS YO-KAI Y GANA UN NINTENDO 2DS Y MUCHOS PREMIOS MÁS. REGÍSTRATE Y CREA TU ÁLBUM DIGITAL.</h1>
 		<form method="POST" class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>
 			<div class="form-group">
-				<label class="[ hidden ]" for="exampleInputNickname">Nickname</label>
+				<label class="[ hidden ]" for="exampleInputNickName">Nickname</label>
 				<input type="text" name="login-nickname" class="form-control" id="exampleInputNickName" placeholder="Nickname" aria-describedby="nicknameHelp" required data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO">
 			</div>
 			<div class="form-group [ margin-bottom--large ]">

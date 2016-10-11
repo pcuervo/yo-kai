@@ -209,6 +209,5 @@ class Medallas{
 			FROM {$wpdb->prefix}lista_medallas_participantes
 			ORDER BY numero_de_medallas DESC", OBJECT
 		 );
-
 	}
 }

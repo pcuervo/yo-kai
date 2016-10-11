@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="es">
 	<head>
 		<meta charset="utf-8">
 		<title>Yo-Kai Watch México</title>
@@ -8,6 +8,7 @@
 		<!-- SEO -->
 		<meta name="keywords" content="yo-kai, yo kai, yokai, medallas yo-kai, colecciona, nintendo, nintendo 2ds, las medallas yo-kai, colecciona las medallas, yo-kai watch, yo-kai watch mexico, méxico, yokai watch, yokai mexico, yo-kai méxico, album digital, álbum, ">
 		<meta name="description" content="<?php bloginfo('description'); ?>">
+		<meta http-equiv="content-language" content="ES-mx" />
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
@@ -18,8 +19,17 @@
 		<link rel="stylesheet" href="<?php echo THEMEPATH; ?>style.css">
 		<!-- Google font(s) -->
 		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
-		<!-- Font awesome -->
-		<!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+		<!-- FB -->
+		<meta property="fb:app_id"      content="623777827794843" />
+		<meta property="og:url"         content="<?php echo site_url(); ?>" />
+		<meta property="og:type"        content="website" />
+		<meta property="og:title"       content="Yo-Kai Watch México" />
+		<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+		<meta property="og:image"       content="<?php echo THEMEPATH; ?>images/fb-artboard.png" />
+		<meta property="og:image:type"  content="png" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
 		<!--[if lt IE 9]>
@@ -39,7 +49,6 @@
 		<body class="bg-image--primary">
 	<?php } ?>
 		<header class="[ js-header ]">
-			<h1></h1>
 			<?php if ( is_front_page() || is_page( array ('registro', 'recuperar-contrasena', 'terminos-y-condiciones', 'aviso-de-privacidad') )) { ?>
 				<a class="[ block ][ text-center ]" href="<?php echo site_url('/'); ?>">
 					<img class="[ width--100 ]" src="<?php echo THEMEPATH; ?>images/header.png" alt="logo yo-kai"> <!--  max-width--1024p -->

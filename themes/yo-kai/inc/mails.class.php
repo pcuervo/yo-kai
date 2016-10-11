@@ -24,7 +24,7 @@ class Mails{
 		$body = 'Hemos enviado los datos de acceso a las cuentas de tus hijos: <br />';
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: Yo-Kai Watch México <no-reply@yo-kai.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
+		$message = '<html><body style="margin: 0 auto; max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
 			$message .= '<a style="display:block; " href="http://yokaiwatchmexico.com/">';
@@ -89,7 +89,7 @@ class Mails{
 		$subject = 'Yo-Kai - Consulta de '.$participante->user_login;
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: Yo-Kai - Consultas <no-reply@yo-kai.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
+		$message = '<html><body style="margin: 0 auto; max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
 			$message .= '<a style="display:block; " href="http://yokaiwatchmexico.com/">';
@@ -128,33 +128,35 @@ class Mails{
 	 */
 	public function sendMailNewRegister($participante_id, $args){
 		global $success;
-		$subject = 'YO-KAI - ¡Bienvenido a la comunidad Yo-kay México!';
+		$subject = '¡BIENVENIDO A LA COMUNIDAD YO-KAI MÉXICO!';
 		$headers = array('Content-Type: text/html; charset=UTF-8');
-		$headers = 'From: YO-KAI <no-reply@yo-kay.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
+		$headers = 'From: Yo-Kai Watch México <no-reply@Yo-Kai.com>' . "\r\n";
+		$message = '<html><body style="margin: 0 auto; max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
-			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
-				$message .= '<img style="width: 100%" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
+			$message .= '<a style="display:block; " href="http://yokaiwatchmexico.com/">';
+				$message .= '<img style="width: 100%" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
 			$message .= '</a>';
 		$message .= '</div>';
-		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
+		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
 		$message .= '<div style="padding-left:50px; padding-right:50px; padding-bottom:50px;">';
-			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">¡Bienvenido a la comunidad Yo-kay México!</h2>';
+			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">¡Bienvenido a la comunidad Yo-Kai México!</h2>';
 			$message .= '<div class="">';
 				$message .= '<div class="">';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Consigue las medallas para tu reloj Yo-kai©, registralas en tu album digital a través de la página y gana increíbles premios.</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Desde ahora estás participando. Puedes checar el lugar en el que te encuentras en la sección "ranking". El concurso por un nintendo 2ds y nueve premios más termina el 5 de enero de 2017 a las 14 horas. ¡Junta la mayor cantidad de medallas que puedas!</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Si tienes alguna duda, escríbenos desde la sección de ayuda y responderemos lo más rápido posible a esta dirección de correo.</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Si esres el papá, la mamá o el tutor del niño participante, muéstrale este correo por favor!</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Estos son los datos de tu cuenta. ¡Buena suerte!</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Consigue las medallas para tu reloj Yo-Kai©, regístralas en tu álbum digital a través de la página y gana increíbles premios.</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Desde ahora estás participando. Puedes checar el lugar en el que te encuentras en la sección “Ranking". El concurso por un Nintendo 2DS y nueve premios más termina el 5 de enero de 2017 a las 14 horas. ¡Junta la mayor cantidad de medallas que puedas!</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Si tienes alguna duda, escríbenos desde la sección de “Ayuda" y responderemos lo más rápido posible a esta dirección de correo.</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Si eres el papá, la mamá o el tutor del niño participante, muéstrale este correo por favor!</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Estos son los datos de tu cuenta.</p>';
 
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Nickname: <span style="color: #FDC804">'.$args['nick-name-competitor'].'</span></p>';
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Contraseña: <span style="color: #FDC804">'.$args['password-competitor'].'</span></p>';
+
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Buena suerte!</p>';
 				$message .= '</div>';
 			$message .= '</div>';
 			$message .= '<div style="text-align: right;">';
-				$message .= '<img style="width: 150px;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
+				$message .= '<img style="width: 150px;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
 			$message .= '<div>';
 		$message .= '</div>';
 
@@ -164,7 +166,7 @@ class Mails{
 
 		//SEND EMAIL CONFIRMATION
 		return wp_mail( $args['email-tutor'], $subject, $message, $headers );
-		
+
 	}
 
 
