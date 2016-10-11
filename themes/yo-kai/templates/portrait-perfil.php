@@ -17,6 +17,6 @@ $imagen_perfil = getAvatarParticipanteId($current_user->ID) ?>
 		</div>
 	</div>
 	<div class="[ border-primary border-radius--20 ][ inline-block ][ logout ]">
-		<a class="[ inline-block ][ btn btn-sm btn--primary ][ text-center ][ margin-auto ]" href="<?php echo wp_logout_url(); ?>">LOG OUT</a>
+		<a class="[ inline-block ][ btn btn-sm btn--primary ][ text-center ][ margin-auto ]" href="<?php echo wp_logout_url( site_url() ); ?>">LOG OUT</a>
 	</div>
 </div>

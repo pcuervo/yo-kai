@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 require_once plugin_dir_path( __FILE__ ) . 'class-sendgrid-tools.php';
 require_once plugin_dir_path( __FILE__ ) . 'class-sendgrid-nlvx.php';
@@ -15,7 +15,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
     const INVALID_EMAIL_ERROR           = 'email_invalid';
     const SUCCESS_EMAIL_SEND            = 'email_sent';
     const ERROR_EMAIL_SEND              = 'email_error_send';
-    
+
     /**
      * Widget class constructor
      *
@@ -23,8 +23,8 @@ class SendGrid_NLVX_Widget extends WP_Widget {
      */
     function __construct() {
       parent::__construct(
-        'sendgrid_nlvx_widget', 
-        'SendGrid Subscription Widget', 
+        'sendgrid_nlvx_widget',
+        'SendGrid Subscription Widget',
         array(
           'description' => 'SendGrid Marketing Campaigns Subscription Widget'
         )
@@ -71,35 +71,35 @@ class SendGrid_NLVX_Widget extends WP_Widget {
 
       // Widget title input
       echo '<p>';
-      echo '<label for="' . $this->get_field_id( 'title' ) . '">' . _e( 'Title:' ) . '</label>'; 
+      echo '<label for="' . $this->get_field_id( 'title' ) . '">' . _e( 'Title:' ) . '</label>';
       echo '<input class="widefat" id="'. $this->get_field_id( 'title' ) . '" name="' . $this->get_field_name( 'title' ) . ' type="text" value="' . esc_attr( $title ) . '" />';
       echo '</p>';
 
       // Widget text input
       echo '<p>';
-      echo '<label for="' . $this->get_field_id( 'text' ) . '">' . _e( 'Message to display before subscription form:' ) . '</label>'; 
+      echo '<label for="' . $this->get_field_id( 'text' ) . '">' . _e( 'Message to display before subscription form:' ) . '</label>';
       echo '<input class="widefat" id="' . $this->get_field_id( 'text' ) . '" name="' . $this->get_field_name( 'text' ). '" type="text" value="' . esc_attr( $text ) . '" />';
       echo '</p>';
 
       // Widget error text input
       echo '<p>';
-      echo '<label for="' . $this->get_field_id( 'error_text' ) . '">' . _e( 'Message to display for errors:' ) . '</label>'; 
+      echo '<label for="' . $this->get_field_id( 'error_text' ) . '">' . _e( 'Message to display for errors:' ) . '</label>';
       echo '<input class="widefat" id="' . $this->get_field_id( 'error_text' ) . '" name="' . $this->get_field_name( 'error_text' ). '" type="text" value="' . esc_attr( $error_text ) . '" />';
       echo '</p>';
 
       // Widget email error text input
       echo '<p>';
-      echo '<label for="' . $this->get_field_id( 'error_email_text' ) . '">' . _e( 'Message to display for invalid email address:' ) . '</label>'; 
+      echo '<label for="' . $this->get_field_id( 'error_email_text' ) . '">' . _e( 'Message to display for invalid email address:' ) . '</label>';
       echo '<input class="widefat" id="' . $this->get_field_id( 'error_email_text' ) . '" name="' . $this->get_field_name( 'error_email_text' ). '" type="text" value="' . esc_attr( $error_email_text ) . '" />';
       echo '</p>';
 
       // Widget success text input
       echo '<p>';
-      echo '<label for="' . $this->get_field_id( 'success_text' ) . '">' . _e( 'Message to display for success:' ) . '</label>'; 
+      echo '<label for="' . $this->get_field_id( 'success_text' ) . '">' . _e( 'Message to display for success:' ) . '</label>';
       echo '<input class="widefat" id="' . $this->get_field_id( 'success_text' ) . '" name="' . $this->get_field_name( 'success_text' ). '" type="text" value="' . esc_attr( $success_text ) . '" />';
       echo '</p>';
     }
-    
+
     /**
      * Method called to update the widget parameters in the back-end
      *
@@ -118,7 +118,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
 
       return $instance;
     }
-    
+
     /**
      * Method called to render the front-end of the widget
      *
@@ -192,17 +192,17 @@ class SendGrid_NLVX_Widget extends WP_Widget {
      *
      * @return  void
      */
-    private function process_subscription( $params ) {  
+    private function process_subscription( $params ) {
       $email_split = explode( "@", $_POST['sendgrid_mc_email'] );
 
       if ( isset( $email_split[1] ) ) {
         $email_domain = $email_split[1];
-        
+
         try {
           $Punycode = new Punycode();
           $email_domain = $Punycode->decode( $email_split[1] );
         }
-        catch ( Exception $e ) { 
+        catch ( Exception $e ) {
         }
 
         $email = $email_split[0] . '@' . $email_domain;
@@ -240,7 +240,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
      */
     private function display_form() {
       echo '<form method="post" id="sendgrid_mc_email_form" class="mc_email_form" action="#sendgrid_mc_email_subscribe">';
-        
+
       if ( 'true' == Sendgrid_Tools::get_mc_opt_incl_fname_lname() ) {
         if ( 'true' == Sendgrid_Tools::get_mc_opt_req_fname_lname() ) {
           echo '<div class="sendgrid-mc-field">';
@@ -252,7 +252,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
           echo '<input id="sendgrid_mc_last_name" name="sendgrid_mc_last_name" type="text" value="" required/>';
           echo '</div>';
         } else {
-          echo '<div class="sendgrid-mc-field">';  
+          echo '<div class="sendgrid-mc-field">';
           echo '<label for="sendgrid_mc_first_name">First Name : </label>';
           echo '<input id="sendgrid_mc_first_name" name="sendgrid_mc_first_name" type="text" value=""/>';
           echo '</div>';
@@ -260,7 +260,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
           echo '<label for="sendgrid_mc_last_name">Last Name : </label>';
           echo '<input id="sendgrid_mc_last_name" name="sendgrid_mc_last_name" type="text" value=""/>';
           echo '</div>';
-        } 
+        }
       }
 
       echo '<div class="sendgrid-mc-field">';
@@ -268,7 +268,7 @@ class SendGrid_NLVX_Widget extends WP_Widget {
       echo '<input id="sendgrid_mc_email" name="sendgrid_mc_email"  value="" required/>';
       echo '</div>';
 
-      echo '<div class="sendgrid-mc-button">';      
+      echo '<div class="sendgrid-mc-button">';
       echo '<input type="submit" id="sendgrid_mc_email_submit" value="Subscribe" />';
       echo '</div>';
       echo '</form>';

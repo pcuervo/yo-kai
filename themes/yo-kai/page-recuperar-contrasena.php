@@ -19,7 +19,7 @@ if ($success != '') {
 		<form method="POST" class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>
 			<div class="form-group [ margin-bottom--large ]">
 				<label class="[ hidden ]" for="exampleInputEmail">Email</label>
-				<input type="text" class="form-control" name="valorRecuperar" id="exampleInputEmail" placeholder="Email ó nickname" aria-describedby="emailHelp" required data-parsley-type-message="ERROR TEXT" data-parsley-required-message="ERROR TEXT">
+				<input type="text" class="form-control" name="valorRecuperar" id="exampleInputEmail" placeholder="Email ó nickname" aria-describedby="emailHelp" required data-parsley-type-message="ESTE CAMPO ES OBLIGATORIO" data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO">
 			</div>
 			<input type="hidden" name="action" value="recuperar-contrasena">
 			<div class="[ border-primary border-radius--20 ][ inline-block ]"><button type="submit" class="btn btn--primary">Recuperar</button></div>

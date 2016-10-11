@@ -2,12 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Yo-kai</title>
+		<title>Yo-Kai Watch México | <?php bloginfo('description'); ?></title>
 		<!-- Sets initial viewport load and disables zooming -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- SEO -->
 		<meta name="keywords" content="">
-		<meta name="description" content="">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 		<!-- Compatibility -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="cleartype" content="on">
