@@ -66,6 +66,9 @@ class Participante{
 
 		$this->auto_login($participante_id);
 
+		$mail_class = new Mails;
+		$mail_class = $mail_class->sendMailNewRegister($participante_id, $args);
+
 		wp_redirect( site_url('/album/') );
 		exit;
 	}
