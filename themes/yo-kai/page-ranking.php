@@ -26,13 +26,13 @@ global $current_user; ?>
 				<h3 class="[ color-light ]">Medallas</h3>
 			</div>
 		</div>
-		<?php $participantes_ranking = Medallas::ranking();
-		if (!empty($participantes_ranking)):
+		<?php $participantes_ranking = Medallas::ranking(); ?>
+		<?php if (!empty($participantes_ranking)):
 			$count_medallas = wp_count_posts('medallas');
 			foreach ($participantes_ranking as $key => $paricipante):
 				$imagen_perfil = getAvatarParticipanteId($paricipante->participante_id);
 				$user_info = get_userdata($paricipante->participante_id);
-				$class_active = $current_user->ID == $paricipante->participante_id ? 'active' : ''; ?>
+				$class_active = $current_user->ID == $paricipante->participante_id ? '[ current-user ][ js-current-user ]' : ''; ?>
 				<div class="row [ margin-bottom ] <?php echo $class_active; ?> ">
 					<div class="col-xs-3">
 						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº <?php echo $paricipante->rank; ?></p>

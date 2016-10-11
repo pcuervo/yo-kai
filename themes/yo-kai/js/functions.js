@@ -16,6 +16,11 @@ var $=jQuery.noConflict();
             if(window.location.href.indexOf("album/?cat=") > -1) {
                 $( ".carousel-control" ).addClass('hidden');
             };
+
+            if ( $('.box-raking').length > 0 && $('.js-current-user').length > 0 ){
+                $('.box-raking').scrollTo(".js-current-user", 2000);
+            }
+
         });
 
         $(window).on('resize', function(){
@@ -41,7 +46,6 @@ var $=jQuery.noConflict();
         });
 
         // CARGAR MEDALLA
-
         if (document.getElementById('gifCargando')) {
 
             var $img = $('#gifCargando');
@@ -141,3 +145,10 @@ function finalConcurso(){
         }
     }
 }
+
+jQuery.fn.scrollTo = function(elem, speed) {
+    $(this).animate({
+        scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top
+    }, speed == undefined ? 1000 : speed);
+    return this;
+};

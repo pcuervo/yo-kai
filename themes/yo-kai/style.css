@@ -7140,12 +7140,13 @@ a:hover .color-primary--hover {
   overflow-x: hidden;
 }
 .box-raking .nombre {
+  width: 190px;
   text-transform: uppercase;
   color: #E2262A;
   line-height: 15px;
   position: absolute;
   top: 40px;
-  left: 130px;
+  left: 120px;
   margin-bottom: 0px;
 }
 .box-raking .avatar {
@@ -7153,6 +7154,10 @@ a:hover .color-primary--hover {
   position: absolute;
   top: 5px;
   left: 19px;
+}
+.current-user .nombre {
+  font-weight: 600;
+  font-size: 20px;
 }
 .category-card {
   border-left: 2px solid #E2262A;

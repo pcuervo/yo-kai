@@ -222,16 +222,22 @@ a:hover .color-primary--hover	{ color: @color-primary; }
 	overflow-y: scroll;
 	overflow-x: hidden;
 	.nombre {
+		width: 190px;
 		text-transform: uppercase;
 		color: @color-secondary;
 		line-height: 15px;
-		position: absolute; top: 40px; left: 130px;
+		position: absolute; top: 40px; left: 120px;
 		margin-bottom: 0px;
 	}
 	.avatar {
 		width: 84px;
 		position: absolute; top: 5px; left: 19px;
 	}
+}
+
+.current-user .nombre{
+	font-weight: 600;
+	font-size: 20px;
 }
 
 .category-card {

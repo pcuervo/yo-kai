@@ -26,6 +26,11 @@ global $idMedalla;
 				$url_medalla = $cargaMedalla == 1 ? $imagen : THEMEPATH.'images/no-card--large.png';
 				if($cargaMedalla == 1): ?>
 					<img id="gifCargando" class="[ width--100 ][ gif-cargar ]" src="<?php echo THEMEPATH; ?>images/medalla.gif" alt="gif de interrogacion">
+					<audio controls autoplay style="display: none;">
+					  <source src="<?php echo THEMEPATH; ?>audio/medalla.ogg" type="audio/ogg">
+					  <source src="<?php echo THEMEPATH; ?>audio/medalla.mp3" type="audio/mpeg">
+					  <source src="<?php echo THEMEPATH; ?>audio/medalla.wav" type="audio/wav">
+					</audio>
 				<?php endif;
 				$css_medalla = $cargaMedalla == 1 ? 'display: none;' : ''; ?>
 				<img id="imgMedalla" class="[ width--100 ]" style="<?php echo $css_medalla; ?>" src="<?php echo $url_medalla; ?>" alt="imagen de interrogacion">
