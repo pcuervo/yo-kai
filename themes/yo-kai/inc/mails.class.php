@@ -24,14 +24,14 @@ class Mails{
 		$body = 'Hemos enviado los datos de acceso a las cuentas de tus hijos: <br />';
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: YO-KAI <no-reply@yo-kay.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
+		$message = '<html><body style="max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: contain;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
 			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
-				$message .= '<img style="width: 100%" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
+				$message .= '<img style="width: 100%" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
 			$message .= '</a>';
 		$message .= '</div>';
-		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
+		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
 		$message .= '<div style="padding-left:50px; padding-right:50px; padding-bottom:50px;">';
 			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Recuperar contraseña</h2>';
 			$message .= '<div class="">';
@@ -44,7 +44,7 @@ class Mails{
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Contraseña: <span style="color: #FDC804">'.$pass.'</span></p>';
 					}
 					$message .= '<div style="text-align: right;">';
-						$message .= '<img style="width: 150px;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
+						$message .= '<img style="width: 150px;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
 					$message .= '<div>';
 				$message .= '</div>';
 			$message .= '</div>';
@@ -89,14 +89,14 @@ class Mails{
 		$subject = 'YO-KAI - Consulta de '.$participante->user_login;
 		$headers = array('Content-Type: text/html; charset=UTF-8');
 		$headers = 'From: YO-KAI - Consultas <no-reply@yo-kay.com>' . "\r\n";
-		$message = '<html><body style="max-width: 500px; background-image: url(http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
+		$message = '<html><body style="max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
 			$message .= '<a style="display:block; " href="http://pcuervo.com/yo-kai">';
-				$message .= '<img style="width: 100%" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
+				$message .= '<img style="width: 100%" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/header.png" alt="header yo-kai">';
 			$message .= '</a>';
 		$message .= '</div>';
-		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
+		/*$message .= '<img style="position: absolute; width: 50%; margin-left: 25%;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/spining-elements.png" alt="imagen spining elements">';*/
 		$message .= '<div style="padding-left:50px; padding-right:50px; padding-bottom:50px;">';
 			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">Consulta participante</h2>';
 			$message .= '<div class="">';
@@ -108,7 +108,7 @@ class Mails{
 				$message .= '</div>';
 			$message .= '</div>';
 			$message .= '<div style="text-align: right;">';
-				$message .= '<img style="width: 150px;" src="http://pcuervo.com/yo-kai/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
+				$message .= '<img style="width: 150px;" src="http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fantasma.png" alt="imagen spining elements">';
 			$message .= '<div>';
 		$message .= '</div>';
 

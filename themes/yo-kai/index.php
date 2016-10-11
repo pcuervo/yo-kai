@@ -12,11 +12,11 @@ if (isset($_GET['return']) AND $_GET['return'] == 'error') {
 		<form method="POST" class="[ border-bottom--primary border-top--primary ][ padding-top--large padding-bottom--large ]" data-parsley-validate>
 			<div class="form-group">
 				<label class="[ hidden ]" for="exampleInputNickname">Nickname</label>
-				<input type="text" name="login-nickname" class="form-control" id="exampleInputNickName" placeholder="Nickname" aria-describedby="nicknameHelp" required data-parsley-required-message="ERROR TEXT">
+				<input type="text" name="login-nickname" class="form-control" id="exampleInputNickName" placeholder="Nickname" aria-describedby="nicknameHelp" required data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO">
 			</div>
 			<div class="form-group [ margin-bottom--large ]">
 				<label class="[ hidden ]" for="exampleInputPassword">Contraseña</label>
-				<input type="password" name="login-password" class="form-control" id="exampleInputPassword" placeholder="Contraseña" required data-parsley-required-message="ERROR TEXT">
+				<input type="password" name="login-password" class="form-control" id="exampleInputPassword" placeholder="Contraseña" required data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO">
 			</div>
 			<input type="hidden" name="action" value="login">
 			<div class="[ border-primary border-radius--20 ][ inline-block ]"><button type="submit" class="btn btn--primary">Ingresar</button></div>

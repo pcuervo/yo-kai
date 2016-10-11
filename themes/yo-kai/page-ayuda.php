@@ -24,7 +24,7 @@ if ($success != '') {
 	<form method="POST" class="[ padding-top--large padding-bottom--large ]" data-parsley-validate>
 		<div class="form-group [ margin-bottom--large ]">
 			<label for="exampleTextarea" class="[ hidden ]">Mensaje</label>
-			<textarea class="form-control" name="contenido-consulta" id="exampleTextarea" rows="9" placeholder="Escríbe aquí tu consulta" aria-describedby="nombreTutorHelp" required data-parsley-required-message="ERROR TEXT"></textarea>
+			<textarea class="form-control" name="contenido-consulta" id="exampleTextarea" rows="9" placeholder="Escríbe aquí tu consulta" aria-describedby="nombreTutorHelp" required data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO"></textarea>
 		</div>
 		<div class="[ text-center ][ margin-bottom ]">
 			<input type="hidden" name="action" value="guarda-consulta">
