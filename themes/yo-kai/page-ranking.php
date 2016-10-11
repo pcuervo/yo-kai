@@ -1,4 +1,5 @@
-<?php get_header(); ?>
+<?php get_header();
+global $current_user; ?>
 	<div class="[ width--800p ][ margin-auto ]">
 	<div class="row [ margin-bottom--large ]">
 		<div class="col-xs-4">
@@ -29,9 +30,10 @@
 		if (!empty($participantes_ranking)):
 			$count_medallas = wp_count_posts('medallas');
 			foreach ($participantes_ranking as $key => $paricipante):
-			$imagen_perfil = getAvatarParticipanteId($paricipante->participante_id);
-			$user_info = get_userdata($paricipante->participante_id); ?>
-				<div class="row [ margin-bottom ]">
+				$imagen_perfil = getAvatarParticipanteId($paricipante->participante_id);
+				$user_info = get_userdata($paricipante->participante_id);
+				$class_active = $current_user->ID == $paricipante->participante_id ? 'active' : ''; ?>
+				<div class="row [ margin-bottom ] <?php echo $class_active; ?> ">
 					<div class="col-xs-3">
 						<p class="[ color-primary ][ font-size--24 ][ margin-top--large ][ font-peace_sansregular ]">Nº <?php echo $paricipante->rank; ?></p>
 					</div>
