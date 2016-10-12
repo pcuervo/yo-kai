@@ -88,7 +88,7 @@ class Mails{
 		$telefono = get_user_meta($participante->ID, '_telefono_tutor', true);
 		$subject = 'Yo-Kai - Consulta de '.$participante->user_login;
 		$headers = array('Content-Type: text/html; charset=UTF-8');
-		$headers = 'From: Yo-Kai - Consultas <no-reply@yo-kai.com>' . "\r\n";
+		$headers = 'From: Ayuda Yo-Kai <no-reply@yo-kai.com>' . "\r\n";
 		$message = '<html><body style="margin: 0 auto; max-width: 500px; background-image: url(http://yokaiwatchmexico.com/wp-content/themes/yo-kai/images/fondo-image.png); background-size: cover;">';
 
 		$message .= '<div style="tex-align: center; padding-top: 30px; ">';
@@ -117,7 +117,7 @@ class Mails{
 		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
 
 		//SEND EMAIL CONFIRMATION
-		$resp = wp_mail( 'nayeli@pcuervo.com', $subject, $message, $headers );
+		$resp = wp_mail( 'ayuda@yokaiwatchmexico.com', $subject, $message, $headers );
 		if ($resp) {
 			$success = 'Se envió tu consulta correctamente.';
 		}
