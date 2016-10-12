@@ -40,7 +40,7 @@ global $idMedalla;
 				<!-- Al cargar -->
 				<form class="formCargaMedalla" method="POST" data-parsley-validate>
 					<div class="form-group [ margin-bottom--large ]">
-						<label class="" for="exampleInputMedalla"><small>Introdúcelo con el espacio entre las letras y los números. <br /> Ejemplo: HAS 1234</small></label>
+						<label class="" for="exampleInputMedalla"><small>Introdúcelo sin el espacio entre las letras y los números.<br /> Ejemplo: HAS1234 ó has1234</small></label>
 						<input type="text" class="form-control" name="nuevaMedallaCompetitor" id="exampleInputMedalla" placeholder="Ingresa el código de tu medalla" aria-describedby="medallaHelp" required data-parsley-required-message="ESTE CAMPO ES OBLIGATORIO">
 						<?php if ($errors != ''): ?>
 							<ul class="parsley-errors-list filled" id="parsley-id-5"><li class="parsley-required"><?php echo $errors; ?></li></ul>
