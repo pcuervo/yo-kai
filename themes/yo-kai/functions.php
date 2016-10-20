@@ -31,6 +31,8 @@ require_once('inc/functions-users.php');
 require_once('inc/functions-post-type.php');
 require_once('inc/functions-metaboxes.php');
 require_once('inc/descargables.php');
+require_once('inc/ganador.php');
+
 
 
 

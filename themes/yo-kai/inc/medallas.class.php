@@ -175,7 +175,7 @@ class Medallas{
 			) AS rank
 			FROM {$wpdb->prefix}lista_medallas_participantes
 			WHERE participante_id = %d
-			ORDER BY numero_de_medallas DESC",
+			ORDER BY numero_de_medallas DESC, fecha_ultima_actualizacion ASC",
 			$participante_id
 		));
 
@@ -207,7 +207,7 @@ class Medallas{
 			FROM {$wpdb->prefix}lista_medallas_participantes )
 			) AS rank
 			FROM {$wpdb->prefix}lista_medallas_participantes
-			ORDER BY numero_de_medallas DESC", OBJECT
+			ORDER BY numero_de_medallas DESC, fecha_ultima_actualizacion ASC", OBJECT
 		 );
 	}
 }
