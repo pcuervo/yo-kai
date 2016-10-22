@@ -9,19 +9,15 @@
 	<table class="widefat fixed" cellspacing="0">
 	    <thead>
 		    <tr>
-
-		            <th id="columnname" scope="col">Rank</th> 
-		            <th id="columnname" scope="col">Usuario</th>
-		            <th id="columnname" scope="col">Medallas</th>
-		            <th id="columnname" scope="col">Fecha ultima medalla</th>
-
-
+	            <th id="columnname" scope="col">Rank</th> 
+	            <th id="columnname" scope="col">Usuario</th>
+	            <th id="columnname" scope="col">Medallas</th>
+	            <th id="columnname" scope="col">Fecha ultima medalla</th>
 		    </tr>
 	    </thead>
 
 	    <tbody>
-	    	<?php $participantes_ranking = Medallas::ranking();
-	    	if (!empty($participantes_ranking)):
+	    	<?php if (!empty($participantes_ranking)):
 				$count_medallas = wp_count_posts('medallas');
 				foreach ($participantes_ranking as $key => $paricipante):
 					$user_info = get_userdata($paricipante->participante_id); ?>
@@ -33,7 +29,7 @@
 			            <td class="column-columnname"><?php echo $paricipante->fecha_ultima_actualizacion; ?></td>
 
 			        </tr>
-			        
+
 				<?php endforeach;
 			endif; ?>	
 	        
