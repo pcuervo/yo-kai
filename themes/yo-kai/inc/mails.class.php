@@ -169,5 +169,32 @@ class Mails{
 
 	}
 
+	/**
+	 * ENVIA MAIL AL GANADOR
+	 * @return [type]       [description]
+	 */
+	public function sendMailChildWinner($ganadorEmail, $infoGanador)
+	{
+		$subject = '¡Felicidades '.$infoGanador->user_login.'! Has ganado en yokaiwatchmexico.com';
+		$headers = array('Content-Type: text/html; charset=UTF-8');
+		$headers = 'From: Yo-Kai Watch México <no-reply@yo-kai.com>' . "\r\n";
+
+		$message = '<html><body>';
+
+		$message .= htmlMailGanador($infoGanador->ID);
+			
+		$message .= '</body></html>';
+		
+		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
+
+		// SEND EMAIL CONFIRMATION
+		$resp = wp_mail( $ganadorEmail, $subject, $message, $headers );
+		
+		if ($resp) {
+			return 'Se envió tu consulta correctamente.';
+		}
+
+		return 'errors';
+	}
 
 }

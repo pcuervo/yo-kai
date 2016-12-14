@@ -1,8 +1,10 @@
 <div class="wrap nosubsub">
 	<h2>Ganador</h2>
-	<div class="notice notice-error">
-		<p>Por ahora no es posible enviar un mail de ganador ya que aun no se cumple la fecha limite.</p>
-	</div>
+	<?php if ( $dateReal < $dateFin ): ?>
+		<div class="notice notice-error">
+			<p>Por ahora no es posible enviar un mail de ganador ya que aun no se cumple la fecha limite.</p>
+		</div>
+	<?php endif; ?>
 
 	<h3>Ranking Participantes</h3>
 	
