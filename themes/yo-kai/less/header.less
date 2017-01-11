@@ -34,6 +34,10 @@ header {
 					display: inline-block;
 					font-family: 'peace_sansregular';
 					&:hover, &.active { color: @color-primary; }
+					&.disabled {
+						color: #bbbbbb;
+						&:hover, &.active { color: #bbbbbb; }
+					}
 				}
 			}
 		}

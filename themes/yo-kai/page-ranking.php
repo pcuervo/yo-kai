@@ -11,10 +11,10 @@ global $current_user; ?>
 				<h2 class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">¡Posiciónate entre los primeros 10 y gana un premio!</h2>
 				<p class="[ text-center ]">El concurso termina el 5 de enero de 2017 a las 14hrs. En caso de empate, se ubicará en mejor posición quien haya registrado primero sus medallas.</p>
 			</div>
-			<h2 id="ranking-cerrado" class="[ hidden ][ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">Estas son las posiciones finales. ¡Sigue usando el album digital!</h2>
 		</div>
 	</div>
 	<div class="[ box-raking ][ margin-bottom--xxlarge ]">
+		<h2 id="ranking-cerrado" class="[ text-center ][ padding-bottom--small ][ color-primary ][ border-bottom--primary ][ margin-top--xxlarge ]">Estas son las posiciones finales. ¡Sigue usando el album digital!</h2>
 		<div class="row [ margin-bottom ]">
 			<div class="col-xs-3">
 				<h3 class="[ color-light ]">Posición</h3>

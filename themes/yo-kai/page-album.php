@@ -102,7 +102,7 @@ $category_slug = isset($_GET['cat']) ? $_GET['cat'] : ''; ?>
 	</div>
 
 	<!-- Button trigger modal -->
-	<button type="button" class="[ hidden ]btn btn-primary btn-lg" data-toggle="modal" data-target="#concurso-terminado">Modal</button>
+	<button type="button" class="[ hidden ] btn btn-primary btn-lg" data-toggle="modal" data-target="#concurso-terminado">Modal</button>
 	<!-- Modal -->
 	<div class="modal fade" id="concurso-terminado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="[ absolute width--100vw height--100vh ]"></div>

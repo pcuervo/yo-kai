@@ -7504,4 +7504,11 @@ header .nav-header > div > div a:hover,
 header .nav-header > div > div a.active {
   color: #FDC804;
 }
+header .nav-header > div > div a.disabled {
+  color: #bbbbbb;
+}
+header .nav-header > div > div a.disabled:hover,
+header .nav-header > div > div a.disabled.active {
+  color: #bbbbbb;
+}
 /*# sourceMappingURL=bootstrap.css.map */

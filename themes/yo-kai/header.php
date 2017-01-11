@@ -59,7 +59,7 @@
 						<div>
 							<a class="<?php if(is_page('album')) echo 'active'; ?>" href="<?php echo site_url('/album'); ?>">Álbum</a>
 							<a class="<?php if(is_page('cargar')) echo 'active'; ?>" href="<?php echo site_url('/cargar'); ?>">Cargar</a>
-							<a class="<?php if(is_page('ranking')) echo 'active'; ?>" href="<?php echo site_url('/ranking'); ?>">Ranking</a>
+							<a class="[ disabled ] <?php if(is_page('ranking')) echo 'active'; ?>">Ranking</a>
 							<div>
 								<a href="<?php echo site_url('/'); ?>">
 									<img src="<?php echo THEMEPATH; ?>images/logo.png" alt="logo yo-kai">

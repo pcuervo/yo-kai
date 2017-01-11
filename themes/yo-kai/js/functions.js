@@ -12,7 +12,10 @@ var $=jQuery.noConflict();
             $('.carousel').carousel({
                 interval:false
             });
-            finalConcurso();
+            //finalConcurso();
+            if ( $("#concurso-terminado").length > 0 ) {
+               $('#concurso-terminado').modal('show');
+            }
             if(window.location.href.indexOf("album/?cat=") > -1) {
                 $( ".carousel-control" ).addClass('hidden');
             };

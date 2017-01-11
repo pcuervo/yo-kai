@@ -143,16 +143,12 @@ class Mails{
 			$message .= '<h2 style="border-bottom: 2px solid #FDC804; color: #FDC804; font-size: 24px; line-height: 35px; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">¡Bienvenido a la comunidad Yo-Kai México!</h2>';
 			$message .= '<div class="">';
 				$message .= '<div class="">';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Consigue las medallas para tu reloj Yo-Kai©, regístralas en tu álbum digital a través de la página y gana increíbles premios.</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Desde ahora estás participando. Puedes checar el lugar en el que te encuentras en la sección “Ranking". El concurso por un Nintendo 2DS y nueve premios más termina el 5 de enero de 2017 a las 14 horas. ¡Junta la mayor cantidad de medallas que puedas!</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Si tienes alguna duda, escríbenos desde la sección de “Ayuda" y responderemos lo más rápido posible a esta dirección de correo.</p>';
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Si eres el papá, la mamá o el tutor del niño participante, muéstrale este correo por favor!</p>';
+						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Bienvenido, regístrate y colecciona las medallas Yo-Kai en tu álbum digital!</p>';
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Estos son los datos de tu cuenta.</p>';
 
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Nickname: <span style="color: #FDC804">'.$args['nick-name-competitor'].'</span></p>';
 						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">Contraseña: <span style="color: #FDC804">'.$args['password-competitor'].'</span></p>';
 
-						$message .= '<p style="font-size: 16px; color: #fff; line-height: 25px;">¡Buena suerte!</p>';
 				$message .= '</div>';
 			$message .= '</div>';
 			$message .= '<div style="text-align: right;">';
@@ -182,14 +178,14 @@ class Mails{
 		$message = '<html><body>';
 
 		$message .= htmlMailGanador($infoGanador->ID);
-			
+
 		$message .= '</body></html>';
-		
+
 		add_filter('wp_mail_content_type',create_function('', 'return "text/html"; '));
 
 		// SEND EMAIL CONFIRMATION
 		$resp = wp_mail( $ganadorEmail, $subject, $message, $headers );
-		
+
 		if ($resp) {
 			return 'Se envió tu consulta correctamente.';
 		}
